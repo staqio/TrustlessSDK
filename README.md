@@ -1,1 +1,1 @@
-# StaqWallet
+# TrustlessSDK
