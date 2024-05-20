@@ -516,7 +516,7 @@ public struct ClientCertificate {
   public init(data: Foundation.Data, password: Swift.String = "")
 }
 public struct KYCStatus : Swift.Codable {
-  public var kycId: Swift.Int
+  public var kycId: Swift.String
   public var customerId: Swift.String?
   public var statusCode: Swift.String
   public var status: Swift.String
@@ -865,6 +865,7 @@ public protocol KYCProvider {
   func getStepsManager(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStepsManager>) -> TrustlessSDK.CancelCallback
   func getCityList(for countryCode: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCCityValue]>) -> TrustlessSDK.CancelCallback
   func createRequest(body: Swift.String, files: [Swift.String : TrustlessSDK.TrustlessFile], proofDocuments: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func getKYCStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
 }
 public struct CreateCliQAliasParams {
   public init(type: TrustlessSDK.CliQAliasType, value: Swift.String)
