@@ -5,6 +5,7 @@ import Combine
 import CryptoKit
 import Foundation
 import LocalAuthentication
+import Security
 import Swift
 import UIKit
 import _Concurrency
@@ -299,6 +300,15 @@ public struct KYCCityValue : Swift.Codable {
 public struct TrustlessConfig {
   public init(clientKeys: TrustlessSDK.ClientKeys, certificate: TrustlessSDK.ClientCertificate, isScreenRecordingDisabled: Swift.Bool = false, biometryEnabled: Swift.Bool = false, biometryMessage: Swift.String = "Authenticate with biometry or passcode to continue.")
 }
+public enum TrustlessLocale : Swift.String {
+  case en
+  case ar
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public struct CreateUserParams {
   public init(email: Swift.String, username: Swift.String, password: Swift.String, firstName: Swift.String, lastName: Swift.String, phoneNumber: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
@@ -307,6 +317,9 @@ public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
   case activated
   case frozen
   case closed
+  case stolen
+  case fraud
+  case lost
   public init?(rawValue: Swift.String)
   public typealias AllCases = [TrustlessSDK.CardStatus]
   public typealias RawValue = Swift.String
@@ -327,6 +340,7 @@ public protocol IdentityProvider {
   func getProfile(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.UserProfile>) -> TrustlessSDK.CancelCallback
   func updateUser(with params: TrustlessSDK.UpdateUserParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.UserProfile>) -> TrustlessSDK.CancelCallback
   func updatePassword(currentPassword: Swift.String, newPassword: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func generateOtp(locale: Swift.String, length: Swift.Int, completion: @escaping TrustlessSDK.ResultCallback<Swift.String>) -> TrustlessSDK.CancelCallback
 }
 public struct CardSpendingLimits : Swift.Codable {
   public var daily: TrustlessSDK.CardSpendingLimitGroup
@@ -624,7 +638,7 @@ public struct CliQAliasAccount : Swift.Codable {
   @objc deinit
 }
 public struct CreateCardParams {
-  public init(currencyCode: Swift.String, cardHolderName: Swift.String, mobileNumber: Swift.String, accountNumber: Swift.String? = nil, amount: Swift.Float? = 0)
+  public init(currencyCode: Swift.String, cardHolderName: Swift.String, mobileNumber: Swift.String, deliveryDestination: Swift.String? = nil, accountNumber: Swift.String? = nil, amount: Swift.Float? = 0)
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct KYCStep : Swift.Decodable {
@@ -824,8 +838,8 @@ public struct Card : Swift.Decodable {
   public var pan: Swift.String
   public var expiryDate: Swift.String
   public var cardHolderName: Swift.String?
-  public var status: TrustlessSDK.CardStatus
-  public var type: TrustlessSDK.Card.CardType
+  public var status: Swift.String
+  public var type: Swift.String
   public var secure3DEnrolled: Swift.Bool?
   public var cvv: Swift.String?
   public init(from decoder: any Swift.Decoder) throws
@@ -865,6 +879,7 @@ public protocol KYCProvider {
   func getStepsManager(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStepsManager>) -> TrustlessSDK.CancelCallback
   func getCityList(for countryCode: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCCityValue]>) -> TrustlessSDK.CancelCallback
   func createRequest(body: Swift.String, files: [Swift.String : TrustlessSDK.TrustlessFile], proofDocuments: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func createNusukRequest(visaNumber: Swift.String, birthDate: Foundation.Date, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func getKYCStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
 }
 public struct CreateCliQAliasParams {
@@ -885,6 +900,9 @@ extension TrustlessSDK.CardSpendingLimitPeriod : Swift.Equatable {}
 extension TrustlessSDK.CardSpendingLimitPeriod : Swift.Hashable {}
 extension TrustlessSDK.CardSpendingLimitPeriod : Swift.RawRepresentable {}
 extension TrustlessSDK.SetCardSpendingLimitParams : Swift.Encodable {}
+extension TrustlessSDK.TrustlessLocale : Swift.Equatable {}
+extension TrustlessSDK.TrustlessLocale : Swift.Hashable {}
+extension TrustlessSDK.TrustlessLocale : Swift.RawRepresentable {}
 extension TrustlessSDK.CreateUserParams : Swift.Encodable {}
 extension TrustlessSDK.CardStatus : Swift.Equatable {}
 extension TrustlessSDK.CardStatus : Swift.Hashable {}
