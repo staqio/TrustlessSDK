@@ -15,6 +15,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "Transfer",
         "printedName": "Transfer",
@@ -5388,6 +5398,26 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "KYCUrlField",
         "printedName": "KYCUrlField",
@@ -5470,6 +5500,105 @@
         "moduleName": "TrustlessSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GenerateOTPParams",
+        "printedName": "GenerateOTPParams",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(locale:length:type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenerateOTPParams",
+                "printedName": "TrustlessSDK.GenerateOTPParams",
+                "usr": "s:12TrustlessSDK17GenerateOTPParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTPLocale",
+                "printedName": "TrustlessSDK.OTPLocale",
+                "usr": "s:12TrustlessSDK9OTPLocaleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTPType",
+                "printedName": "TrustlessSDK.OTPType",
+                "hasDefaultArg": true,
+                "usr": "s:12TrustlessSDK7OTPTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK17GenerateOTPParamsV6locale6length4typeAcA9OTPLocaleO_SiAA7OTPTypeOtcfc",
+            "mangledName": "$s12TrustlessSDK17GenerateOTPParamsV6locale6length4typeAcA9OTPLocaleO_SiAA7OTPTypeOtcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK17GenerateOTPParamsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12TrustlessSDK17GenerateOTPParamsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK17GenerateOTPParamsV",
+        "mangledName": "$s12TrustlessSDK17GenerateOTPParamsV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -5905,6 +6034,16 @@
             "usr": "s:SE",
             "mangledName": "$sSE"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -6645,6 +6784,103 @@
         "moduleName": "TrustlessSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VerifyOTPParams",
+        "printedName": "VerifyOTPParams",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(to:channel:code:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerifyOTPParams",
+                "printedName": "TrustlessSDK.VerifyOTPParams",
+                "usr": "s:12TrustlessSDK15VerifyOTPParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTPChannel",
+                "printedName": "TrustlessSDK.OTPChannel",
+                "usr": "s:12TrustlessSDK10OTPChannelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK15VerifyOTPParamsV2to7channel4codeACSS_AA10OTPChannelOSStcfc",
+            "mangledName": "$s12TrustlessSDK15VerifyOTPParamsV2to7channel4codeACSS_AA10OTPChannelOSStcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK15VerifyOTPParamsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12TrustlessSDK15VerifyOTPParamsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK15VerifyOTPParamsV",
+        "mangledName": "$s12TrustlessSDK15VerifyOTPParamsV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -9128,6 +9364,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "CardSpendingLimitPeriod",
         "printedName": "CardSpendingLimitPeriod",
@@ -9851,6 +10097,96 @@
             "declAttributes": [
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changeStatus",
+            "printedName": "changeStatus(_:status:cardTrailer:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CardStatus",
+                "printedName": "TrustlessSDK.CardStatus",
+                "usr": "s:12TrustlessSDK10CardStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13CardsProviderP12changeStatus_6status11cardTrailer10completionyycSS_AA04CardF0OSSSgys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13CardsProviderP12changeStatus_6status11cardTrailer10completionyycSS_AA04CardF0OSSSgys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.CardsProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.CardsProvider>",
+            "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -12683,7 +13019,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(clientKeys:certificate:isScreenRecordingDisabled:biometryEnabled:biometryMessage:)",
+            "printedName": "init(clientKeys:certificate:baseUrl:isScreenRecordingDisabled:biometryMessage:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12705,10 +13041,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
               },
               {
                 "kind": "TypeNominal",
@@ -12726,8 +13061,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK0A6ConfigV10clientKeys11certificate25isScreenRecordingDisabled15biometryEnabled0K7MessageAcA06ClientE0V_AA0N11CertificateVS2bSStcfc",
-            "mangledName": "$s12TrustlessSDK0A6ConfigV10clientKeys11certificate25isScreenRecordingDisabled15biometryEnabled0K7MessageAcA06ClientE0V_AA0N11CertificateVS2bSStcfc",
+            "usr": "s:12TrustlessSDK0A6ConfigV10clientKeys11certificate7baseUrl25isScreenRecordingDisabled15biometryMessageAcA06ClientE0V_AA0O11CertificateV10Foundation3URLVSbSStcfc",
+            "mangledName": "$s12TrustlessSDK0A6ConfigV10clientKeys11certificate7baseUrl25isScreenRecordingDisabled15biometryMessageAcA06ClientE0V_AA0O11CertificateV10Foundation3URLVSbSStcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl",
@@ -12764,6 +13099,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
       },
       {
         "kind": "Import",
@@ -12914,6 +13256,233 @@
       },
       {
         "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeychainService",
+        "printedName": "KeychainService",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Biometry",
+            "printedName": "Biometry",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "none",
+                "printedName": "none",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TrustlessSDK.KeychainService.Biometry.Type) -> TrustlessSDK.KeychainService.Biometry",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Biometry",
+                        "printedName": "TrustlessSDK.KeychainService.Biometry",
+                        "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "TrustlessSDK.KeychainService.Biometry.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Biometry",
+                            "printedName": "TrustlessSDK.KeychainService.Biometry",
+                            "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO4noneyA2EmF",
+                "mangledName": "$s12TrustlessSDK15KeychainServiceC8BiometryO4noneyA2EmF",
+                "moduleName": "TrustlessSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "faceId",
+                "printedName": "faceId",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TrustlessSDK.KeychainService.Biometry.Type) -> TrustlessSDK.KeychainService.Biometry",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Biometry",
+                        "printedName": "TrustlessSDK.KeychainService.Biometry",
+                        "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "TrustlessSDK.KeychainService.Biometry.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Biometry",
+                            "printedName": "TrustlessSDK.KeychainService.Biometry",
+                            "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO6faceIdyA2EmF",
+                "mangledName": "$s12TrustlessSDK15KeychainServiceC8BiometryO6faceIdyA2EmF",
+                "moduleName": "TrustlessSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "passcode",
+                "printedName": "passcode",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TrustlessSDK.KeychainService.Biometry.Type) -> (Swift.String) -> TrustlessSDK.KeychainService.Biometry",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> TrustlessSDK.KeychainService.Biometry",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Biometry",
+                            "printedName": "TrustlessSDK.KeychainService.Biometry",
+                            "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(code: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "TrustlessSDK.KeychainService.Biometry.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Biometry",
+                            "printedName": "TrustlessSDK.KeychainService.Biometry",
+                            "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO8passcodeyAESS_tcAEmF",
+                "mangledName": "$s12TrustlessSDK15KeychainServiceC8BiometryO8passcodeyAESS_tcAEmF",
+                "moduleName": "TrustlessSDK"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC8BiometryO",
+            "moduleName": "TrustlessSDK",
+            "isFromExtension": true
+          },
+          {
+            "kind": "Function",
+            "name": "saveBiometryAuth",
+            "printedName": "saveBiometryAuth(type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Biometry",
+                "printedName": "TrustlessSDK.KeychainService.Biometry",
+                "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK15KeychainServiceC16saveBiometryAuth4typeyAC0F0O_tFZ",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC16saveBiometryAuth4typeyAC0F0O_tFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBiometryAuthType",
+            "printedName": "getBiometryAuthType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Biometry",
+                "printedName": "TrustlessSDK.KeychainService.Biometry",
+                "usr": "s:12TrustlessSDK15KeychainServiceC8BiometryO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK15KeychainServiceC19getBiometryAuthTypeAC0F0OyFZ",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC19getBiometryAuthTypeAC0F0OyFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12TrustlessSDK15KeychainServiceC",
+        "mangledName": "$s12TrustlessSDK15KeychainServiceC",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -13046,6 +13615,117 @@
             "declAttributes": [
               "RawDocComment"
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "stolen",
+            "printedName": "stolen",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.CardStatus.Type) -> TrustlessSDK.CardStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardStatus",
+                    "printedName": "TrustlessSDK.CardStatus",
+                    "usr": "s:12TrustlessSDK10CardStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.CardStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardStatus",
+                        "printedName": "TrustlessSDK.CardStatus",
+                        "usr": "s:12TrustlessSDK10CardStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK10CardStatusO6stolenyA2CmF",
+            "mangledName": "$s12TrustlessSDK10CardStatusO6stolenyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "fraud",
+            "printedName": "fraud",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.CardStatus.Type) -> TrustlessSDK.CardStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardStatus",
+                    "printedName": "TrustlessSDK.CardStatus",
+                    "usr": "s:12TrustlessSDK10CardStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.CardStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardStatus",
+                        "printedName": "TrustlessSDK.CardStatus",
+                        "usr": "s:12TrustlessSDK10CardStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK10CardStatusO5fraudyA2CmF",
+            "mangledName": "$s12TrustlessSDK10CardStatusO5fraudyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "lost",
+            "printedName": "lost",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.CardStatus.Type) -> TrustlessSDK.CardStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CardStatus",
+                    "printedName": "TrustlessSDK.CardStatus",
+                    "usr": "s:12TrustlessSDK10CardStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.CardStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardStatus",
+                        "printedName": "TrustlessSDK.CardStatus",
+                        "usr": "s:12TrustlessSDK10CardStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK10CardStatusO4lostyA2CmF",
+            "mangledName": "$s12TrustlessSDK10CardStatusO4lostyA2CmF",
+            "moduleName": "TrustlessSDK"
           },
           {
             "kind": "Constructor",
@@ -13283,10 +13963,84 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "IdentityProvider",
         "printedName": "IdentityProvider",
         "children": [
+          {
+            "kind": "Function",
+            "name": "invalidateSession",
+            "printedName": "invalidateSession(_:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16IdentityProviderP17invalidateSessionyyycys6ResultOyytAA0A5ErrorOGcF",
+            "mangledName": "$s12TrustlessSDK16IdentityProviderP17invalidateSessionyyycys6ResultOyytAA0A5ErrorOGcF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.IdentityProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.IdentityProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
           {
             "kind": "Function",
             "name": "login",
@@ -13448,6 +14202,252 @@
             "declAttributes": [
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "login2FA",
+            "printedName": "login2FA(username:password:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16IdentityProviderP8login2FA8username8password10completionyycSS_SSys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK16IdentityProviderP8login2FA8username8password10completionyycSS_SSys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.IdentityProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.IdentityProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "completeLogin2FA",
+            "printedName": "completeLogin2FA(username:password:code:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16IdentityProviderP16completeLogin2FA8username8password4code10completionyycSS_S2Sys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK16IdentityProviderP16completeLogin2FA8username8password4code10completionyycSS_S2Sys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.IdentityProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.IdentityProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "completeLogin2FA",
+            "printedName": "completeLogin2FA(username:password:code:withBiometry:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16IdentityProviderP16completeLogin2FA8username8password4code12withBiometry10completionyycSS_S2SSbys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK16IdentityProviderP16completeLogin2FA8username8password4code12withBiometry10completionyycSS_S2SSbys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.IdentityProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.IdentityProvider>",
+            "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -13968,6 +14968,70 @@
             "declAttributes": [
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logDeviceId",
+            "printedName": "logDeviceId(_:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16IdentityProviderP11logDeviceIdyyycys6ResultOyytAA0A5ErrorOGcF",
+            "mangledName": "$s12TrustlessSDK16IdentityProviderP11logDeviceIdyyycys6ResultOyytAA0A5ErrorOGcF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.IdentityProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.IdentityProvider>",
+            "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
@@ -15488,6 +16552,370 @@
         "moduleName": "TrustlessSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VerifyOTPCode",
+        "printedName": "VerifyOTPCode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "correct",
+            "printedName": "correct",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.VerifyOTPCode.Type) -> TrustlessSDK.VerifyOTPCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.VerifyOTPCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO7correctyA2CmF",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO7correctyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "incorrect",
+            "printedName": "incorrect",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.VerifyOTPCode.Type) -> TrustlessSDK.VerifyOTPCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.VerifyOTPCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO9incorrectyA2CmF",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO9incorrectyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "expired",
+            "printedName": "expired",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.VerifyOTPCode.Type) -> TrustlessSDK.VerifyOTPCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.VerifyOTPCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO7expiredyA2CmF",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO7expiredyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "alreadyVerified",
+            "printedName": "alreadyVerified",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.VerifyOTPCode.Type) -> TrustlessSDK.VerifyOTPCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.VerifyOTPCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO15alreadyVerifiedyA2CmF",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO15alreadyVerifiedyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "attemptsExceeded",
+            "printedName": "attemptsExceeded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.VerifyOTPCode.Type) -> TrustlessSDK.VerifyOTPCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.VerifyOTPCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO16attemptsExceededyA2CmF",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO16attemptsExceededyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.VerifyOTPCode.Type) -> TrustlessSDK.VerifyOTPCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.VerifyOTPCode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO7unknownyA2CmF",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO7unknownyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TrustlessSDK.VerifyOTPCode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyOTPCode",
+                    "printedName": "TrustlessSDK.VerifyOTPCode",
+                    "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO8rawValueACSgSS_tcfc",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK13VerifyOTPCodeO8rawValueSSvp",
+            "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO8rawValueSSvp",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK13VerifyOTPCodeO8rawValueSSvg",
+                "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO8rawValueSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK13VerifyOTPCodeO",
+        "mangledName": "$s12TrustlessSDK13VerifyOTPCodeO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
         ]
       },
       {
@@ -18838,6 +20266,43 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "unavailableDeviceId",
+            "printedName": "unavailableDeviceId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.TrustlessError.Type) -> TrustlessSDK.TrustlessError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrustlessError",
+                    "printedName": "TrustlessSDK.TrustlessError",
+                    "usr": "s:12TrustlessSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.TrustlessError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK0A5ErrorO19unavailableDeviceIdyA2CmF",
+            "mangledName": "$s12TrustlessSDK0A5ErrorO19unavailableDeviceIdyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
             "kind": "TypeDecl",
             "name": "LocalAuthenticationError",
             "printedName": "LocalAuthenticationError",
@@ -19225,6 +20690,16 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -20435,6 +21910,100 @@
                 "declKind": "Accessor",
                 "usr": "s:12TrustlessSDK0A12SDKFrameworkC12cliQProviderAA03CliE0_pvM",
                 "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC12cliQProviderAA03CliE0_pvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "verificationProvider",
+            "printedName": "verificationProvider",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerificationProvider",
+                "printedName": "any TrustlessSDK.VerificationProvider",
+                "usr": "s:12TrustlessSDK20VerificationProviderP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvp",
+            "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "Final",
+              "Lazy",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerificationProvider",
+                    "printedName": "any TrustlessSDK.VerificationProvider",
+                    "usr": "s:12TrustlessSDK20VerificationProviderP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvg",
+                "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerificationProvider",
+                    "printedName": "any TrustlessSDK.VerificationProvider",
+                    "usr": "s:12TrustlessSDK20VerificationProviderP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvs",
+                "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvM",
+                "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC20verificationProviderAA012VerificationE0_pvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -22434,14 +24003,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSivp",
-            "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSivp",
+            "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSSvp",
+            "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSSvp",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "HasStorage",
@@ -22457,14 +24026,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSivg",
-                "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSivg",
+                "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSSvg",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSSvg",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -22481,14 +24050,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSivs",
-                "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSivs",
+                "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSSvs",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSSvs",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -22505,8 +24074,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSivM",
-                "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSivM",
+                "usr": "s:12TrustlessSDK9KYCStatusV5kycIdSSvM",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV5kycIdSSvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -23072,6 +24641,91 @@
                 "declKind": "Accessor",
                 "usr": "s:12TrustlessSDK9KYCStatusV9documentsSayAA0C8DocumentVGvM",
                 "mangledName": "$s12TrustlessSDK9KYCStatusV9documentsSayAA0C8DocumentVGvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pendingWalletTimer",
+            "printedName": "pendingWalletTimer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvp",
+            "mangledName": "$s12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvg",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvs",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvM",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV18pendingWalletTimerSSvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -26646,6 +28300,971 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "VerificationProvider",
+        "printedName": "VerificationProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "generateOTP",
+            "printedName": "generateOTP(params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenerateOTPParams",
+                "printedName": "TrustlessSDK.GenerateOTPParams",
+                "usr": "s:12TrustlessSDK17GenerateOTPParamsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Swift.String, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Swift.String, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK20VerificationProviderP11generateOTP6params10completionyycAA17GenerateOTPParamsV_ys6ResultOySSAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK20VerificationProviderP11generateOTP6params10completionyycAA17GenerateOTPParamsV_ys6ResultOySSAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.VerificationProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.VerificationProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendOTP",
+            "printedName": "sendOTP(params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SendOTPParams",
+                "printedName": "TrustlessSDK.SendOTPParams",
+                "usr": "s:12TrustlessSDK13SendOTPParamsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK20VerificationProviderP7sendOTP6params10completionyycAA13SendOTPParamsV_ys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK20VerificationProviderP7sendOTP6params10completionyycAA13SendOTPParamsV_ys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.VerificationProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.VerificationProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "verifyOTP",
+            "printedName": "verifyOTP(params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VerifyOTPParams",
+                "printedName": "TrustlessSDK.VerifyOTPParams",
+                "usr": "s:12TrustlessSDK15VerifyOTPParamsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TrustlessSDK.VerifyOTPCode, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TrustlessSDK.VerifyOTPCode, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyOTPCode",
+                        "printedName": "TrustlessSDK.VerifyOTPCode",
+                        "usr": "s:12TrustlessSDK13VerifyOTPCodeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK20VerificationProviderP9verifyOTP6params10completionyycAA15VerifyOTPParamsV_ys6ResultOyAA0I7OTPCodeOAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK20VerificationProviderP9verifyOTP6params10completionyycAA15VerifyOTPParamsV_ys6ResultOyAA0I7OTPCodeOAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.VerificationProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.VerificationProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12TrustlessSDK20VerificationProviderP",
+        "mangledName": "$s12TrustlessSDK20VerificationProviderP",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTPLocale",
+        "printedName": "OTPLocale",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "en",
+            "printedName": "en",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.OTPLocale.Type) -> TrustlessSDK.OTPLocale",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPLocale",
+                    "printedName": "TrustlessSDK.OTPLocale",
+                    "usr": "s:12TrustlessSDK9OTPLocaleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.OTPLocale.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OTPLocale",
+                        "printedName": "TrustlessSDK.OTPLocale",
+                        "usr": "s:12TrustlessSDK9OTPLocaleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK9OTPLocaleO2enyA2CmF",
+            "mangledName": "$s12TrustlessSDK9OTPLocaleO2enyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "ar",
+            "printedName": "ar",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.OTPLocale.Type) -> TrustlessSDK.OTPLocale",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPLocale",
+                    "printedName": "TrustlessSDK.OTPLocale",
+                    "usr": "s:12TrustlessSDK9OTPLocaleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.OTPLocale.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OTPLocale",
+                        "printedName": "TrustlessSDK.OTPLocale",
+                        "usr": "s:12TrustlessSDK9OTPLocaleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK9OTPLocaleO2aryA2CmF",
+            "mangledName": "$s12TrustlessSDK9OTPLocaleO2aryA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TrustlessSDK.OTPLocale?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPLocale",
+                    "printedName": "TrustlessSDK.OTPLocale",
+                    "usr": "s:12TrustlessSDK9OTPLocaleO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK9OTPLocaleO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12TrustlessSDK9OTPLocaleO8rawValueACSgSS_tcfc",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK9OTPLocaleO8rawValueSSvp",
+            "mangledName": "$s12TrustlessSDK9OTPLocaleO8rawValueSSvp",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9OTPLocaleO8rawValueSSvg",
+                "mangledName": "$s12TrustlessSDK9OTPLocaleO8rawValueSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK9OTPLocaleO",
+        "mangledName": "$s12TrustlessSDK9OTPLocaleO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTPChannel",
+        "printedName": "OTPChannel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sms",
+            "printedName": "sms",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.OTPChannel.Type) -> TrustlessSDK.OTPChannel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPChannel",
+                    "printedName": "TrustlessSDK.OTPChannel",
+                    "usr": "s:12TrustlessSDK10OTPChannelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.OTPChannel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OTPChannel",
+                        "printedName": "TrustlessSDK.OTPChannel",
+                        "usr": "s:12TrustlessSDK10OTPChannelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK10OTPChannelO3smsyA2CmF",
+            "mangledName": "$s12TrustlessSDK10OTPChannelO3smsyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "email",
+            "printedName": "email",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.OTPChannel.Type) -> TrustlessSDK.OTPChannel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPChannel",
+                    "printedName": "TrustlessSDK.OTPChannel",
+                    "usr": "s:12TrustlessSDK10OTPChannelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.OTPChannel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OTPChannel",
+                        "printedName": "TrustlessSDK.OTPChannel",
+                        "usr": "s:12TrustlessSDK10OTPChannelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK10OTPChannelO5emailyA2CmF",
+            "mangledName": "$s12TrustlessSDK10OTPChannelO5emailyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TrustlessSDK.OTPChannel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPChannel",
+                    "printedName": "TrustlessSDK.OTPChannel",
+                    "usr": "s:12TrustlessSDK10OTPChannelO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK10OTPChannelO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12TrustlessSDK10OTPChannelO8rawValueACSgSS_tcfc",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK10OTPChannelO8rawValueSSvp",
+            "mangledName": "$s12TrustlessSDK10OTPChannelO8rawValueSSvp",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK10OTPChannelO8rawValueSSvg",
+                "mangledName": "$s12TrustlessSDK10OTPChannelO8rawValueSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK10OTPChannelO",
+        "mangledName": "$s12TrustlessSDK10OTPChannelO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTPType",
+        "printedName": "OTPType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "numeric",
+            "printedName": "numeric",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.OTPType.Type) -> TrustlessSDK.OTPType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPType",
+                    "printedName": "TrustlessSDK.OTPType",
+                    "usr": "s:12TrustlessSDK7OTPTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.OTPType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OTPType",
+                        "printedName": "TrustlessSDK.OTPType",
+                        "usr": "s:12TrustlessSDK7OTPTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK7OTPTypeO7numericyA2CmF",
+            "mangledName": "$s12TrustlessSDK7OTPTypeO7numericyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "alphanumeric",
+            "printedName": "alphanumeric",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.OTPType.Type) -> TrustlessSDK.OTPType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPType",
+                    "printedName": "TrustlessSDK.OTPType",
+                    "usr": "s:12TrustlessSDK7OTPTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.OTPType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OTPType",
+                        "printedName": "TrustlessSDK.OTPType",
+                        "usr": "s:12TrustlessSDK7OTPTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK7OTPTypeO12alphanumericyA2CmF",
+            "mangledName": "$s12TrustlessSDK7OTPTypeO12alphanumericyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TrustlessSDK.OTPType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OTPType",
+                    "printedName": "TrustlessSDK.OTPType",
+                    "usr": "s:12TrustlessSDK7OTPTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK7OTPTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12TrustlessSDK7OTPTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK7OTPTypeO8rawValueSSvp",
+            "mangledName": "$s12TrustlessSDK7OTPTypeO8rawValueSSvp",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK7OTPTypeO8rawValueSSvg",
+                "mangledName": "$s12TrustlessSDK7OTPTypeO8rawValueSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK7OTPTypeO",
+        "mangledName": "$s12TrustlessSDK7OTPTypeO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SendOTPParams",
+        "printedName": "SendOTPParams",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(to:channel:locale:length:type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SendOTPParams",
+                "printedName": "TrustlessSDK.SendOTPParams",
+                "usr": "s:12TrustlessSDK13SendOTPParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTPChannel",
+                "printedName": "TrustlessSDK.OTPChannel",
+                "usr": "s:12TrustlessSDK10OTPChannelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTPLocale",
+                "printedName": "TrustlessSDK.OTPLocale",
+                "usr": "s:12TrustlessSDK9OTPLocaleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTPType",
+                "printedName": "TrustlessSDK.OTPType",
+                "hasDefaultArg": true,
+                "usr": "s:12TrustlessSDK7OTPTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK13SendOTPParamsV2to7channel6locale6length4typeACSS_AA10OTPChannelOAA9OTPLocaleOSiAA7OTPTypeOtcfc",
+            "mangledName": "$s12TrustlessSDK13SendOTPParamsV2to7channel6locale6length4typeACSS_AA10OTPChannelOAA9OTPLocaleOSiAA7OTPTypeOtcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SendOTPParamsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12TrustlessSDK13SendOTPParamsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK13SendOTPParamsV",
+        "mangledName": "$s12TrustlessSDK13SendOTPParamsV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -26663,7 +29282,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(currencyCode:cardHolderName:mobileNumber:accountNumber:amount:)",
+            "printedName": "init(currencyCode:cardHolderName:mobileNumber:deliveryDestination:accountNumber:amount:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26707,6 +29326,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "Swift.Float?",
                 "children": [
                   {
@@ -26721,8 +29355,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK16CreateCardParamsV12currencyCode14cardHolderName12mobileNumber07accountL06amountACSS_S3SSgSfSgtcfc",
-            "mangledName": "$s12TrustlessSDK16CreateCardParamsV12currencyCode14cardHolderName12mobileNumber07accountL06amountACSS_S3SSgSfSgtcfc",
+            "usr": "s:12TrustlessSDK16CreateCardParamsV12currencyCode14cardHolderName12mobileNumber19deliveryDestination07accountL06amountACSS_S3SSgAJSfSgtcfc",
+            "mangledName": "$s12TrustlessSDK16CreateCardParamsV12currencyCode14cardHolderName12mobileNumber19deliveryDestination07accountL06amountACSS_S3SSgAJSfSgtcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl",
@@ -35745,14 +38379,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CardStatus",
-                "printedName": "TrustlessSDK.CardStatus",
-                "usr": "s:12TrustlessSDK10CardStatusO"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12TrustlessSDK4CardV6statusAA0C6StatusOvp",
-            "mangledName": "$s12TrustlessSDK4CardV6statusAA0C6StatusOvp",
+            "usr": "s:12TrustlessSDK4CardV6statusSSvp",
+            "mangledName": "$s12TrustlessSDK4CardV6statusSSvp",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "HasStorage",
@@ -35768,14 +38402,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CardStatus",
-                    "printedName": "TrustlessSDK.CardStatus",
-                    "usr": "s:12TrustlessSDK10CardStatusO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK4CardV6statusAA0C6StatusOvg",
-                "mangledName": "$s12TrustlessSDK4CardV6statusAA0C6StatusOvg",
+                "usr": "s:12TrustlessSDK4CardV6statusSSvg",
+                "mangledName": "$s12TrustlessSDK4CardV6statusSSvg",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -35792,14 +38426,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "CardStatus",
-                    "printedName": "TrustlessSDK.CardStatus",
-                    "usr": "s:12TrustlessSDK10CardStatusO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK4CardV6statusAA0C6StatusOvs",
-                "mangledName": "$s12TrustlessSDK4CardV6statusAA0C6StatusOvs",
+                "usr": "s:12TrustlessSDK4CardV6statusSSvs",
+                "mangledName": "$s12TrustlessSDK4CardV6statusSSvs",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -35816,8 +38450,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK4CardV6statusAA0C6StatusOvM",
-                "mangledName": "$s12TrustlessSDK4CardV6statusAA0C6StatusOvM",
+                "usr": "s:12TrustlessSDK4CardV6statusSSvM",
+                "mangledName": "$s12TrustlessSDK4CardV6statusSSvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -35831,14 +38465,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CardType",
-                "printedName": "TrustlessSDK.Card.CardType",
-                "usr": "s:12TrustlessSDK4CardV0C4TypeO"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12TrustlessSDK4CardV4typeAC0C4TypeOvp",
-            "mangledName": "$s12TrustlessSDK4CardV4typeAC0C4TypeOvp",
+            "usr": "s:12TrustlessSDK4CardV4typeSSvp",
+            "mangledName": "$s12TrustlessSDK4CardV4typeSSvp",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "HasStorage",
@@ -35854,14 +38488,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CardType",
-                    "printedName": "TrustlessSDK.Card.CardType",
-                    "usr": "s:12TrustlessSDK4CardV0C4TypeO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK4CardV4typeAC0C4TypeOvg",
-                "mangledName": "$s12TrustlessSDK4CardV4typeAC0C4TypeOvg",
+                "usr": "s:12TrustlessSDK4CardV4typeSSvg",
+                "mangledName": "$s12TrustlessSDK4CardV4typeSSvg",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -35878,14 +38512,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "CardType",
-                    "printedName": "TrustlessSDK.Card.CardType",
-                    "usr": "s:12TrustlessSDK4CardV0C4TypeO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK4CardV4typeAC0C4TypeOvs",
-                "mangledName": "$s12TrustlessSDK4CardV4typeAC0C4TypeOvs",
+                "usr": "s:12TrustlessSDK4CardV4typeSSvs",
+                "mangledName": "$s12TrustlessSDK4CardV4typeSSvs",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -35902,8 +38536,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK4CardV4typeAC0C4TypeOvM",
-                "mangledName": "$s12TrustlessSDK4CardV4typeAC0C4TypeOvM",
+                "usr": "s:12TrustlessSDK4CardV4typeSSvM",
+                "mangledName": "$s12TrustlessSDK4CardV4typeSSvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -37445,6 +40079,504 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserDefault",
+        "printedName": "UserDefault",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "defaultValue",
+            "printedName": "defaultValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK11UserDefaultV12defaultValuexvp",
+            "mangledName": "$s12TrustlessSDK11UserDefaultV12defaultValuexvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11UserDefaultV12defaultValuexvg",
+                "mangledName": "$s12TrustlessSDK11UserDefaultV12defaultValuexvg",
+                "moduleName": "TrustlessSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+                "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11UserDefaultV12defaultValuexvs",
+                "mangledName": "$s12TrustlessSDK11UserDefaultV12defaultValuexvs",
+                "moduleName": "TrustlessSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+                "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11UserDefaultV12defaultValuexvM",
+                "mangledName": "$s12TrustlessSDK11UserDefaultV12defaultValuexvM",
+                "moduleName": "TrustlessSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+                "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK11UserDefaultV12wrappedValuexvp",
+            "mangledName": "$s12TrustlessSDK11UserDefaultV12wrappedValuexvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11UserDefaultV12wrappedValuexvg",
+                "mangledName": "$s12TrustlessSDK11UserDefaultV12wrappedValuexvg",
+                "moduleName": "TrustlessSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+                "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11UserDefaultV12wrappedValuexvs",
+                "mangledName": "$s12TrustlessSDK11UserDefaultV12wrappedValuexvs",
+                "moduleName": "TrustlessSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+                "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11UserDefaultV12wrappedValuexvM",
+                "mangledName": "$s12TrustlessSDK11UserDefaultV12wrappedValuexvM",
+                "moduleName": "TrustlessSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+                "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK11UserDefaultV",
+        "mangledName": "$s12TrustlessSDK11UserDefaultV",
+        "moduleName": "TrustlessSDK",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+        "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+        "declAttributes": [
+          "AccessControl",
+          "PropertyWrapper"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppUserDefaultsKey",
+        "printedName": "AppUserDefaultsKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "tokenExpirationDate",
+            "printedName": "tokenExpirationDate",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.AppUserDefaultsKey.Type) -> TrustlessSDK.AppUserDefaultsKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppUserDefaultsKey",
+                    "printedName": "TrustlessSDK.AppUserDefaultsKey",
+                    "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.AppUserDefaultsKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppUserDefaultsKey",
+                        "printedName": "TrustlessSDK.AppUserDefaultsKey",
+                        "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO19tokenExpirationDateyA2CmF",
+            "mangledName": "$s12TrustlessSDK18AppUserDefaultsKeyO19tokenExpirationDateyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TrustlessSDK.AppUserDefaultsKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppUserDefaultsKey",
+                    "printedName": "TrustlessSDK.AppUserDefaultsKey",
+                    "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12TrustlessSDK18AppUserDefaultsKeyO8rawValueACSgSS_tcfc",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO8rawValueSSvp",
+            "mangledName": "$s12TrustlessSDK18AppUserDefaultsKeyO8rawValueSSvp",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO8rawValueSSvg",
+                "mangledName": "$s12TrustlessSDK18AppUserDefaultsKeyO8rawValueSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK18AppUserDefaultsKeyO",
+        "mangledName": "$s12TrustlessSDK18AppUserDefaultsKeyO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppUserDefaults",
+        "printedName": "AppUserDefaults",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "tokenExpirationDate",
+            "printedName": "tokenExpirationDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvpZ",
+            "mangledName": "$s12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvpZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvgZ",
+                "mangledName": "$s12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvgZ",
+                "moduleName": "TrustlessSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvsZ",
+                "mangledName": "$s12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvsZ",
+                "moduleName": "TrustlessSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvMZ",
+                "mangledName": "$s12TrustlessSDK15AppUserDefaultsC19tokenExpirationDate10Foundation0H0VSgvMZ",
+                "moduleName": "TrustlessSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12TrustlessSDK15AppUserDefaultsC",
+        "mangledName": "$s12TrustlessSDK15AppUserDefaultsC",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
         "declKind": "Import",
@@ -37916,6 +41048,147 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createNusukRequest",
+            "printedName": "createNusukRequest(visaNumber:birthDate:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK11KYCProviderP18createNusukRequest10visaNumber9birthDate10completionyycSS_10Foundation0J0Vys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK11KYCProviderP18createNusukRequest10visaNumber9birthDate10completionyycSS_10Foundation0J0Vys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.KYCProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.KYCProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getKYCStatus",
+            "printedName": "getKYCStatus(_:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TrustlessSDK.KYCStatus, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TrustlessSDK.KYCStatus, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KYCStatus",
+                        "printedName": "TrustlessSDK.KYCStatus",
+                        "usr": "s:12TrustlessSDK9KYCStatusV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK11KYCProviderP12getKYCStatusyyycys6ResultOyAA0E0VAA0A5ErrorOGcF",
+            "mangledName": "$s12TrustlessSDK11KYCProviderP12getKYCStatusyyycys6ResultOyAA0E0VAA0A5ErrorOGcF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.KYCProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.KYCProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -37946,6 +41219,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
       },
       {
         "kind": "Import",
@@ -38044,6 +41324,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/VerificationProviderImp.swift",
+      "kind": "StringLiteral",
+      "offset": 295,
+      "length": 32,
+      "value": "\"com.trustless.identityProvider\""
+    },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/TransfersProvider\/Responses\/Transfer.swift",
       "kind": "StringLiteral",
@@ -38761,44 +42048,100 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Models\/RefreshUserTokenBody.swift",
       "kind": "StringLiteral",
-      "offset": 286,
+      "offset": 308,
       "length": 12,
       "value": "\"grant_type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Models\/RefreshUserTokenBody.swift",
       "kind": "StringLiteral",
-      "offset": 323,
+      "offset": 345,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Models\/RefreshUserTokenBody.swift",
       "kind": "StringLiteral",
-      "offset": 363,
+      "offset": 385,
       "length": 15,
       "value": "\"refresh_token\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Models\/RefreshUserTokenBody.swift",
       "kind": "StringLiteral",
-      "offset": 286,
+      "offset": 308,
       "length": 12,
       "value": "\"grant_type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Models\/RefreshUserTokenBody.swift",
       "kind": "StringLiteral",
-      "offset": 323,
+      "offset": 345,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Models\/RefreshUserTokenBody.swift",
       "kind": "StringLiteral",
-      "offset": 363,
+      "offset": 385,
       "length": 15,
       "value": "\"refresh_token\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/GenerateOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 209,
+      "length": 6,
+      "value": "\"Code\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/GenerateOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 209,
+      "length": 6,
+      "value": "\"Code\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Get2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 296,
+      "length": 10,
+      "value": "\"Username\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Get2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 10,
+      "value": "\"Password\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Get2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 363,
+      "length": 7,
+      "value": "\"Scope\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Get2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 296,
+      "length": 10,
+      "value": "\"Username\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Get2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 10,
+      "value": "\"Password\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Get2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 363,
+      "length": 7,
+      "value": "\"Scope\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/GetUserTokenBody.swift",
@@ -38834,6 +42177,13 @@
       "offset": 380,
       "length": 11,
       "value": "\"client_id\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Params\/GenerateOTPParams.swift",
+      "kind": "IntegerLiteral",
+      "offset": 233,
+      "length": 1,
+      "value": "6"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/TransfersProvider\/Responses\/CliQPurposeCode.swift",
@@ -38887,7 +42237,7 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/CardsProviderImp.swift",
       "kind": "BooleanLiteral",
-      "offset": 3633,
+      "offset": 3675,
       "length": 5,
       "value": "false"
     },
@@ -39319,6 +42669,13 @@
       "value": "\"Accounts\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Params\/CreateNusukKYCBody.swift",
+      "kind": "Dictionary",
+      "offset": 204,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Helpers\/TaskManager.swift",
       "kind": "Dictionary",
       "offset": 1153,
@@ -39377,16 +42734,30 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/SetCardStatusBody.swift",
       "kind": "StringLiteral",
-      "offset": 288,
+      "offset": 384,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/SetCardStatusBody.swift",
       "kind": "StringLiteral",
-      "offset": 288,
+      "offset": 420,
+      "length": 13,
+      "value": "\"CardTrailer\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/SetCardStatusBody.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
       "length": 8,
       "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/SetCardStatusBody.swift",
+      "kind": "StringLiteral",
+      "offset": 420,
+      "length": 13,
+      "value": "\"CardTrailer\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Responses\/AccountDetails.swift",
@@ -39622,28 +42993,21 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1389,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1428,
+      "offset": 1277,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "StringLiteral",
-      "offset": 1469,
+      "offset": 1318,
       "length": 53,
       "value": "\"Authenticate with biometry or passcode to continue.\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/IdentityProviderImp.swift",
       "kind": "StringLiteral",
-      "offset": 293,
+      "offset": 296,
       "length": 32,
       "value": "\"com.trustless.identityProvider\""
     },
@@ -39816,6 +43180,27 @@
       "value": "\"KycId\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 282,
+      "length": 6,
+      "value": "\".com\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 5145,
+      "length": 8,
+      "value": "\"faceId\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 5188,
+      "length": 10,
+      "value": "\"passCode\""
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
       "kind": "StringLiteral",
       "offset": 284,
@@ -39839,6 +43224,27 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
       "kind": "StringLiteral",
+      "offset": 524,
+      "length": 8,
+      "value": "\"STOLEN\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 7,
+      "value": "\"FRAUD\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 574,
+      "length": 6,
+      "value": "\"LOST\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
+      "kind": "StringLiteral",
       "offset": 284,
       "length": 11,
       "value": "\"ACTIVATED\""
@@ -39856,6 +43262,83 @@
       "offset": 497,
       "length": 8,
       "value": "\"CLOSED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 524,
+      "length": 8,
+      "value": "\"STOLEN\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 7,
+      "value": "\"FRAUD\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 574,
+      "length": 6,
+      "value": "\"LOST\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 275,
+      "length": 10,
+      "value": "\"Username\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 310,
+      "length": 10,
+      "value": "\"Password\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 342,
+      "length": 7,
+      "value": "\"Scope\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 370,
+      "length": 6,
+      "value": "\"Code\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 275,
+      "length": 10,
+      "value": "\"Username\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 310,
+      "length": 10,
+      "value": "\"Password\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 342,
+      "length": 7,
+      "value": "\"Scope\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Params\/Confirm2FATokenBody.swift",
+      "kind": "StringLiteral",
+      "offset": 370,
+      "length": 6,
+      "value": "\"Code\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardSpendingLimits.swift",
@@ -40014,119 +43497,112 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 534,
-      "length": 34,
-      "value": "\"https:\/\/sandbox-api.finto.io\/api\""
-    },
-    {
-      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 2379,
+      "offset": 2242,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2405,
+      "offset": 2268,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2431,
+      "offset": 2294,
       "length": 5,
       "value": "\"PUT\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2459,
+      "offset": 2322,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2489,
+      "offset": 2352,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2379,
+      "offset": 2242,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2405,
+      "offset": 2268,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2431,
+      "offset": 2294,
       "length": 5,
       "value": "\"PUT\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2459,
+      "offset": 2322,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2489,
+      "offset": 2352,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3407,
+      "offset": 3270,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3450,
+      "offset": 3313,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3495,
+      "offset": 3358,
       "length": 17,
       "value": "\"Idempotency-key\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3407,
+      "offset": 3270,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3450,
+      "offset": 3313,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3495,
+      "offset": 3358,
       "length": 17,
       "value": "\"Idempotency-key\""
     },
@@ -40262,6 +43738,90 @@
       "offset": 119,
       "length": 9,
       "value": "\"APPROVE\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 9,
+      "value": "\"CORRECT\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 168,
+      "length": 11,
+      "value": "\"INCORRECT\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 199,
+      "length": 9,
+      "value": "\"EXPIRED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 236,
+      "length": 18,
+      "value": "\"ALREADY_VERIFIED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 283,
+      "length": 19,
+      "value": "\"ATTEMPTS_EXCEEDED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 322,
+      "length": 9,
+      "value": "\"UNKNOWN\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 9,
+      "value": "\"CORRECT\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 168,
+      "length": 11,
+      "value": "\"INCORRECT\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 199,
+      "length": 9,
+      "value": "\"EXPIRED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 236,
+      "length": 18,
+      "value": "\"ALREADY_VERIFIED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 283,
+      "length": 19,
+      "value": "\"ATTEMPTS_EXCEEDED\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Responses\/VerifyOTPResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 322,
+      "length": 9,
+      "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/SimulateProvider\/Params\/SetAccountBalanceBody.swift",
@@ -40712,9 +44272,9 @@
       "value": "\"show_cvv\""
     },
     {
-      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Params\/KYCCreateBody.swift",
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Params\/CreateKYCBody.swift",
       "kind": "Array",
-      "offset": 290,
+      "offset": 285,
       "length": 2,
       "value": "[]"
     },
@@ -40752,6 +44312,20 @@
       "offset": 330,
       "length": 11,
       "value": "\"client_id\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Responses\/DeviceLoggingBody.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 10,
+      "value": "\"DeviceId\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Responses\/DeviceLoggingBody.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 10,
+      "value": "\"DeviceId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardPinCode.swift",
@@ -41078,168 +44652,182 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 996,
+      "offset": 1046,
       "length": 7,
       "value": "\"KycId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1030,
+      "offset": 1080,
       "length": 12,
       "value": "\"CustomerId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1069,
+      "offset": 1119,
       "length": 12,
       "value": "\"StatusCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1104,
+      "offset": 1154,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1137,
+      "offset": 1187,
       "length": 10,
       "value": "\"StatusAr\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1170,
+      "offset": 1220,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1204,
+      "offset": 1254,
       "length": 11,
       "value": "\"Documents\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 996,
+      "offset": 1300,
+      "length": 20,
+      "value": "\"PendingWalletTimer\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1046,
       "length": 7,
       "value": "\"KycId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1030,
+      "offset": 1080,
       "length": 12,
       "value": "\"CustomerId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1069,
+      "offset": 1119,
       "length": 12,
       "value": "\"StatusCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1104,
+      "offset": 1154,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1137,
+      "offset": 1187,
       "length": 10,
       "value": "\"StatusAr\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1170,
+      "offset": 1220,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1204,
+      "offset": 1254,
       "length": 11,
       "value": "\"Documents\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1968,
+      "offset": 1300,
+      "length": 20,
+      "value": "\"PendingWalletTimer\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 2073,
       "length": 6,
       "value": "\"Name\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2003,
+      "offset": 2108,
       "length": 14,
       "value": "\"DocumentCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2042,
+      "offset": 2147,
       "length": 10,
       "value": "\"Approved\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2075,
+      "offset": 2180,
       "length": 8,
       "value": "\"Reason\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2108,
+      "offset": 2213,
       "length": 10,
       "value": "\"ReasonAr\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 1968,
+      "offset": 2073,
       "length": 6,
       "value": "\"Name\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2003,
+      "offset": 2108,
       "length": 14,
       "value": "\"DocumentCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2042,
+      "offset": 2147,
       "length": 10,
       "value": "\"Approved\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2075,
+      "offset": 2180,
       "length": 8,
       "value": "\"Reason\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2108,
+      "offset": 2213,
       "length": 10,
       "value": "\"ReasonAr\""
     },
@@ -41370,93 +44958,114 @@
       "value": "\"IsDefault\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/VerificationProvider\/Params\/SendOTPParams.swift",
+      "kind": "IntegerLiteral",
+      "offset": 533,
+      "length": 1,
+      "value": "6"
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "IntegerLiteral",
-      "offset": 1135,
+      "offset": 1233,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1530,
+      "offset": 1683,
       "length": 14,
       "value": "\"CurrencyCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1575,
+      "offset": 1728,
       "length": 16,
       "value": "\"CardHolderName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1620,
+      "offset": 1773,
       "length": 14,
       "value": "\"MobileNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1664,
+      "offset": 1823,
+      "length": 21,
+      "value": "\"DeliveryDestination\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
+      "kind": "StringLiteral",
+      "offset": 1874,
       "length": 15,
       "value": "\"CreditDetails\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1530,
+      "offset": 1683,
       "length": 14,
       "value": "\"CurrencyCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1575,
+      "offset": 1728,
       "length": 16,
       "value": "\"CardHolderName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1620,
+      "offset": 1773,
       "length": 14,
       "value": "\"MobileNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1664,
+      "offset": 1823,
+      "length": 21,
+      "value": "\"DeliveryDestination\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
+      "kind": "StringLiteral",
+      "offset": 1874,
       "length": 15,
       "value": "\"CreditDetails\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1859,
+      "offset": 2069,
       "length": 15,
       "value": "\"AccountNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1897,
+      "offset": 2107,
       "length": 8,
       "value": "\"Amount\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1859,
+      "offset": 2069,
       "length": 15,
       "value": "\"AccountNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Params\/CreateCardParams.swift",
       "kind": "StringLiteral",
-      "offset": 1897,
+      "offset": 2107,
       "length": 8,
       "value": "\"Amount\""
     },
@@ -41926,139 +45535,167 @@
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessContext.swift",
       "kind": "StringLiteral",
       "offset": 1059,
-      "length": 25,
-      "value": "\"identity kyc simulation\""
+      "length": 27,
+      "value": "\"identity kyc verification\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessContext.swift",
       "kind": "StringLiteral",
-      "offset": 1117,
-      "length": 55,
-      "value": "\"identity kyc accounts cards transfers cliq simulation\""
+      "offset": 1119,
+      "length": 42,
+      "value": "\"identity kyc accounts cards verification\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1433,
+      "offset": 477,
+      "length": 9,
+      "value": "\"VIRTUAL\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
+      "kind": "StringLiteral",
+      "offset": 511,
+      "length": 10,
+      "value": "\"PHYSICAL\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
+      "kind": "StringLiteral",
+      "offset": 477,
+      "length": 9,
+      "value": "\"VIRTUAL\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
+      "kind": "StringLiteral",
+      "offset": 511,
+      "length": 10,
+      "value": "\"PHYSICAL\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
+      "kind": "StringLiteral",
+      "offset": 1452,
       "length": 7,
       "value": "\"Token\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1460,
+      "offset": 1479,
       "length": 5,
       "value": "\"PAN\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1492,
+      "offset": 1511,
       "length": 12,
       "value": "\"ExpiryDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1535,
+      "offset": 1554,
       "length": 16,
       "value": "\"CardHolderName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1574,
+      "offset": 1593,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1607,
+      "offset": 1626,
       "length": 10,
       "value": "\"Balances\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1638,
+      "offset": 1657,
       "length": 6,
       "value": "\"Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1677,
+      "offset": 1696,
       "length": 18,
       "value": "\"Secure3DEnrolled\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1715,
+      "offset": 1734,
       "length": 5,
       "value": "\"CVV\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1433,
+      "offset": 1452,
       "length": 7,
       "value": "\"Token\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1460,
+      "offset": 1479,
       "length": 5,
       "value": "\"PAN\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1492,
+      "offset": 1511,
       "length": 12,
       "value": "\"ExpiryDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1535,
+      "offset": 1554,
       "length": 16,
       "value": "\"CardHolderName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1574,
+      "offset": 1593,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1607,
+      "offset": 1626,
       "length": 10,
       "value": "\"Balances\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1638,
+      "offset": 1657,
       "length": 6,
       "value": "\"Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1677,
+      "offset": 1696,
       "length": 18,
       "value": "\"Secure3DEnrolled\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
       "kind": "StringLiteral",
-      "offset": 1715,
+      "offset": 1734,
       "length": 5,
       "value": "\"CVV\""
     },
