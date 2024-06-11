@@ -920,6 +920,10 @@ public struct CardBalance : Swift.Codable {
   public var currentBalance: Swift.Double
   public var blockedBalance: Swift.Double
   public var availableBalance: Swift.Double
+  public var number: Swift.String
+  public var iban: Swift.String
+  public var swift: Swift.String
+  public var bankName: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

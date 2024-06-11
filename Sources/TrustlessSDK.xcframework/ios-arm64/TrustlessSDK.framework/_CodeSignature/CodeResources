@@ -10,15 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PXi/A/hjRhMIkRjmXwfWa12O7KY=
+		6/8lS3ihHoJWw/DeE53HJTlq2wE=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Z3dEK10rpviiFKdabAafxWX/BQM=
+		44lk/qIK5sTQoUyEd5yep+ilXXU=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		tkrNVm3//SfIDPp4J87+qHLB1cM=
+		iFV0Rm6MV/bHIjpJCqphJ7xJRE4=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		tkrNVm3//SfIDPp4J87+qHLB1cM=
+		iFV0Rm6MV/bHIjpJCqphJ7xJRE4=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		3DDF/yD9COk/LzBJzSTil8rxnFg=
+		C3vwfGn0t914fnfq7vBwYyY0B3Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,14 +50,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k8sCKlFzjofYcmPKMRR4MeyzUhRLTVDcmO1Xo+p/yNk=
+			H/jAaIzk6cnJJA5qwYUyykpl6Y13DPvRQmGiqcnUuH0=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gkXYHShPQRT1PjFsjaZni4Nze907JB/wQmZzHsJ+a/M=
+			+2IzPj6U2w1CMqgzGgS+EASWD+eoN7mExQr8X4DzVEw=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -71,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gkXYHShPQRT1PjFsjaZni4Nze907JB/wQmZzHsJ+a/M=
+			+2IzPj6U2w1CMqgzGgS+EASWD+eoN7mExQr8X4DzVEw=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UxI3Uze2Xzy4FdzBv9Zyf4uPO7Jlkex2hxAi44/kMlE=
+			R/UIljaUR2AIjaxTymzDYL1gDJwavITTuk2nHfPKFxk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

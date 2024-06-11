@@ -39191,6 +39191,346 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "number",
+            "printedName": "number",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK11CardBalanceV6numberSSvp",
+            "mangledName": "$s12TrustlessSDK11CardBalanceV6numberSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV6numberSSvg",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV6numberSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV6numberSSvs",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV6numberSSvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV6numberSSvM",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV6numberSSvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iban",
+            "printedName": "iban",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK11CardBalanceV4ibanSSvp",
+            "mangledName": "$s12TrustlessSDK11CardBalanceV4ibanSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV4ibanSSvg",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV4ibanSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV4ibanSSvs",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV4ibanSSvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV4ibanSSvM",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV4ibanSSvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "swift",
+            "printedName": "swift",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK11CardBalanceV5swiftSSvp",
+            "mangledName": "$s12TrustlessSDK11CardBalanceV5swiftSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV5swiftSSvg",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV5swiftSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV5swiftSSvs",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV5swiftSSvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV5swiftSSvM",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV5swiftSSvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bankName",
+            "printedName": "bankName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK11CardBalanceV8bankNameSSvp",
+            "mangledName": "$s12TrustlessSDK11CardBalanceV8bankNameSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV8bankNameSSvg",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV8bankNameSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV8bankNameSSvs",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV8bankNameSSvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK11CardBalanceV8bankNameSSvM",
+                "mangledName": "$s12TrustlessSDK11CardBalanceV8bankNameSSvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -45744,58 +46084,114 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 912,
+      "offset": 1032,
       "length": 14,
       "value": "\"CurrencyCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 957,
+      "offset": 1077,
       "length": 16,
       "value": "\"CurrentBalance\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 1124,
       "length": 16,
       "value": "\"BlockedBalance\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 1053,
+      "offset": 1173,
       "length": 18,
       "value": "\"AvailableBalance\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 912,
+      "offset": 1214,
+      "length": 8,
+      "value": "\"Number\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1243,
+      "length": 6,
+      "value": "\"Iban\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1271,
+      "length": 7,
+      "value": "\"Swift\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1303,
+      "length": 10,
+      "value": "\"BankName\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1032,
       "length": 14,
       "value": "\"CurrencyCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 957,
+      "offset": 1077,
       "length": 16,
       "value": "\"CurrentBalance\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 1124,
       "length": 16,
       "value": "\"BlockedBalance\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
       "kind": "StringLiteral",
-      "offset": 1053,
+      "offset": 1173,
       "length": 18,
       "value": "\"AvailableBalance\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1214,
+      "length": 8,
+      "value": "\"Number\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1243,
+      "length": 6,
+      "value": "\"Iban\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1271,
+      "length": 7,
+      "value": "\"Swift\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/CardBalance.swift",
+      "kind": "StringLiteral",
+      "offset": 1303,
+      "length": 10,
+      "value": "\"BankName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/CreateAccountBody.swift",
