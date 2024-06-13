@@ -323,6 +323,7 @@ extension TrustlessSDK.KeychainService {
     case passcode(code: Swift.String)
   }
   public static func saveBiometryAuth(type: TrustlessSDK.KeychainService.Biometry)
+  public static func getAppPassCode() -> Swift.String?
   public static func getBiometryAuthType() -> TrustlessSDK.KeychainService.Biometry
 }
 public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
@@ -345,6 +346,7 @@ public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
 public protocol IdentityProvider {
   func invalidateSession(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func login(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func clearSession()
   func login(username: Swift.String, password: Swift.String, withBiometry: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func login2FA(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback

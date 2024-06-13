@@ -13449,6 +13449,37 @@
           },
           {
             "kind": "Function",
+            "name": "getAppPassCode",
+            "printedName": "getAppPassCode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK15KeychainServiceC14getAppPassCodeSSSgyFZ",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC14getAppPassCodeSSSgyFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getBiometryAuthType",
             "printedName": "getBiometryAuthType()",
             "children": [
@@ -14117,6 +14148,27 @@
             "declAttributes": [
               "RawDocComment"
             ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearSession",
+            "printedName": "clearSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16IdentityProviderP12clearSessionyyF",
+            "mangledName": "$s12TrustlessSDK16IdentityProviderP12clearSessionyyF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.IdentityProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.IdentityProvider>",
+            "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -42577,7 +42629,7 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/CardsProviderImp.swift",
       "kind": "BooleanLiteral",
-      "offset": 3675,
+      "offset": 3717,
       "length": 5,
       "value": "false"
     },
