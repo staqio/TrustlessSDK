@@ -322,6 +322,11 @@ extension TrustlessSDK.KeychainService {
     case faceId
     case passcode(code: Swift.String)
   }
+  public static func enableFaceID(_ isEnabled: Swift.Bool)
+  public static var isEnabledFaceID: Swift.Bool {
+    get
+  }
+  public static func savePassCode(_ passCode: Swift.String)
   public static func saveBiometryAuth(type: TrustlessSDK.KeychainService.Biometry)
   public static func getAppPassCode() -> Swift.String?
   public static func getBiometryAuthType() -> TrustlessSDK.KeychainService.Biometry

@@ -13421,6 +13421,109 @@
           },
           {
             "kind": "Function",
+            "name": "enableFaceID",
+            "printedName": "enableFaceID(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK15KeychainServiceC12enableFaceIDyySbFZ",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC12enableFaceIDyySbFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isEnabledFaceID",
+            "printedName": "isEnabledFaceID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK15KeychainServiceC15isEnabledFaceIDSbvpZ",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC15isEnabledFaceIDSbvpZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK15KeychainServiceC15isEnabledFaceIDSbvgZ",
+                "mangledName": "$s12TrustlessSDK15KeychainServiceC15isEnabledFaceIDSbvgZ",
+                "moduleName": "TrustlessSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "savePassCode",
+            "printedName": "savePassCode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK15KeychainServiceC12savePassCodeyySSFZ",
+            "mangledName": "$s12TrustlessSDK15KeychainServiceC12savePassCodeyySSFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "saveBiometryAuth",
             "printedName": "saveBiometryAuth(type:)",
             "children": [
@@ -43581,14 +43684,14 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "StringLiteral",
-      "offset": 5145,
+      "offset": 5138,
       "length": 8,
       "value": "\"faceId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "StringLiteral",
-      "offset": 5188,
+      "offset": 5181,
       "length": 10,
       "value": "\"passCode\""
     },
