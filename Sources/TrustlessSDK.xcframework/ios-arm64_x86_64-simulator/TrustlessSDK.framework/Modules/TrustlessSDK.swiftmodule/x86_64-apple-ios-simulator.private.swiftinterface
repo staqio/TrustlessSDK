@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.10 effective-4.2 (swiftlang-5.10.0.13 clang-1500.3.9.4)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TrustlessSDK
 import Combine
+import CommonCrypto
 import CryptoKit
 import Foundation
 import LocalAuthentication
@@ -330,6 +331,7 @@ extension TrustlessSDK.KeychainService {
   public static func saveBiometryAuth(type: TrustlessSDK.KeychainService.Biometry)
   public static func getAppPassCode() -> Swift.String?
   public static func getBiometryAuthType() -> TrustlessSDK.KeychainService.Biometry
+  public static func clearPasscodeAndBiometry()
 }
 public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
   case activated
@@ -349,11 +351,13 @@ public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
   }
 }
 public protocol IdentityProvider {
-  func invalidateSession(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func invalidateSession(forUsername username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func login(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func clearSession()
   func login(username: Swift.String, password: Swift.String, withBiometry: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func login2FA(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func users2FAOTP(phone: Swift.String, locale: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func users2FA(email: Swift.String, username: Swift.String, password: Swift.String, phone: Swift.String, otp: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String, withBiometry enableBiometry: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func logout(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
@@ -464,6 +468,7 @@ public enum TrustlessError : Swift.Error {
   case notInitialized
   case notLoggedIn
   case kycNotFinished
+  case sessionInvalidated
   case server(code: Swift.String, message: Swift.String)
   case invalidServerResponse
   case timeout
@@ -481,6 +486,9 @@ public enum TrustlessError : Swift.Error {
     case memoryAllocation
     case unhandledKeychain(_: Darwin.OSStatus)
   }
+}
+extension TrustlessSDK.TrustlessError : Swift.Equatable {
+  public static func == (lhs: TrustlessSDK.TrustlessError, rhs: TrustlessSDK.TrustlessError) -> Swift.Bool
 }
 public protocol TransfersProvider {
   func createTransfersPaginator(type: TrustlessSDK.TransferType, params: TrustlessSDK.GetTransfersParams?) -> TrustlessSDK.Paginator<TrustlessSDK.Transfer>
@@ -954,29 +962,6 @@ public struct UserProfile : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public typealias CancelCallback = () -> Swift.Void
-@propertyWrapper public struct UserDefault<T> where T : Swift.Decodable, T : Swift.Encodable {
-  public var defaultValue: T
-  public var wrappedValue: T {
-    get
-    set
-  }
-}
-public enum AppUserDefaultsKey : Swift.String {
-  case tokenExpirationDate
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@_hasMissingDesignatedInitializers public class AppUserDefaults {
-  @TrustlessSDK.UserDefault public static var tokenExpirationDate: Foundation.Date? {
-    get
-    set
-    _modify
-  }
-  @objc deinit
-}
 public protocol KYCProvider {
   var isKycFinished: Swift.Bool { get }
   func getStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
@@ -1040,7 +1025,4 @@ extension TrustlessSDK.RequestStatus : Swift.Hashable {}
 extension TrustlessSDK.Card.CardType : Swift.Equatable {}
 extension TrustlessSDK.Card.CardType : Swift.Hashable {}
 extension TrustlessSDK.Card.CardType : Swift.RawRepresentable {}
-extension TrustlessSDK.AppUserDefaultsKey : Swift.Equatable {}
-extension TrustlessSDK.AppUserDefaultsKey : Swift.Hashable {}
-extension TrustlessSDK.AppUserDefaultsKey : Swift.RawRepresentable {}
 extension TrustlessSDK.CreateCliQAliasParams : Swift.Encodable {}
