@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 effective-4.2 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0 effective-4.2 (swiftlang-6.0.0.7.6 clang-1600.0.24.1)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TrustlessSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import Combine
 import CommonCrypto
 import CryptoKit
@@ -277,6 +278,7 @@ public protocol CardsProvider {
   func createCardsPaginator(onlyActiveCards: Swift.Bool) -> TrustlessSDK.Paginator<TrustlessSDK.Card>
   func createCardsPaginator(onlyActiveCards: Swift.Bool, pageSize: Swift.Int?) -> TrustlessSDK.Paginator<TrustlessSDK.Card>
   func getPinCode(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.String>) -> TrustlessSDK.CancelCallback
+  func setPinCode(_ cardToken: Swift.String, pin: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
 }
 public struct AccountDetails : Swift.Decodable {
   public var branch: Swift.String
@@ -343,7 +345,7 @@ public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [TrustlessSDK.CardStatus]
   public typealias RawValue = Swift.String
-  public static var allCases: [TrustlessSDK.CardStatus] {
+  nonisolated public static var allCases: [TrustlessSDK.CardStatus] {
     get
   }
   public var rawValue: Swift.String {
@@ -470,7 +472,7 @@ public enum TrustlessError : Swift.Error {
   case kycNotFinished
   case sessionInvalidated
   case server(code: Swift.String, message: Swift.String)
-  case invalidServerResponse
+  case invalidServerResponse(error: (any Swift.Error)?)
   case timeout
   case canceled
   case unexpected
@@ -724,7 +726,7 @@ public struct SendOTPParams {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct CreateCardParams {
-  public init(currencyCode: Swift.String, cardHolderName: Swift.String, mobileNumber: Swift.String, deliveryDestination: Swift.String? = nil, accountNumber: Swift.String? = nil, amount: Swift.Float? = 0)
+  public init(currencyCode: Swift.String, cardHolderName: Swift.String, mobileNumber: Swift.String, deliveryDestination: Swift.String? = nil, arrivalDateTime: Swift.String, accountNumber: Swift.String? = nil, amount: Swift.Float? = 0)
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct KYCStep : Swift.Decodable {
@@ -935,10 +937,10 @@ public struct CardBalance : Swift.Codable {
   public var currentBalance: Swift.Double
   public var blockedBalance: Swift.Double
   public var availableBalance: Swift.Double
-  public var number: Swift.String
-  public var iban: Swift.String
-  public var swift: Swift.String
-  public var bankName: Swift.String
+  public var number: Swift.String?
+  public var iban: Swift.String?
+  public var swift: Swift.String?
+  public var bankName: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -969,7 +971,8 @@ public protocol KYCProvider {
   func getStepsManager(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStepsManager>) -> TrustlessSDK.CancelCallback
   func getCityList(for countryCode: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCCityValue]>) -> TrustlessSDK.CancelCallback
   func createRequest(body: Swift.String, files: [Swift.String : TrustlessSDK.TrustlessFile], proofDocuments: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func createNusukRequest(visaNumber: Swift.String, birthDate: Foundation.Date, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func createNusukRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func uploadDocuments(files: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func getKYCStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
 }
 public struct CreateCliQAliasParams {
