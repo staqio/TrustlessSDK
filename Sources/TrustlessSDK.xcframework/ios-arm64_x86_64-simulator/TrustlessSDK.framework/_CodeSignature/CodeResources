@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/TrustlessSDK-Swift.h</key>
 		<data>
-		YZsJPNVQCCaU674WWepsA0hgb5U=
+		kStLLsRncWPsSkKeeHEizbZiMoo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0FNa4IWgeZs1pbWBbaCp/QXJf6E=
+		swN2ELEOzM6tlq4lV/LnkMQhejY=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		y1Q4FtBdu4F04VeITVJKzC2c0QY=
+		setF0tUTXb4/CFDL9RJx/JGHe6M=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		XCsGjluvnaRfXH7UzHfVGfL7Tjo=
+		nWQ3MZn3JHfDl6HCnXwsV30+T8w=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MUxamLsww/cIks0ebOwpTMPrBnw=
+		gxiPOyw8T9IESoP5O9Bni6Y2vV4=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		XCsGjluvnaRfXH7UzHfVGfL7Tjo=
+		nWQ3MZn3JHfDl6HCnXwsV30+T8w=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pT8NTrsrhqWBx7Z3WzokWbggkwY=
+		cLej/ZXDqFFuJKotOg1NW2mXMUI=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		y1Q4FtBdu4F04VeITVJKzC2c0QY=
+		setF0tUTXb4/CFDL9RJx/JGHe6M=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		eIhhwX34HaAUKb2KkL6zUaxA32s=
+		QisVY1K38ch6Nk3b2caGmtduixQ=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		rE4vncMyzKPMyL4wM+8OQ6lFjYo=
+		my0o+Ju64lZNKRB2utLHoXw24cI=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		eIhhwX34HaAUKb2KkL6zUaxA32s=
+		QisVY1K38ch6Nk3b2caGmtduixQ=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yx3AVwcGYPSsfXXs1XWBg0Qtrj0=
+		UzrCmdeGGQLPpE0a8rhupPlyBdc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uQDx4b4eoCVBKa+ONpWDmBxAhm6uHqox48fSqA8VAXA=
+			SqUrXazyf/bX7m4+ee6q4TL3tdIZ4+rCCpsIHYhh0Tc=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XFR7oE5u0Cq15paUgnViAb8hyOsQeZBTHoU2CJ3bYfI=
+			Mvv5FojiZ3Olp960akEATsXWcqb18RLQSx92OVeoa+o=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			odKm7e6TUJZfHR++i3X33tFUx2dkTEU0xpGnzgBS1RM=
+			RqjQBqDi2cgFSLWkc4ZZqkegSAvdmkGmbH2YKGNiflE=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UNcTiMT7BcEXOxu5uIMlQpL/gj642UGnGvI9PCUc8mo=
+			fWZh0ryk+ElyWQxYZJCpjLWQc4Hqd6AY7l0TBYEzFCI=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			odKm7e6TUJZfHR++i3X33tFUx2dkTEU0xpGnzgBS1RM=
+			RqjQBqDi2cgFSLWkc4ZZqkegSAvdmkGmbH2YKGNiflE=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5q3INJ0u9SAgTYXCJj+iAe1cl8iYJ7ZNQ75MBF2FFbw=
+			EGsZYbXRwOiNTzgYbYSGBOiXCsXtl9V3Z7rCenccMH0=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XFR7oE5u0Cq15paUgnViAb8hyOsQeZBTHoU2CJ3bYfI=
+			Mvv5FojiZ3Olp960akEATsXWcqb18RLQSx92OVeoa+o=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ke5uh2Ptp5ewJW5jhVIFsf4vVzYH/Cy5YZz/gniGM4M=
+			tR4g5RA/l9UNh+W1hN+2LrI/kHBrm8A0D9Ll5v/RbaA=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qekm+foLdcxyOVTic2FdAabd2Z12HXMeUQf87Vkx+CY=
+			ILx7PipzUzFSEumprs17mAV2dU+GmBwea5Y0xZ8ZJqI=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ke5uh2Ptp5ewJW5jhVIFsf4vVzYH/Cy5YZz/gniGM4M=
+			tR4g5RA/l9UNh+W1hN+2LrI/kHBrm8A0D9Ll5v/RbaA=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w/orY4WEaIE8q0fYcsrNsutMNCblBKNyKtF1xPVS6WU=
+			1ZYN2wAI1cwdsFUses99k2x1EZ0KMDBW4aUdvEdK/es=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
