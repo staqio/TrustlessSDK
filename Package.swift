@@ -11,9 +11,21 @@ let package = Package(
     products: [
         .library(
             name: "TrustlessSDK",
-            targets: ["TrustlessSDK"]),
+            targets: ["TrustlessSDKTarget"]),
     ],
     targets: [
-        .binaryTarget(name: "TrustlessSDK", path: "./Sources/TrustlessSDK.xcframework"),
+        .binaryTarget(
+            name: "TrustlessSDK",
+            path: "./Sources/TrustlessSDK.xcframework"
+        ),
+        .target(
+            name: "TrustlessSDKTarget",
+            dependencies: [
+                .target(name: "TrustlessSDK")
+            ],
+            path: "Sources/TrustlessSDKTarget",
+            sources: ["TrustlessSDKEmpty.m"],
+            publicHeadersPath: "Sources"
+        )
     ]
 )
