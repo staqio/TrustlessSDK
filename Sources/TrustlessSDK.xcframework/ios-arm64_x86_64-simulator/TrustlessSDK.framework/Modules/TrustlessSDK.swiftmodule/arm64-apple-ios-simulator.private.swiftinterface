@@ -407,7 +407,7 @@ public struct KYCCityValue : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TrustlessConfig {
-  public init(clientKeys: TrustlessSDK.ClientKeys, certificate: TrustlessSDK.ClientCertificate, baseUrl: Foundation.URL, isScreenRecordingDisabled: Swift.Bool = false, biometryMessage: Swift.String = "Authenticate with biometry or passcode to continue.")
+  public init(clientKeys: TrustlessSDK.ClientKeys, certificate: TrustlessSDK.ClientCertificate, baseUrl: Foundation.URL, isScreenRecordingDisabled: Swift.Bool = false, biometryMessage: Swift.String = "Authenticate with biometry or passcode to continue.", globalHeaders: [Swift.String : Swift.String] = [:])
 }
 public protocol NusukProvider {
   func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
@@ -674,6 +674,7 @@ public let TrustlessSDK: TrustlessSDK.TrustlessSDKFramework
     set
   }
   final public func initialize(with config: TrustlessSDK.TrustlessConfig)
+  final public func setGlobalHeaders(_ headers: [Swift.String : Swift.String])
   final public func setDelegate(_ delegate: any TrustlessSDK.TrustlessSDKDelegate)
   @objc deinit
 }

@@ -19366,7 +19366,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(clientKeys:certificate:baseUrl:isScreenRecordingDisabled:biometryMessage:)",
+            "printedName": "init(clientKeys:certificate:baseUrl:isScreenRecordingDisabled:biometryMessage:globalHeaders:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -19405,11 +19405,32 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK0A6ConfigV10clientKeys11certificate7baseUrl25isScreenRecordingDisabled15biometryMessageAcA06ClientE0V_AA0O11CertificateV10Foundation3URLVSbSStcfc",
-            "mangledName": "$s12TrustlessSDK0A6ConfigV10clientKeys11certificate7baseUrl25isScreenRecordingDisabled15biometryMessageAcA06ClientE0V_AA0O11CertificateV10Foundation3URLVSbSStcfc",
+            "usr": "s:12TrustlessSDK0A6ConfigV10clientKeys11certificate7baseUrl25isScreenRecordingDisabled15biometryMessage13globalHeadersAcA06ClientE0V_AA0Q11CertificateV10Foundation3URLVSbSSSDyS2SGtcfc",
+            "mangledName": "$s12TrustlessSDK0A6ConfigV10clientKeys11certificate7baseUrl25isScreenRecordingDisabled15biometryMessage13globalHeadersAcA06ClientE0V_AA0Q11CertificateV10Foundation3URLVSbSSSDyS2SGtcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl",
@@ -31597,6 +31618,47 @@
               "Final",
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setGlobalHeaders",
+            "printedName": "setGlobalHeaders(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK0A12SDKFrameworkC16setGlobalHeadersyySDyS2SGF",
+            "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC16setGlobalHeadersyySDyS2SGF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -58592,16 +58654,23 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1277,
+      "offset": 1330,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "StringLiteral",
-      "offset": 1318,
+      "offset": 1371,
       "length": 53,
       "value": "\"Authenticate with biometry or passcode to continue.\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
+      "kind": "Dictionary",
+      "offset": 1468,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/IdentityProviderImp.swift",
@@ -58893,56 +58962,56 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2242,
+      "offset": 2411,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2268,
+      "offset": 2437,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2294,
+      "offset": 2463,
       "length": 5,
       "value": "\"PUT\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2322,
+      "offset": 2491,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2352,
+      "offset": 2521,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3270,
+      "offset": 3439,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3313,
+      "offset": 3482,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/API\/TrustlessRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3358,
+      "offset": 3527,
       "length": 17,
       "value": "\"Idempotency-key\""
     },
