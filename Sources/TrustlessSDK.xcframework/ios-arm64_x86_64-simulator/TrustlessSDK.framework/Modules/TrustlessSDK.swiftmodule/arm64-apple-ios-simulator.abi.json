@@ -8364,6 +8364,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "KYCBooleanField",
         "printedName": "KYCBooleanField",
@@ -13855,6 +13865,85 @@
             "declKind": "Func",
             "usr": "s:12TrustlessSDK16AccountsProviderP14getTopUpStatus7orderId10completionyycSS_ys6ResultOyAA07AccountfgH0VAA0A5ErrorOGctF",
             "mangledName": "$s12TrustlessSDK16AccountsProviderP14getTopUpStatus7orderId10completionyycSS_ys6ResultOyAA07AccountfgH0VAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.AccountsProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.AccountsProvider>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendApplePayTopUpRequest",
+            "printedName": "sendApplePayTopUpRequest(_:params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AccountApplePayTopUpParams",
+                "printedName": "TrustlessSDK.AccountApplePayTopUpParams",
+                "usr": "s:12TrustlessSDK26AccountApplePayTopUpParamsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK16AccountsProviderP24sendApplePayTopUpRequest_6params10completionyycSS_AA07AccountfghI6ParamsVys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK16AccountsProviderP24sendApplePayTopUpRequest_6params10completionyycSS_AA07AccountfghI6ParamsVys6ResultOyytAA0A5ErrorOGctF",
             "moduleName": "TrustlessSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.AccountsProvider>",
             "sugared_genericSig": "<Self where Self : TrustlessSDK.AccountsProvider>",
@@ -30043,6 +30132,16 @@
             "usr": "s:SQ",
             "mangledName": "$sSQ"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -56232,6 +56331,101 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "AccountApplePayTopUpParams",
+        "printedName": "AccountApplePayTopUpParams",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(amount:currency:paymentToken:walletProvider:idempotencyKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccountApplePayTopUpParams",
+                "printedName": "TrustlessSDK.AccountApplePayTopUpParams",
+                "usr": "s:12TrustlessSDK26AccountApplePayTopUpParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK26AccountApplePayTopUpParamsV6amount8currency12paymentToken14walletProvider14idempotencyKeyACSd_S4Stcfc",
+            "mangledName": "$s12TrustlessSDK26AccountApplePayTopUpParamsV6amount8currency12paymentToken14walletProvider14idempotencyKeyACSd_S4Stcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK26AccountApplePayTopUpParamsV",
+        "mangledName": "$s12TrustlessSDK26AccountApplePayTopUpParamsV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
@@ -58001,6 +58195,83 @@
       "value": "\"Otp\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 931,
+      "length": 20,
+      "value": "\"DestinationOfFunds\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 981,
+      "length": 15,
+      "value": "\"SourceOfFunds\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 1018,
+      "length": 7,
+      "value": "\"Order\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 1129,
+      "length": 6,
+      "value": "\"CARD\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 1242,
+      "length": 6,
+      "value": "\"Type\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 1273,
+      "length": 6,
+      "value": "\"Card\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 1459,
+      "length": 15,
+      "value": "\"DevicePayment\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 1641,
+      "length": 14,
+      "value": "\"PaymentToken\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 2084,
+      "length": 8,
+      "value": "\"Amount\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 2121,
+      "length": 10,
+      "value": "\"Currency\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
+      "kind": "StringLiteral",
+      "offset": 2166,
+      "length": 16,
+      "value": "\"WalletProvider\""
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/TransfersProvider\/Responses\/CliQPurposeCode.swift",
       "kind": "StringLiteral",
       "offset": 298,
@@ -59520,6 +59791,27 @@
       "value": "\"client_id\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpDestinationOfFunds.swift",
+      "kind": "StringLiteral",
+      "offset": 196,
+      "length": 9,
+      "value": "\"ACCOUNT\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpDestinationOfFunds.swift",
+      "kind": "StringLiteral",
+      "offset": 302,
+      "length": 6,
+      "value": "\"Type\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpDestinationOfFunds.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 9,
+      "value": "\"Account\""
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Responses\/DeviceLoggingBody.swift",
       "kind": "StringLiteral",
       "offset": 203,
@@ -59543,126 +59835,105 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 374,
+      "offset": 386,
       "length": 20,
       "value": "\"DestinationOfFunds\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 424,
+      "offset": 436,
       "length": 15,
       "value": "\"SourceOfFunds\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 461,
+      "offset": 473,
       "length": 7,
       "value": "\"Order\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 491,
+      "offset": 503,
       "length": 8,
       "value": "\"Device\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 600,
-      "length": 9,
-      "value": "\"ACCOUNT\""
-    },
-    {
-      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
-      "kind": "StringLiteral",
-      "offset": 722,
-      "length": 6,
-      "value": "\"Type\""
-    },
-    {
-      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
-      "kind": "StringLiteral",
-      "offset": 762,
-      "length": 9,
-      "value": "\"Account\""
-    },
-    {
-      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
-      "kind": "StringLiteral",
-      "offset": 850,
+      "offset": 607,
       "length": 6,
       "value": "\"CARD\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 971,
+      "offset": 728,
       "length": 6,
       "value": "\"Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1002,
+      "offset": 759,
       "length": 6,
       "value": "\"Card\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1235,
+      "offset": 992,
       "length": 11,
       "value": "\"SessionId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1273,
+      "offset": 1030,
       "length": 8,
       "value": "\"Secret\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1304,
+      "offset": 1061,
       "length": 4,
       "value": "\"Iv\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1649,
+      "offset": 1406,
       "length": 8,
       "value": "\"Amount\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1443,
       "length": 10,
       "value": "\"Currency\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1943,
+      "offset": 1700,
       "length": 9,
       "value": "\"Browser\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 1987,
+      "offset": 1744,
       "length": 16,
       "value": "\"BrowserDetails\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountTopUpBody.swift",
       "kind": "StringLiteral",
-      "offset": 2033,
+      "offset": 1790,
       "length": 11,
       "value": "\"IpAddress\""
     },
@@ -60960,6 +61231,13 @@
       "offset": 808,
       "length": 13,
       "value": "\"PhoneNumber\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpParams.swift",
+      "kind": "StringLiteral",
+      "offset": 1774,
+      "length": 11,
+      "value": "\"APPLE_PAY\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/IdentityProvider\/Responses\/AppToken.swift",

@@ -308,6 +308,7 @@ public protocol AccountsProvider {
   func createAccountTransactionsPaginator(_ accountNumber: Swift.String, pageSize: Swift.Int?, params: TrustlessSDK.GetAccountTransactionsParams?) -> TrustlessSDK.Paginator<TrustlessSDK.AccountTransaction>
   func sendTopUpRequest(_ accountNumber: Swift.String, params: TrustlessSDK.AccountTopUpParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountTopUpResponse>) -> TrustlessSDK.CancelCallback
   func getTopUpStatus(orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountTopUpStatus>) -> TrustlessSDK.CancelCallback
+  func sendApplePayTopUpRequest(_ accountNumber: Swift.String, params: TrustlessSDK.AccountApplePayTopUpParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
 }
 public struct CreateCliQTransferParams {
   public init(customerAccount: Swift.String, beneficiaryAliasType: TrustlessSDK.CliQAliasType, beneficiaryAlias: Swift.String, amount: Swift.Double, purposeCode: Swift.String, currencyCode: Swift.String, transferNote: Swift.String? = nil)
@@ -1202,6 +1203,9 @@ public struct UserProfile : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public typealias CancelCallback = () -> Swift.Void
+public struct AccountApplePayTopUpParams {
+  public init(amount: Swift.Double, currency: Swift.String, paymentToken: Swift.String, walletProvider: Swift.String = "APPLE_PAY", idempotencyKey: Swift.String = UUID().uuidString)
+}
 public protocol KYCProvider {
   var isKycFinished: Swift.Bool { get }
   func getStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
