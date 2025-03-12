@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-4.2 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-4.2 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TrustlessSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import Combine
@@ -745,6 +745,7 @@ public struct KYCStatus : Swift.Codable {
   public var passportExpiryDate: Swift.String?
   public var passportIssueDate: Swift.String?
   public var kycType: TrustlessSDK.KYCStatus.KYCType
+  public var edaatInvoiceNumber: Swift.String?
   public var idType: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
