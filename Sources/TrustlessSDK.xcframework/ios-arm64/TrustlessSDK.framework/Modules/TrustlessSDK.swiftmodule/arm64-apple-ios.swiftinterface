@@ -745,6 +745,7 @@ public struct KYCStatus : Swift.Codable {
   public var passportExpiryDate: Swift.String?
   public var passportIssueDate: Swift.String?
   public var kycType: TrustlessSDK.KYCStatus.KYCType
+  public var edaatInvoiceNumber: Swift.String?
   public var idType: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
