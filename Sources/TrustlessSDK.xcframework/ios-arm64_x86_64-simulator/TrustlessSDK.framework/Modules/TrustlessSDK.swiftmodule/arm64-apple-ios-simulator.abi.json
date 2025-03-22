@@ -19711,7 +19711,7 @@
           {
             "kind": "Function",
             "name": "getWallet",
-            "printedName": "getWallet(_:)",
+            "printedName": "getWallet(forUsername:completion:)",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -19729,6 +19729,12 @@
                     "printedName": "()"
                   }
                 ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeFunc",
@@ -19772,8 +19778,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12TrustlessSDK13NusukProviderP9getWalletyyycys6ResultOyAA7AccountVSgAA0A5ErrorOGcF",
-            "mangledName": "$s12TrustlessSDK13NusukProviderP9getWalletyyycys6ResultOyAA7AccountVSgAA0A5ErrorOGcF",
+            "usr": "s:12TrustlessSDK13NusukProviderP9getWallet11forUsername10completionyycSS_ys6ResultOyAA7AccountVSgAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP9getWallet11forUsername10completionyycSS_ys6ResultOyAA7AccountVSgAA0A5ErrorOGctF",
             "moduleName": "TrustlessSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
             "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
@@ -19787,7 +19793,7 @@
           {
             "kind": "Function",
             "name": "getWallet",
-            "printedName": "getWallet()",
+            "printedName": "getWallet(forUsername:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -19802,11 +19808,17 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:12TrustlessSDK13NusukProviderP9getWalletAA7AccountVSgyYaKF",
-            "mangledName": "$s12TrustlessSDK13NusukProviderP9getWalletAA7AccountVSgyYaKF",
+            "usr": "s:12TrustlessSDK13NusukProviderP9getWallet11forUsernameAA7AccountVSgSS_tYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP9getWallet11forUsernameAA7AccountVSgSS_tYaKF",
             "moduleName": "TrustlessSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
             "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",

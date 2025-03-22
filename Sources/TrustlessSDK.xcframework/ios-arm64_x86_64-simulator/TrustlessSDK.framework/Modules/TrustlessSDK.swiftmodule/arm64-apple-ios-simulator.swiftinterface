@@ -413,8 +413,8 @@ public struct TrustlessConfig {
 public protocol NusukProvider {
   func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
   func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String) async throws
-  func getWallet(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
-  func getWallet() async throws -> TrustlessSDK.Account?
+  func getWallet(forUsername username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
+  func getWallet(forUsername username: Swift.String) async throws -> TrustlessSDK.Account?
   func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatePaymentOrderResponse>) -> TrustlessSDK.CancelCallback
   func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams) async throws -> TrustlessSDK.CreatePaymentOrderResponse
   func getPaymentOrderDetails(_ orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.PaymentOrderDetails>) -> TrustlessSDK.CancelCallback
