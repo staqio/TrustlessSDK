@@ -174,6 +174,50 @@ public struct LocalRequestResponse : Swift.Decodable {
   public var otp: Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct NusukWithdrawRequestResponse : Swift.Decodable {
+  public let transferId: Swift.Int
+  public let paymentAmount: Swift.Double
+  public let paymentCurrency: Swift.String
+  public let transferAmount: Swift.Double
+  public let transferCurrency: Swift.String
+  public let exchangeRate: Swift.Double
+  public let timestamp: Swift.String
+  public let type: Swift.String
+  public let transferType: Swift.String
+  public let beneficiary: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary
+  public let purpose: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose
+  public let status: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus
+  public init(transferId: Swift.Int, paymentAmount: Swift.Double, paymentCurrency: Swift.String, transferAmount: Swift.Double, transferCurrency: Swift.String, exchangeRate: Swift.Double, timestamp: Swift.String, type: Swift.String, transferType: Swift.String, beneficiary: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary, purpose: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose, status: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus)
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TrustlessSDK.NusukWithdrawRequestResponse {
+  public struct NusukWithdrawBeneficiary : Swift.Decodable {
+    public let type: Swift.String
+    public let account: Swift.String
+    public let bankCode: Swift.String
+    public let name: Swift.String
+    public let phone: Swift.String
+    public let address: Swift.String
+    public init(type: Swift.String, account: Swift.String, bankCode: Swift.String, name: Swift.String, phone: Swift.String, address: Swift.String)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct NusukWithdrawPurpose : Swift.Decodable {
+    public let code: Swift.String
+    public let descriptionArabic: Swift.String
+    public let descriptionEnglish: Swift.String
+    public init(code: Swift.String, descriptionArabic: Swift.String, descriptionEnglish: Swift.String)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct NusukWithdrawStatus : Swift.Decodable {
+    public let id: Swift.Int
+    public let name: Swift.String
+    public let code: Swift.String
+    public let label: Swift.String
+    public let labelAr: Swift.String
+    public init(id: Swift.Int, name: Swift.String, code: Swift.String, label: Swift.String, labelAr: Swift.String)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCBooleanField : TrustlessSDK.KYCGenericField<Swift.Bool> {
   public var webviewUrl: Swift.String? {
     get
@@ -419,6 +463,10 @@ public protocol NusukProvider {
   func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams) async throws -> TrustlessSDK.CreatePaymentOrderResponse
   func getPaymentOrderDetails(_ orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.PaymentOrderDetails>) -> TrustlessSDK.CancelCallback
   func getPaymentOrderDetails(_ orderId: Swift.String) async throws -> TrustlessSDK.PaymentOrderDetails
+  func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
+  func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
+  func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
+  func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
 }
 public struct CreateUserParams {
   public init(email: Swift.String, username: Swift.String, password: Swift.String, firstName: Swift.String, lastName: Swift.String, phoneNumber: Swift.String)
@@ -600,6 +648,7 @@ public enum TrustlessError : Swift.Error {
   case sessionInvalidated
   case server(code: Swift.String, message: Swift.String)
   case invalidServerResponse(error: (any Swift.Error)?)
+  case invalidEmptyServerResponse
   case timeout
   case canceled
   case unexpected
@@ -747,6 +796,7 @@ public struct KYCStatus : Swift.Codable {
   public var kycType: TrustlessSDK.KYCStatus.KYCType
   public var edaatInvoiceNumber: Swift.String?
   public var idType: Swift.String
+  public var fundOutAvailable: Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1021,6 +1071,28 @@ public struct AccountTransaction : Swift.Decodable {
   public var transactionCurrency: Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct NusukWithdrawRequestParam {
+  public let idempotencyKey: Swift.String
+  public let customerAccount: Swift.String
+  public let amount: Swift.Double
+  public let currencyCode: Swift.String
+  public let purposeCode: Swift.String
+  public let beneficiary: TrustlessSDK.NusukWithdrawRequestParam.NusukWithdrawRequestBeneficiary
+  public init(idempotencyKey: Swift.String, customerAccount: Swift.String, amount: Swift.Double, currencyCode: Swift.String, purposeCode: Swift.String, beneficiary: TrustlessSDK.NusukWithdrawRequestParam.NusukWithdrawRequestBeneficiary)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension TrustlessSDK.NusukWithdrawRequestParam {
+  public struct NusukWithdrawRequestBeneficiary : Swift.Encodable {
+    public let name: Swift.String
+    public let account: Swift.String
+    public let bank: Swift.String
+    public let address: Swift.String
+    public let type: Swift.String
+    public let country: Swift.String
+    public init(name: Swift.String, account: Swift.String, bank: Swift.String, address: Swift.String, type: Swift.String, country: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+}
 public typealias ResultValue<Value> = Swift.Result<Value, TrustlessSDK.TrustlessError>
 public typealias ResultCallback<Value> = (TrustlessSDK.ResultValue<Value>) -> Swift.Void
 public struct PaymentOrderSupplier : Swift.Codable {
@@ -1282,6 +1354,7 @@ extension TrustlessSDK.KYCFieldType : Swift.Hashable {}
 extension TrustlessSDK.KYCFieldSourceType : Swift.Equatable {}
 extension TrustlessSDK.KYCFieldSourceType : Swift.Hashable {}
 extension TrustlessSDK.KYCFieldSourceType : Swift.RawRepresentable {}
+extension TrustlessSDK.NusukWithdrawRequestParam : Swift.Encodable {}
 extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.Equatable {}
 extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.Hashable {}
 extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.RawRepresentable {}

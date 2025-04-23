@@ -8364,6 +8364,1655 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "NusukWithdrawRequestResponse",
+        "printedName": "NusukWithdrawRequestResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "transferId",
+            "printedName": "transferId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV10transferIdSivp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV10transferIdSivp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV10transferIdSivg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV10transferIdSivg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "paymentAmount",
+            "printedName": "paymentAmount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV13paymentAmountSdvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV13paymentAmountSdvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV13paymentAmountSdvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV13paymentAmountSdvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "paymentCurrency",
+            "printedName": "paymentCurrency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV15paymentCurrencySSvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV15paymentCurrencySSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV15paymentCurrencySSvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV15paymentCurrencySSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferAmount",
+            "printedName": "transferAmount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV14transferAmountSdvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV14transferAmountSdvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV14transferAmountSdvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV14transferAmountSdvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferCurrency",
+            "printedName": "transferCurrency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV16transferCurrencySSvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV16transferCurrencySSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV16transferCurrencySSvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV16transferCurrencySSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "exchangeRate",
+            "printedName": "exchangeRate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV12exchangeRateSdvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV12exchangeRateSdvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV12exchangeRateSdvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV12exchangeRateSdvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV9timestampSSvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV9timestampSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV9timestampSSvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV9timestampSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV4typeSSvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV4typeSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV4typeSSvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV4typeSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferType",
+            "printedName": "transferType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV12transferTypeSSvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV12transferTypeSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV12transferTypeSSvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV12transferTypeSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "beneficiary",
+            "printedName": "beneficiary",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawBeneficiary",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV11beneficiaryAC0cD11BeneficiaryVvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV11beneficiaryAC0cD11BeneficiaryVvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawBeneficiary",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV11beneficiaryAC0cD11BeneficiaryVvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV11beneficiaryAC0cD11BeneficiaryVvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "purpose",
+            "printedName": "purpose",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawPurpose",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV7purposeAC0cD7PurposeVvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV7purposeAC0cD7PurposeVvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawPurpose",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV7purposeAC0cD7PurposeVvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV7purposeAC0cD7PurposeVvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawStatus",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV6statusAC0cD6StatusVvp",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV6statusAC0cD6StatusVvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawStatus",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV6statusAC0cD6StatusVvg",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV6statusAC0cD6StatusVvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(transferId:paymentAmount:paymentCurrency:transferAmount:transferCurrency:exchangeRate:timestamp:type:transferType:beneficiary:purpose:status:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestResponse",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawBeneficiary",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawPurpose",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawStatus",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV10transferId13paymentAmount0I8Currency0gJ00gK012exchangeRate9timestamp4type0G4Type11beneficiary7purpose6statusACSi_SdSSSdSSSdS3SAC0cD11BeneficiaryVAC0cD7PurposeVAC0cD6StatusVtcfc",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV10transferId13paymentAmount0I8Currency0gJ00gK012exchangeRate9timestamp4type0G4Type11beneficiary7purpose6statusACSi_SdSSSdSSSdS3SAC0cD11BeneficiaryVAC0cD7PurposeVAC0cD6StatusVtcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestResponse",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NusukWithdrawBeneficiary",
+            "printedName": "NusukWithdrawBeneficiary",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "type",
+                "printedName": "type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4typeSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4typeSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4typeSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4typeSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "account",
+                "printedName": "account",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7accountSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7accountSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7accountSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7accountSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "bankCode",
+                "printedName": "bankCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV8bankCodeSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV8bankCodeSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV8bankCodeSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV8bankCodeSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "name",
+                "printedName": "name",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4nameSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4nameSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4nameSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4nameSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "phone",
+                "printedName": "phone",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV5phoneSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV5phoneSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV5phoneSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV5phoneSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "address",
+                "printedName": "address",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7addressSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7addressSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7addressSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV7addressSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(type:account:bankCode:name:phone:address:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawBeneficiary",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4type7account8bankCode4name5phone7addressAESS_S5Stcfc",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4type7account8bankCode4name5phone7addressAESS_S5Stcfc",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawBeneficiary",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD11BeneficiaryV",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NusukWithdrawPurpose",
+            "printedName": "NusukWithdrawPurpose",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "code",
+                "printedName": "code",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4codeSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4codeSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4codeSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4codeSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "descriptionArabic",
+                "printedName": "descriptionArabic",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV17descriptionArabicSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV17descriptionArabicSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV17descriptionArabicSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV17descriptionArabicSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "descriptionEnglish",
+                "printedName": "descriptionEnglish",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV18descriptionEnglishSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV18descriptionEnglishSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV18descriptionEnglishSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV18descriptionEnglishSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(code:descriptionArabic:descriptionEnglish:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawPurpose",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4code17descriptionArabic0I7EnglishAESS_S2Stcfc",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4code17descriptionArabic0I7EnglishAESS_S2Stcfc",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawPurpose",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD7PurposeV",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NusukWithdrawStatus",
+            "printedName": "NusukWithdrawStatus",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "id",
+                "printedName": "id",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV2idSivp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV2idSivp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV2idSivg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV2idSivg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "name",
+                "printedName": "name",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4nameSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4nameSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4nameSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4nameSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "code",
+                "printedName": "code",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4codeSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4codeSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4codeSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4codeSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "label",
+                "printedName": "label",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV5labelSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV5labelSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV5labelSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV5labelSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "labelAr",
+                "printedName": "labelAr",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV7labelArSSvp",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV7labelArSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV7labelArSSvg",
+                    "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV7labelArSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(id:name:code:label:labelAr:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawStatus",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV2id4name4code5label0K2ArAESi_S4Stcfc",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV2id4name4code5label0K2ArAESi_S4Stcfc",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawStatus",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus",
+                    "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV",
+            "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV0cD6StatusV",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV",
+        "mangledName": "$s12TrustlessSDK28NusukWithdrawRequestResponseV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -9976,6 +11625,16 @@
         "printedName": "CommonCrypto",
         "declKind": "Import",
         "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -20035,6 +21694,218 @@
             "throwing": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendWithdrawalRequest",
+            "printedName": "sendWithdrawalRequest(params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestParam",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestParam",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TrustlessSDK.NusukWithdrawRequestResponse, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TrustlessSDK.NusukWithdrawRequestResponse, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukWithdrawRequestResponse",
+                        "printedName": "TrustlessSDK.NusukWithdrawRequestResponse",
+                        "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderP21sendWithdrawalRequest6params10completionyycAA0c8WithdrawG5ParamV_ys6ResultOyAA0cjG8ResponseVAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP21sendWithdrawalRequest6params10completionyycAA0c8WithdrawG5ParamV_ys6ResultOyAA0cjG8ResponseVAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendWithdrawalRequest",
+            "printedName": "sendWithdrawalRequest(params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestResponse",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestParam",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestParam",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderP21sendWithdrawalRequest6paramsAA0c8WithdrawG8ResponseVAA0ciG5ParamV_tYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP21sendWithdrawalRequest6paramsAA0c8WithdrawG8ResponseVAA0ciG5ParamV_tYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmWithdrawalRequest",
+            "printedName": "confirmWithdrawalRequest(transferId:otp:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TrustlessSDK.NusukWithdrawRequestResponse, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TrustlessSDK.NusukWithdrawRequestResponse, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukWithdrawRequestResponse",
+                        "printedName": "TrustlessSDK.NusukWithdrawRequestResponse",
+                        "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderP24confirmWithdrawalRequest10transferId3otp10completionyycSi_SSys6ResultOyAA0c8WithdrawG8ResponseVAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP24confirmWithdrawalRequest10transferId3otp10completionyycSi_SSys6ResultOyAA0c8WithdrawG8ResponseVAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmWithdrawalRequest",
+            "printedName": "confirmWithdrawalRequest(transferId:otp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestResponse",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestResponse",
+                "usr": "s:12TrustlessSDK28NusukWithdrawRequestResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderP24confirmWithdrawalRequest10transferId3otpAA0c8WithdrawG8ResponseVSi_SStYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP24confirmWithdrawalRequest10transferId3otpAA0c8WithdrawG8ResponseVSi_SStYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -29413,6 +31284,43 @@
           },
           {
             "kind": "Var",
+            "name": "invalidEmptyServerResponse",
+            "printedName": "invalidEmptyServerResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.TrustlessError.Type) -> TrustlessSDK.TrustlessError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrustlessError",
+                    "printedName": "TrustlessSDK.TrustlessError",
+                    "usr": "s:12TrustlessSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.TrustlessError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK0A5ErrorO26invalidEmptyServerResponseyA2CmF",
+            "mangledName": "$s12TrustlessSDK0A5ErrorO26invalidEmptyServerResponseyA2CmF",
+            "moduleName": "TrustlessSDK"
+          },
+          {
+            "kind": "Var",
             "name": "timeout",
             "printedName": "timeout",
             "children": [
@@ -35864,6 +37772,91 @@
                 "declKind": "Accessor",
                 "usr": "s:12TrustlessSDK9KYCStatusV6idTypeSSvM",
                 "mangledName": "$s12TrustlessSDK9KYCStatusV6idTypeSSvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fundOutAvailable",
+            "printedName": "fundOutAvailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK9KYCStatusV16fundOutAvailableSbvp",
+            "mangledName": "$s12TrustlessSDK9KYCStatusV16fundOutAvailableSbvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9KYCStatusV16fundOutAvailableSbvg",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV16fundOutAvailableSbvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9KYCStatusV16fundOutAvailableSbvs",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV16fundOutAvailableSbvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK9KYCStatusV16fundOutAvailableSbvM",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV16fundOutAvailableSbvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -48229,6 +50222,783 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "NusukWithdrawRequestParam",
+        "printedName": "NusukWithdrawRequestParam",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "idempotencyKey",
+            "printedName": "idempotencyKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV14idempotencyKeySSvp",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV14idempotencyKeySSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV14idempotencyKeySSvg",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV14idempotencyKeySSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customerAccount",
+            "printedName": "customerAccount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV15customerAccountSSvp",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV15customerAccountSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV15customerAccountSSvg",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV15customerAccountSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "amount",
+            "printedName": "amount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV6amountSdvp",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV6amountSdvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV6amountSdvg",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV6amountSdvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currencyCode",
+            "printedName": "currencyCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV12currencyCodeSSvp",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV12currencyCodeSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV12currencyCodeSSvg",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV12currencyCodeSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "purposeCode",
+            "printedName": "purposeCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV11purposeCodeSSvp",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV11purposeCodeSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV11purposeCodeSSvg",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV11purposeCodeSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "beneficiary",
+            "printedName": "beneficiary",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestBeneficiary",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestParam.NusukWithdrawRequestBeneficiary",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV11beneficiaryAC0cdE11BeneficiaryVvp",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV11beneficiaryAC0cdE11BeneficiaryVvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawRequestBeneficiary",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestParam.NusukWithdrawRequestBeneficiary",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV11beneficiaryAC0cdE11BeneficiaryVvg",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV11beneficiaryAC0cdE11BeneficiaryVvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(idempotencyKey:customerAccount:amount:currencyCode:purposeCode:beneficiary:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestParam",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestParam",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukWithdrawRequestBeneficiary",
+                "printedName": "TrustlessSDK.NusukWithdrawRequestParam.NusukWithdrawRequestBeneficiary",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV14idempotencyKey15customerAccount6amount12currencyCode07purposeM011beneficiaryACSS_SSSdS2SAC0cdE11BeneficiaryVtcfc",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV14idempotencyKey15customerAccount6amount12currencyCode07purposeM011beneficiaryACSS_SSSdS2SAC0cdE11BeneficiaryVtcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NusukWithdrawRequestBeneficiary",
+            "printedName": "NusukWithdrawRequestBeneficiary",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "name",
+                "printedName": "name",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4nameSSvp",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4nameSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4nameSSvg",
+                    "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4nameSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "account",
+                "printedName": "account",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7accountSSvp",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7accountSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7accountSSvg",
+                    "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7accountSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "bank",
+                "printedName": "bank",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4bankSSvp",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4bankSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4bankSSvg",
+                    "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4bankSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "address",
+                "printedName": "address",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7addressSSvp",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7addressSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7addressSSvg",
+                    "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7addressSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "type",
+                "printedName": "type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4typeSSvp",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4typeSSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4typeSSvg",
+                    "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4typeSSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "country",
+                "printedName": "country",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7countrySSvp",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7countrySSvp",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7countrySSvg",
+                    "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV7countrySSvg",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(name:account:bank:address:type:country:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukWithdrawRequestBeneficiary",
+                    "printedName": "TrustlessSDK.NusukWithdrawRequestParam.NusukWithdrawRequestBeneficiary",
+                    "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4name7account4bank7address4type7countryAESS_S5Stcfc",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV4name7account4bank7address4type7countryAESS_S5Stcfc",
+                "moduleName": "TrustlessSDK",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV6encode2toys7Encoder_p_tKF",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV",
+            "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV0cdE11BeneficiaryV",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK25NusukWithdrawRequestParamV",
+        "mangledName": "$s12TrustlessSDK25NusukWithdrawRequestParamV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -57653,6 +60423,412 @@
             "mangledName": "$sSE"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Optional",
+        "printedName": "Optional",
+        "declKind": "Enum",
+        "usr": "s:Sq",
+        "mangledName": "$sSq",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0 where τ_0_0 : ~Copyable>",
+        "sugared_genericSig": "<Wrapped where Wrapped : ~Copyable>",
+        "declAttributes": [
+          "Frozen"
+        ],
+        "isExternal": true,
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByNilLiteral",
+            "printedName": "ExpressibleByNilLiteral",
+            "usr": "s:s23ExpressibleByNilLiteralP",
+            "mangledName": "$ss23ExpressibleByNilLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "EncodableWithConfiguration",
+            "printedName": "EncodableWithConfiguration",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "EncodingConfiguration",
+                "printedName": "EncodingConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.EncodingConfiguration"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation26EncodableWithConfigurationP",
+            "mangledName": "$s10Foundation26EncodableWithConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DecodableWithConfiguration",
+            "printedName": "DecodableWithConfiguration",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "DecodingConfiguration",
+                "printedName": "DecodingConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.DecodingConfiguration"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation26DecodableWithConfigurationP",
+            "mangledName": "$s10Foundation26DecodableWithConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Gesture",
+            "printedName": "Gesture",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI7GestureP",
+            "mangledName": "$s7SwiftUI7GestureP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TableColumnContent",
+            "printedName": "TableColumnContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "TableRowValue",
+                "printedName": "TableRowValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TableRowValue"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "TableColumnSortComparator",
+                "printedName": "TableColumnSortComparator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TableColumnSortComparator"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "TableColumnBody",
+                "printedName": "TableColumnBody",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18TableColumnContentP",
+            "mangledName": "$s7SwiftUI18TableColumnContentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TabContent",
+            "printedName": "TabContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "TabValue",
+                "printedName": "TabValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TabValue"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "_IdentifiedView",
+                "printedName": "_IdentifiedView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0._IdentifiedView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0._IdentifiedView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI10TabContentP",
+            "mangledName": "$s7SwiftUI10TabContentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TableRowContent",
+            "printedName": "TableRowContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "TableRowValue",
+                "printedName": "TableRowValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TableRowValue"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "TableRowBody",
+                "printedName": "TableRowBody",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI15TableRowContentP",
+            "mangledName": "$s7SwiftUI15TableRowContentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Commands",
+            "printedName": "Commands",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI8CommandsP",
+            "mangledName": "$s7SwiftUI8CommandsP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ToolbarContent",
+            "printedName": "ToolbarContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI14ToolbarContentP",
+            "mangledName": "$s7SwiftUI14ToolbarContentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomizableToolbarContent",
+            "printedName": "CustomizableToolbarContent",
+            "usr": "s:7SwiftUI26CustomizableToolbarContentP",
+            "mangledName": "$s7SwiftUI26CustomizableToolbarContentP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -58317,6 +61493,188 @@
       "value": "\"Otp\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1591,
+      "length": 12,
+      "value": "\"TransferId\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1633,
+      "length": 15,
+      "value": "\"PaymentAmount\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1680,
+      "length": 17,
+      "value": "\"PaymentCurrency\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1728,
+      "length": 16,
+      "value": "\"TransferAmount\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1777,
+      "length": 18,
+      "value": "\"TransferCurrency\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1824,
+      "length": 14,
+      "value": "\"ExchangeRate\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1864,
+      "length": 11,
+      "value": "\"Timestamp\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1896,
+      "length": 6,
+      "value": "\"Type\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1931,
+      "length": 14,
+      "value": "\"TransferType\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1973,
+      "length": 13,
+      "value": "\"Beneficiary\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2010,
+      "length": 9,
+      "value": "\"Purpose\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2042,
+      "length": 8,
+      "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2836,
+      "length": 6,
+      "value": "\"Type\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2870,
+      "length": 9,
+      "value": "\"Account\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2908,
+      "length": 10,
+      "value": "\"BankCode\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2943,
+      "length": 6,
+      "value": "\"Name\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2975,
+      "length": 7,
+      "value": "\"Phone\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3010,
+      "length": 9,
+      "value": "\"Address\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3571,
+      "length": 6,
+      "value": "\"Code\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3615,
+      "length": 19,
+      "value": "\"DescriptionArabic\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3673,
+      "length": 20,
+      "value": "\"DescriptionEnglish\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 4310,
+      "length": 4,
+      "value": "\"Id\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 4339,
+      "length": 6,
+      "value": "\"Name\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 4370,
+      "length": 6,
+      "value": "\"Code\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 4402,
+      "length": 7,
+      "value": "\"Label\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 4437,
+      "length": 9,
+      "value": "\"LabelAr\""
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AccountsProvider\/Params\/AccountApplePayTopUpBody.swift",
       "kind": "StringLiteral",
       "offset": 931,
@@ -58546,6 +61904,13 @@
       "offset": 657,
       "length": 7,
       "value": "\"Value\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawConfirmOTP.swift",
+      "kind": "Dictionary",
+      "offset": 257,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Models\/Fields\/KYCBaseField.swift",
@@ -60251,175 +63616,182 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2056,
+      "offset": 2099,
       "length": 7,
       "value": "\"KycId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2090,
+      "offset": 2133,
       "length": 12,
       "value": "\"CustomerId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2129,
+      "offset": 2172,
       "length": 12,
       "value": "\"StatusCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2164,
+      "offset": 2207,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2197,
+      "offset": 2240,
       "length": 10,
       "value": "\"StatusAr\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2230,
+      "offset": 2273,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2264,
+      "offset": 2307,
       "length": 11,
       "value": "\"Documents\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2310,
+      "offset": 2353,
       "length": 20,
       "value": "\"PendingWalletTimer\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2359,
+      "offset": 2402,
       "length": 14,
       "value": "\"MobileNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2399,
+      "offset": 2442,
       "length": 11,
       "value": "\"FirstName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2435,
+      "offset": 2478,
       "length": 10,
       "value": "\"LastName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2471,
+      "offset": 2514,
       "length": 11,
       "value": "\"BirthDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2505,
+      "offset": 2548,
       "length": 8,
       "value": "\"Gender\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2541,
+      "offset": 2584,
       "length": 13,
       "value": "\"Nationality\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2585,
+      "offset": 2628,
       "length": 16,
       "value": "\"PassportNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2636,
+      "offset": 2679,
       "length": 20,
       "value": "\"PassportExpiryDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2690,
+      "offset": 2733,
       "length": 19,
       "value": "\"PassportIssueDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2733,
+      "offset": 2776,
       "length": 9,
       "value": "\"KycType\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2777,
+      "offset": 2820,
       "length": 20,
       "value": "\"EdaatInvoiceNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 2820,
+      "offset": 2863,
       "length": 8,
       "value": "\"IdType\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3581,
+      "offset": 2904,
+      "length": 18,
+      "value": "\"FundOutAvailable\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 3675,
       "length": 6,
       "value": "\"Name\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3616,
+      "offset": 3710,
       "length": 14,
       "value": "\"DocumentCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3655,
+      "offset": 3749,
       "length": 10,
       "value": "\"Approved\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3688,
+      "offset": 3782,
       "length": 8,
       "value": "\"Reason\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3721,
+      "offset": 3815,
       "length": 10,
       "value": "\"ReasonAr\""
     },
@@ -60809,6 +64181,83 @@
       "value": "\"TransactionCurrency\""
     },
     {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 969,
+      "length": 17,
+      "value": "\"CustomerAccount\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 1009,
+      "length": 8,
+      "value": "\"Amount\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 1046,
+      "length": 14,
+      "value": "\"CurrencyCode\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 1088,
+      "length": 13,
+      "value": "\"PurposeCode\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 1129,
+      "length": 13,
+      "value": "\"Beneficiary\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 1940,
+      "length": 6,
+      "value": "\"Name\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 1974,
+      "length": 9,
+      "value": "\"Account\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 2008,
+      "length": 6,
+      "value": "\"Bank\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 2042,
+      "length": 9,
+      "value": "\"Address\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 2076,
+      "length": 6,
+      "value": "\"Type\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukWithdrawRequestParam.swift",
+      "kind": "StringLiteral",
+      "offset": 2110,
+      "length": 9,
+      "value": "\"Country\""
+    },
+    {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/PaymentOrderSupplier.swift",
       "kind": "StringLiteral",
       "offset": 435,
@@ -61015,8 +64464,8 @@
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessContext.swift",
       "kind": "StringLiteral",
       "offset": 1119,
-      "length": 50,
-      "value": "\"identity kyc accounts cards verification cardpay\""
+      "length": 60,
+      "value": "\"identity kyc accounts cards verification cardpay transfers\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/staq-wallet-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/CardsProvider\/Responses\/Card.swift",
