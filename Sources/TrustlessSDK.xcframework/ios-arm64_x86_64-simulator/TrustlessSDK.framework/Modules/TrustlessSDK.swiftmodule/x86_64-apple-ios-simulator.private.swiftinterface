@@ -15,6 +15,126 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public struct AccountApplePayTopUpParams {
+  public init(amount: Swift.Double, currency: Swift.String, paymentToken: Swift.String, walletProvider: Swift.String = "APPLE_PAY", idempotencyKey: Swift.String = UUID().uuidString)
+}
+public struct AccountTopUpParams {
+  public var amount: Swift.Double
+  public var currency: Swift.String
+  public var card: TrustlessSDK.AccountTopUpParams.CardDetails
+  public var browser: TrustlessSDK.TopUpBrowserDetails
+  public var idempotencyKey: Swift.String
+  public init(amount: Swift.Double, currency: Swift.String, card: TrustlessSDK.AccountTopUpParams.CardDetails, browser: TrustlessSDK.TopUpBrowserDetails, idempotencyKey: Swift.String)
+}
+extension TrustlessSDK.AccountTopUpParams {
+  public struct CardDetails : Swift.Encodable {
+    public struct Expiry : Swift.Encodable {
+      public var month: Swift.String
+      public var year: Swift.String
+      public init(month: Swift.String, year: Swift.String)
+      public func encode(to encoder: any Swift.Encoder) throws
+    }
+    public var number: Swift.String
+    public var expiry: TrustlessSDK.AccountTopUpParams.CardDetails.Expiry
+    public var securityCode: Swift.Int
+    public init(number: Swift.String, expiry: TrustlessSDK.AccountTopUpParams.CardDetails.Expiry, securityCode: Swift.Int)
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+}
+public struct TopUpBrowserDetails : Swift.Encodable {
+  public enum SecureChallengeWindowSize : Swift.String, Swift.Encodable {
+    case size250x400
+    case size390x400
+    case size500x600
+    case size600x400
+    case fullScreen
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var secureChallengeWindowSize: TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize
+  public let acceptHeaders: Swift.String
+  public var colorDepth: Swift.Int
+  public var javaEnabled: Swift.Bool
+  public var javaScriptEnabled: Swift.Bool
+  public var language: TrustlessSDK.TrustlessLanguage
+  public let screenHeight: Swift.Int
+  public let screenWidth: Swift.Int
+  public let timeZone: Swift.Int
+  public init(secureChallengeWindowSize: TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize = .fullScreen, colorDepth: Swift.Int = 30, javaEnabled: Swift.Bool = false, javaScriptEnabled: Swift.Bool = true, language: TrustlessSDK.TrustlessLanguage)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct GetAccountTransactionsParams : Swift.Encodable {
+  public var dateTo: Swift.String?
+  public var dateFrom: Swift.String?
+  public init(dateTo: Foundation.Date? = nil, dateFrom: Foundation.Date? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct Account : Swift.Decodable {
+  public var branch: Swift.String?
+  public var number: Swift.String
+  public var type: Swift.String
+  public var name: Swift.String
+  public var bankName: Swift.String
+  public var customer: TrustlessSDK.AccountCustomer
+  public var currencyCode: Swift.String
+  public var noDebit: Swift.Bool
+  public var noCredit: Swift.Bool
+  public var dormant: Swift.Bool?
+  public var iban: Swift.String
+  public var swift: Swift.String
+  public var currentBalance: Swift.Double
+  public var localCurrencyCurrentBalance: Swift.Double
+  public var availableBalance: Swift.Double
+  public init(branch: Swift.String, number: Swift.String, type: Swift.String, name: Swift.String, bankName: Swift.String, customer: TrustlessSDK.AccountCustomer, currencyCode: Swift.String, noDebit: Swift.Bool, noCredit: Swift.Bool, dormant: Swift.Bool, iban: Swift.String, swift: Swift.String, currentBalance: Swift.Double, localCurrencyCurrentBalance: Swift.Double, availableBalance: Swift.Double)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AccountCustomer : Swift.Decodable {
+  public var name: Swift.String?
+  public var fullName: Swift.String?
+  public var type: Swift.String
+  public init(name: Swift.String, fullName: Swift.String, type: Swift.String)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AccountDetails : Swift.Decodable {
+  public var branch: Swift.String?
+  public var number: Swift.String
+  public var type: Swift.String
+  public var name: Swift.String
+  public var bankName: Swift.String
+  public var customer: TrustlessSDK.AccountCustomer
+  public var currencyCode: Swift.String
+  public var noDebit: Swift.Bool
+  public var noCredit: Swift.Bool
+  public var dormant: Swift.Bool
+  public var iban: Swift.String
+  public var swift: Swift.String
+  public var currentBalance: Swift.Float
+  public var localCurrencyCurrentBalance: Swift.Float
+  public var availableBalance: Swift.Double
+  public var blockedAmount: Swift.Float
+  public init(branch: Swift.String, number: Swift.String, type: Swift.String, name: Swift.String, bankName: Swift.String, customer: TrustlessSDK.AccountCustomer, currencyCode: Swift.String, noDebit: Swift.Bool, noCredit: Swift.Bool, dormant: Swift.Bool, iban: Swift.String, swift: Swift.String, currentBalance: Swift.Float, localCurrencyCurrentBalance: Swift.Float, availableBalance: Swift.Double, blockedAmount: Swift.Float)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AccountTopUpResponse : Swift.Decodable {
+  public var order: TrustlessSDK.AccountTopUpStatus.TopUpOrder
+  public var authentication: TrustlessSDK.AccountTopUpResponse.TopUpAuthentication?
+  public var result: TrustlessSDK.AccountTopUpStatus.TopUpStatus
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TrustlessSDK.AccountTopUpResponse {
+  public struct TopUpAuthentication : Swift.Decodable {
+    public var redirect: TrustlessSDK.AccountTopUpResponse.TopUpRedirect
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct TopUpRedirect : Swift.Decodable {
+    public var domainName: Swift.String
+    public var html: Swift.String
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
 public struct AccountTopUpStatus : Swift.Decodable {
   public var order: TrustlessSDK.AccountTopUpStatus.TopUpOrder
   public var result: TrustlessSDK.AccountTopUpStatus.TopUpStatus
@@ -47,73 +167,133 @@ extension TrustlessSDK.AccountTopUpStatus {
     public init(from decoder: any Swift.Decoder) throws
   }
 }
-public struct Transfer : Swift.Decodable {
-  public var transferId: Swift.Int
-  public var type: TrustlessSDK.TransferType
-  public var transferType: Swift.String
-  public var transferNote: Swift.String
-  public var timestamp: Swift.String?
-  public var status: TrustlessSDK.TransferStatus
-  public var localCurrencyAmount: Swift.Double
-  public var exchangeRate: Swift.Int
-  public var transferCurrency: Swift.String
-  public var transferAmount: Swift.Double
-  public var chargeType: TrustlessSDK.TransferChargeType
-  public var beneficiary: TrustlessSDK.TransferBeneficiary
-  public var fees: TrustlessSDK.TransferFee
-  public var requiredDocuments: TrustlessSDK.TransferRequiredDocuments
+public struct AccountTransaction : Swift.Decodable {
+  public var date: Swift.String
+  public var valueDate: Swift.String
+  public var description: Swift.String
+  public var debitCreditIndicator: Swift.String
+  public var transactionAmount: Swift.Double
+  public var transactionCurrency: Swift.String
+  public init(date: Swift.String, valueDate: Swift.String, description: Swift.String, debitCreditIndicator: Swift.String, transactionAmount: Swift.Double, transactionCurrency: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
 }
-public enum TransferType : Swift.String, Swift.Decodable {
-  case standing
-  case saved
-  case transfer
-  case goal
-  case all
+public protocol AccountsProvider {
+  func createAccount(currency: Swift.String, name: Swift.String) async throws -> TrustlessSDK.AccountDetails
+  func createAccount(currency: Swift.String, name: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountDetails>) -> TrustlessSDK.CancelCallback
+  func getAccount(_ accountNumber: Swift.String) async throws -> TrustlessSDK.AccountDetails
+  func getAccount(_ accountNumber: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountDetails>) -> TrustlessSDK.CancelCallback
+  func closeAccount(_ accountNumber: Swift.String, creditAccountNumber: Swift.String?) async throws
+  func closeAccount(_ accountNumber: Swift.String, creditAccountNumber: Swift.String?, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func createAccountsPaginator() -> TrustlessSDK.Paginator<TrustlessSDK.Account>
+  func createAccountsPaginator(pageSize: Swift.Int) -> TrustlessSDK.Paginator<TrustlessSDK.Account>
+  func createAccountTransactionsPaginator(_ accountNumber: Swift.String, params: TrustlessSDK.GetAccountTransactionsParams?) -> TrustlessSDK.Paginator<TrustlessSDK.AccountTransaction>
+  func createAccountTransactionsPaginator(_ accountNumber: Swift.String, params: TrustlessSDK.GetAccountTransactionsParams?, pageSize: Swift.Int) -> TrustlessSDK.Paginator<TrustlessSDK.AccountTransaction>
+  func sendTopUpRequest(_ accountNumber: Swift.String, params: TrustlessSDK.AccountTopUpParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountTopUpResponse>) -> TrustlessSDK.CancelCallback
+  func getTopUpStatus(orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountTopUpStatus>) -> TrustlessSDK.CancelCallback
+  func sendApplePayTopUpRequest(_ accountNumber: Swift.String, params: TrustlessSDK.AccountApplePayTopUpParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+}
+public protocol AuthenticationProvider {
+  var isPasscodeEnabled: Swift.Bool { get }
+  var isBiometryEnabled: Swift.Bool { get }
+  var isLocalAuthEnabled: Swift.Bool { get }
+  func invalidateSession(forUsername username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func invalidateSession(forUsername username: Swift.String) async throws
+  func login(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func login(username: Swift.String, password: Swift.String) async throws
+  func login2FA(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func login2FA(username: Swift.String, password: Swift.String) async throws
+  func users2FAOTP(phone: Swift.String, locale: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func users2FAOTP(phone: Swift.String, locale: Swift.String) async throws
+  func users2FA(email: Swift.String, username: Swift.String, password: Swift.String, phone: Swift.String, otp: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func users2FA(email: Swift.String, username: Swift.String, password: Swift.String, phone: Swift.String, otp: Swift.String) async throws
+  func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String) async throws
+  func logout(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func logout() async throws
+  func registerUser(with params: TrustlessSDK.CreateUserParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.RegisteredUser>) -> TrustlessSDK.CancelCallback
+  func registerUser(with params: TrustlessSDK.CreateUserParams) async throws -> TrustlessSDK.RegisteredUser
+  func getAppPassCode() -> Swift.String?
+  func getLocalAuthType() -> TrustlessSDK.LocalAuthType
+  func saveBiometryAuth(isEnabled: Swift.Bool) async throws
+  func savePasscodeAuth(code: Swift.String)
+  func canEvaluateBiometryAuth() -> TrustlessSDK.BiometryLocalAuthError?
+  func evaluateBiometryAuth(reason: Swift.String) async -> TrustlessSDK.BiometryLocalAuthError?
+  func removeLocalAuth()
+}
+public struct CardManageFundsParams {
+  public init(accountNumber: Swift.String, amount: Swift.Double, currency: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CreateCardParams {
+  public var currencyCode: Swift.String
+  public var cardHolderName: Swift.String
+  public var mobileNumber: Swift.String
+  public var deliveryDestination: Swift.String?
+  public var arrivalDateTime: Swift.String?
+  public var flightNumber: Swift.String?
+  public var creditDetails: TrustlessSDK.CardCreditDetails?
+  public init(currencyCode: Swift.String, cardHolderName: Swift.String, mobileNumber: Swift.String, deliveryDestination: Swift.String? = nil, arrivalDateTime: Swift.String? = nil, flightNumber: Swift.String? = nil, accountNumber: Swift.String? = nil, amount: Swift.Double? = 0)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CardCreditDetails : Swift.Encodable {
+  public var accountNumber: Swift.String
+  public var amount: Swift.Double
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct GetCardTransactionsParams : Swift.Codable {
+  public var dateFrom: Swift.String
+  public var dateTo: Swift.String
+  public init(dateFrom: Foundation.Date, dateTo: Foundation.Date = Date())
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CardSpendingLimitPeriod : Swift.String, Swift.Codable {
+  case daily
+  case weekly
+  case monthly
+  case annually
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
-public struct TransferStatus : Swift.Codable {
-  public var id: Swift.Int
-  public var code: Swift.String
-  public var name: Swift.String
-  public var label: Swift.String
-  public var labelAr: Swift.String
+public struct SetCardSpendingLimitParams {
+  public init(period: TrustlessSDK.CardSpendingLimitPeriod, cashLimit: Swift.Double? = nil, eCommerceLimit: Swift.Double? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct Card : Swift.Decodable {
+  public enum CardType : Swift.String, Swift.Decodable {
+    case virtual
+    case physical
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var token: Swift.String
+  public var balances: [TrustlessSDK.CardBalance]
+  public var pan: Swift.String
+  public var expiryDate: Swift.String
+  public var cardHolderName: Swift.String?
+  public var status: Swift.String
+  public var type: Swift.String
+  public var secure3DEnrolled: Swift.Bool?
+  public var cvv: Swift.String?
+  public init(token: Swift.String, balances: [TrustlessSDK.CardBalance], pan: Swift.String, expiryDate: Swift.String, cardHolderName: Swift.String? = nil, status: Swift.String, type: Swift.String, secure3DEnrolled: Swift.Bool? = nil, cvv: Swift.String? = nil)
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct TransferChargeType : Swift.Codable {
-  public var chargeTypeId: Swift.Int
-  public var chargeTypeCode: Swift.String
-  public var chargeTypeName: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TransferBeneficiary : Swift.Codable {
-  public var name: Swift.String
-  public var alias: Swift.String?
-  public var account: Swift.String
-  public var address: Swift.String
-  public var bankCode: Swift.String
-  public var bankCountry: Swift.String
-  public var type: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TransferFee : Swift.Codable {
-  public var amount: Swift.Double
-  public var currency: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TransferRequiredDocuments : Swift.Codable {
-  public var requiredDocumentCount: Swift.Int
-  public var requiredDocumentsList: [Swift.String]
-  public var requiredDocumentsListAr: [Swift.String]
-  public var isDocumentsRequired: [Swift.Bool?]
+public struct CardBalance : Swift.Codable {
+  public var currencyCode: Swift.String
+  public var currentBalance: Swift.Double
+  public var blockedBalance: Swift.Double
+  public var availableBalance: Swift.Double
+  public var number: Swift.String?
+  public var iban: Swift.String?
+  public var swift: Swift.String?
+  public var bankName: Swift.String?
+  public init(currencyCode: Swift.String, currentBalance: Swift.Double, blockedBalance: Swift.Double, availableBalance: Swift.Double, number: Swift.String? = nil, iban: Swift.String? = nil, swift: Swift.String? = nil, bankName: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -121,6 +301,77 @@ public struct CardHiddenData : Swift.Codable {
   public var token: Swift.String
   public var pan: Swift.String
   public var cvv: Swift.String?
+  public init(token: Swift.String, pan: Swift.String, cvv: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CardSpendingLimits : Swift.Codable {
+  public var daily: TrustlessSDK.CardSpendingLimitGroup
+  public var weekly: TrustlessSDK.CardSpendingLimitGroup
+  public var monthly: TrustlessSDK.CardSpendingLimitGroup
+  public var annually: TrustlessSDK.CardSpendingLimitGroup
+  public init(daily: TrustlessSDK.CardSpendingLimitGroup, weekly: TrustlessSDK.CardSpendingLimitGroup, monthly: TrustlessSDK.CardSpendingLimitGroup, annually: TrustlessSDK.CardSpendingLimitGroup)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CardSpendingLimitGroup : Swift.Codable {
+  public var cash: TrustlessSDK.CardSpendingLimit
+  public var eCommerce: TrustlessSDK.CardSpendingLimit
+  public init(cash: TrustlessSDK.CardSpendingLimit, eCommerce: TrustlessSDK.CardSpendingLimit)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CardSpendingLimit : Swift.Codable {
+  public var limit: Swift.Double
+  public var transactionCountLimit: Swift.Int
+  public var transactionAmountLimit: Swift.Double
+  public var remainingAmount: Swift.Double?
+  public var remainingCount: Swift.Int?
+  public init(limit: Swift.Double, transactionCountLimit: Swift.Int, transactionAmountLimit: Swift.Double, remainingAmount: Swift.Double? = nil, remainingCount: Swift.Int? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
+  case activated
+  case frozen
+  case closed
+  case stolen
+  case fraud
+  case lost
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [TrustlessSDK.CardStatus]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [TrustlessSDK.CardStatus] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CardTransaction : Swift.Codable {
+  public var id: Swift.String
+  public var type: Swift.String
+  public var status: Swift.String
+  public var date: Swift.String
+  public var description: Swift.String
+  public var transactionCurrency: Swift.String
+  public var transactionCurrencySymbol: Swift.String
+  public var transactionAmount: Swift.Double
+  public var cardCurrencyISO: Swift.String
+  public var cardCurrency: Swift.String
+  public var cardCurrencyAmount: Swift.Double
+  public var fees: Swift.Double
+  public var availableBalance: Swift.Double
+  public var postedAmount: Swift.Double
+  public var blockedAmount: Swift.Double
+  public var pendingAmount: Swift.Double
+  public var note: Swift.String
+  public var debitCreditIndicator: Swift.String
+  public var mcc: Swift.String?
+  public var merchantName: Swift.String?
+  public var merchantCity: Swift.String?
+  public var merchantCountry: Swift.String?
+  public init(id: Swift.String, type: Swift.String, status: Swift.String, date: Swift.String, description: Swift.String, transactionCurrency: Swift.String, transactionCurrencySymbol: Swift.String, transactionAmount: Swift.Double, cardCurrencyISO: Swift.String, cardCurrency: Swift.String, cardCurrencyAmount: Swift.Double, fees: Swift.Double, availableBalance: Swift.Double, postedAmount: Swift.Double, blockedAmount: Swift.Double, pendingAmount: Swift.Double, note: Swift.String, debitCreditIndicator: Swift.String, mcc: Swift.String? = nil, merchantName: Swift.String? = nil, merchantCity: Swift.String? = nil, merchantCountry: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -142,92 +393,85 @@ public struct NewCardSpendingLimits : Swift.Decodable {
   public var status: Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
-public enum TrustlessLocale : Swift.String, Swift.Codable {
-  case en
-  case ar
+public protocol CardsProvider {
+  func createCard(_ params: TrustlessSDK.CreateCardParams) async throws -> TrustlessSDK.Card
+  func createCard(_ params: TrustlessSDK.CreateCardParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Card>) -> TrustlessSDK.CancelCallback
+  func getCard(_ cardToken: Swift.String) async throws -> TrustlessSDK.Card
+  func getCard(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Card>) -> TrustlessSDK.CancelCallback
+  func getHiddenData(_ cardToken: Swift.String, showCVV: Swift.Bool) async throws -> TrustlessSDK.CardHiddenData
+  func getHiddenData(_ cardToken: Swift.String, showCVV: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardHiddenData>) -> TrustlessSDK.CancelCallback
+  func changeStatus(_ cardToken: Swift.String, status: TrustlessSDK.CardStatus, cardTrailer: Swift.String?) async throws
+  func changeStatus(_ cardToken: Swift.String, status: TrustlessSDK.CardStatus, cardTrailer: Swift.String?, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func changeMobileNumber(_ cardToken: Swift.String, mobileNumber: Swift.String) async throws
+  func changeMobileNumber(_ cardToken: Swift.String, mobileNumber: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func getBalance(_ cardToken: Swift.String) async throws -> [TrustlessSDK.CardBalance]
+  func getBalance(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CardBalance]>) -> TrustlessSDK.CancelCallback
+  func topUp(_ cardToken: Swift.String, params: TrustlessSDK.CardManageFundsParams) async throws -> TrustlessSDK.CardBalance
+  func topUp(_ cardToken: Swift.String, params: TrustlessSDK.CardManageFundsParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardBalance>) -> TrustlessSDK.CancelCallback
+  func withdraw(_ cardToken: Swift.String, params: TrustlessSDK.CardManageFundsParams) async throws -> TrustlessSDK.CardBalance
+  func withdraw(_ cardToken: Swift.String, params: TrustlessSDK.CardManageFundsParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardBalance>) -> TrustlessSDK.CancelCallback
+  func getLimits(_ cardToken: Swift.String) async throws -> TrustlessSDK.CardSpendingLimits
+  func getLimits(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardSpendingLimits>) -> TrustlessSDK.CancelCallback
+  func setLimits(_ cardToken: Swift.String, params: TrustlessSDK.SetCardSpendingLimitParams) async throws -> [TrustlessSDK.NewCardSpendingLimits]
+  func setLimits(_ cardToken: Swift.String, params: TrustlessSDK.SetCardSpendingLimitParams, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.NewCardSpendingLimits]>) -> TrustlessSDK.CancelCallback
+  func getCardTransactions(_ cardToken: Swift.String, params: TrustlessSDK.GetCardTransactionsParams) async throws -> [TrustlessSDK.CardTransaction]
+  func getCardTransactions(_ cardToken: Swift.String, params: TrustlessSDK.GetCardTransactionsParams, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CardTransaction]>) -> TrustlessSDK.CancelCallback
+  func createCardsPaginator(onlyActiveCards: Swift.Bool) -> TrustlessSDK.Paginator<TrustlessSDK.Card>
+  func createCardsPaginator(onlyActiveCards: Swift.Bool, pageSize: Swift.Int) -> TrustlessSDK.Paginator<TrustlessSDK.Card>
+  func getPinCode(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.String>) -> TrustlessSDK.CancelCallback
+  func getPinCode(_ cardToken: Swift.String) async throws -> Swift.String
+  func setPinCode(_ cardToken: Swift.String, pin: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func setPinCode(_ cardToken: Swift.String, pin: Swift.String) async throws
+  func getBlockedMCC(_ cardToken: Swift.String) async throws -> [Swift.String]
+  func setBlockedMCCs(_ cardToken: Swift.String, codes mccCodes: [Swift.String]) async throws -> [Swift.String]
+  func unblockAll(_ cardToken: Swift.String) async throws
+  func getAllMCC(refresh: Swift.Bool, cacheTime: Foundation.TimeInterval?) -> TrustlessSDK.Paginator<TrustlessSDK.MCC>
+  func getAllMCCCategories(refresh: Swift.Bool, cacheTime: Foundation.TimeInterval?) async throws -> [TrustlessSDK.MCCCategory]
+}
+public struct MCC : Swift.Codable {
+  public let mcc: Swift.String
+  public let mccDescription: Swift.String
+  public let merchantTypeCategory: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MCCCategory : Swift.Codable {
+  public let categoryId: Swift.Int
+  public let categoryName: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CreateCliQAliasParams {
+  public init(type: TrustlessSDK.CliQAliasType, value: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CliQAlias : Swift.Codable {
+  public var type: TrustlessSDK.CliQAliasType?
+  public var value: Swift.String?
+  public var startDate: Swift.String?
+  public var expirationDate: Swift.String?
+  public var status: Swift.String?
+  public var accounts: [TrustlessSDK.CliQAliasAccount]?
+  public init(type: TrustlessSDK.CliQAliasType? = nil, value: Swift.String? = nil, startDate: Swift.String? = nil, expirationDate: Swift.String? = nil, status: Swift.String? = nil, accounts: [TrustlessSDK.CliQAliasAccount]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CliQAliasType : Swift.String, Swift.Codable {
+  case alias
+  case mobl
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
-public struct PaymentOrderStatus : Swift.Codable {
-  public var id: Swift.String
-  public var code: Swift.String
-  public var name: Swift.String
-  public var label: Swift.String
-  public var labelAr: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCUrlField : TrustlessSDK.KYCSelectField {
-  public func setOptions(_ options: [TrustlessSDK.KYCSelectFieldValue])
-  @objc deinit
-}
-public struct GenerateOTPParams {
-  public init(locale: TrustlessSDK.OTPLocale, length: Swift.Int = 6, type: TrustlessSDK.OTPType = .numeric)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct LocalRequestResponse : Swift.Decodable {
-  public var requestId: Swift.String
-  public var transactionId: Swift.String
-  public var otp: Swift.String
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct NusukWithdrawRequestResponse : Swift.Decodable {
-  public let transferId: Swift.Int
-  public let paymentAmount: Swift.Double
-  public let paymentCurrency: Swift.String
-  public let transferAmount: Swift.Double
-  public let transferCurrency: Swift.String
-  public let exchangeRate: Swift.Double
-  public let timestamp: Swift.String
-  public let type: Swift.String
-  public let transferType: Swift.String
-  public let beneficiary: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary
-  public let purpose: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose
-  public let status: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus
-  public init(transferId: Swift.Int, paymentAmount: Swift.Double, paymentCurrency: Swift.String, transferAmount: Swift.Double, transferCurrency: Swift.String, exchangeRate: Swift.Double, timestamp: Swift.String, type: Swift.String, transferType: Swift.String, beneficiary: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary, purpose: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose, status: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus)
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension TrustlessSDK.NusukWithdrawRequestResponse {
-  public struct NusukWithdrawBeneficiary : Swift.Decodable {
-    public let type: Swift.String
-    public let account: Swift.String
-    public let bankCode: Swift.String
-    public let name: Swift.String
-    public let phone: Swift.String
-    public let address: Swift.String
-    public init(type: Swift.String, account: Swift.String, bankCode: Swift.String, name: Swift.String, phone: Swift.String, address: Swift.String)
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  public struct NusukWithdrawPurpose : Swift.Decodable {
-    public let code: Swift.String
-    public let descriptionArabic: Swift.String
-    public let descriptionEnglish: Swift.String
-    public init(code: Swift.String, descriptionArabic: Swift.String, descriptionEnglish: Swift.String)
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  public struct NusukWithdrawStatus : Swift.Decodable {
-    public let id: Swift.Int
-    public let name: Swift.String
-    public let code: Swift.String
-    public let label: Swift.String
-    public let labelAr: Swift.String
-    public init(id: Swift.Int, name: Swift.String, code: Swift.String, label: Swift.String, labelAr: Swift.String)
-    public init(from decoder: any Swift.Decoder) throws
-  }
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCBooleanField : TrustlessSDK.KYCGenericField<Swift.Bool> {
-  public var webviewUrl: Swift.String? {
-    get
-  }
-  @objc deinit
-}
-public struct CliQPurposeCode : Swift.Codable {
-  public var purposeCode: Swift.String
-  public var purposeCodeLabelAr: Swift.String
-  public var purposeCodeLabelEn: Swift.String
+public struct CliQAliasAccount : Swift.Codable {
+  public var currency: Swift.String?
+  public var openingDate: Swift.String?
+  public var closingDate: Swift.String?
+  public var iban: Swift.String?
+  public var isDefault: Swift.Bool?
+  public init(currency: Swift.String? = nil, openingDate: Swift.String? = nil, closingDate: Swift.String? = nil, iban: Swift.String? = nil, isDefault: Swift.Bool? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -235,25 +479,56 @@ public struct CreatedCliqAlias : Swift.Codable {
   public var alias: Swift.String
   public var iban: Swift.String
   public var isDefault: Swift.Bool
+  public init(alias: Swift.String, iban: Swift.String, isDefault: Swift.Bool)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct GetAccountTransactionsParams : Swift.Encodable {
-  public var dateTo: Swift.String?
-  public var dateFrom: Swift.String?
-  public init(dateTo: Foundation.Date? = nil, dateFrom: Foundation.Date? = nil)
+public protocol CliQProvider {
+  func getAliases(completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CliQAlias]>) -> TrustlessSDK.CancelCallback
+  func createAlias(for accountNumber: Swift.String, params: TrustlessSDK.CreateCliQAliasParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatedCliqAlias>) -> TrustlessSDK.CancelCallback
+  func getPurposeCodes(aliasType: TrustlessSDK.CliQAliasType, alias: Swift.String?, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CliQPurposeCode]>) -> TrustlessSDK.CancelCallback
+}
+public struct CreateUserParams {
+  public init(email: Swift.String, username: Swift.String, password: Swift.String, firstName: Swift.String, lastName: Swift.String, phoneNumber: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
 }
-public struct PaymentOrderSourceOfFunds : Swift.Codable {
-  public var customerId: Swift.String
-  public var type: Swift.String
-  public var value: Swift.String
+public struct UpdateUserParams {
+  public init(firstName: Swift.String? = nil, lastName: Swift.String? = nil, phoneNumber: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct RegisteredUser : Swift.Decodable {
+  public let id: Swift.String
+  public let username: Swift.String
+  public let email: Swift.String
+  public let firstName: Swift.String
+  public let lastName: Swift.String
+  public let phoneNumber: Swift.String
+  public init(id: Swift.String, username: Swift.String, email: Swift.String, firstName: Swift.String, lastName: Swift.String, phoneNumber: Swift.String)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct UserProfile : Swift.Codable {
+  public let username: Swift.String
+  public let email: Swift.String
+  public let firstName: Swift.String
+  public let lastName: Swift.String
+  public let phoneNumber: Swift.String
+  public init(username: Swift.String, email: Swift.String, firstName: Swift.String, lastName: Swift.String, phoneNumber: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct VerifyOTPParams {
-  public init(to: Swift.String, channel: TrustlessSDK.OTPChannel, code: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
+public protocol IdentityProvider {
+  func requestPasswordReset(email: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func requestPasswordReset(email: Swift.String) async throws
+  func confirmPasswordReset(email: Swift.String, code: Swift.String, newPassword: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func confirmPasswordReset(email: Swift.String, code: Swift.String, newPassword: Swift.String) async throws
+  func getProfile(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.UserProfile>) -> TrustlessSDK.CancelCallback
+  func getProfile() async throws -> TrustlessSDK.UserProfile
+  func updateUser(with params: TrustlessSDK.UpdateUserParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.UserProfile>) -> TrustlessSDK.CancelCallback
+  func updateUser(with params: TrustlessSDK.UpdateUserParams) async throws -> TrustlessSDK.UserProfile
+  func updatePassword(currentPassword: Swift.String, newPassword: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func updatePassword(currentPassword: Swift.String, newPassword: Swift.String) async throws
+  func logDeviceId(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func logDeviceId() async throws
 }
 @_hasMissingDesignatedInitializers public class KYCBaseField {
   final public let code: Swift.String
@@ -317,259 +592,29 @@ public struct KYCFieldValidationError : Swift.Equatable {
   public var messageAr: Swift.String
   public static func == (lhs: TrustlessSDK.KYCFieldValidationError, rhs: TrustlessSDK.KYCFieldValidationError) -> Swift.Bool
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCBooleanField : TrustlessSDK.KYCGenericField<Swift.Bool> {
+  public var webviewUrl: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCDateField : TrustlessSDK.KYCGenericField<Foundation.Date> {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCDocumentField : TrustlessSDK.KYCGenericField<TrustlessSDK.TrustlessFile> {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCGenericField<T> : TrustlessSDK.KYCBaseField {
+  public var value: T? {
+    get
+  }
+  public func putValue(_ value: T?)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCProofDocumentsField : TrustlessSDK.KYCGenericField<[TrustlessSDK.TrustlessFile]> {
   override public func putValue(_ newValue: [TrustlessSDK.TrustlessFile]?)
   public func removeFile(_ file: TrustlessSDK.TrustlessFile)
   @objc deinit
-}
-public struct PaymentOrderDetails : Swift.Codable {
-  public var orderId: Swift.String
-  public var orderType: Swift.String
-  public var createdAt: Swift.String?
-  public var status: TrustlessSDK.PaymentOrderStatus
-  public var errorCode: Swift.String?
-  public var errorDescription: Swift.String?
-  public var errorDescriptionAr: Swift.String?
-  public var currency: Swift.String
-  public var totalAmount: Swift.Double
-  public var feesAmount: Swift.Double?
-  public var taxAmount: Swift.Double?
-  public var localCurrencyAmount: Swift.Double
-  public var exchangeRate: Swift.Double
-  public var transactionId: Swift.String?
-  public var sourceOfFunds: TrustlessSDK.PaymentOrderSourceOfFunds
-  public var supplier: TrustlessSDK.PaymentOrderSupplier
-  public var externalUniqueIdentifier: Swift.String?
-  public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public protocol AccountsProvider {
-  func createAccount(currency: Swift.String, name: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountDetails>) -> TrustlessSDK.CancelCallback
-  func getAccount(_ accountNumber: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountDetails>) -> TrustlessSDK.CancelCallback
-  func closeAccount(_ accountNumber: Swift.String, creditAccountNumber: Swift.String?, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func createAccountsPaginator(pageSize: Swift.Int?) -> TrustlessSDK.Paginator<TrustlessSDK.Account>
-  func createAccountTransactionsPaginator(_ accountNumber: Swift.String, pageSize: Swift.Int?, params: TrustlessSDK.GetAccountTransactionsParams?) -> TrustlessSDK.Paginator<TrustlessSDK.AccountTransaction>
-  func sendTopUpRequest(_ accountNumber: Swift.String, params: TrustlessSDK.AccountTopUpParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountTopUpResponse>) -> TrustlessSDK.CancelCallback
-  func getTopUpStatus(orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.AccountTopUpStatus>) -> TrustlessSDK.CancelCallback
-  func sendApplePayTopUpRequest(_ accountNumber: Swift.String, params: TrustlessSDK.AccountApplePayTopUpParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-}
-public struct CreateCliQTransferParams {
-  public init(customerAccount: Swift.String, beneficiaryAliasType: TrustlessSDK.CliQAliasType, beneficiaryAlias: Swift.String, amount: Swift.Double, purposeCode: Swift.String, currencyCode: Swift.String, transferNote: Swift.String? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public protocol SimulateProvider {
-  func approveKyc(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func setAccountBalance(_ accountNumber: Swift.String, balance: Swift.Float, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-}
-public struct UpdateUserParams {
-  public init(firstName: Swift.String? = nil, lastName: Swift.String? = nil, phoneNumber: Swift.String? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct AccountTopUpResponse : Swift.Decodable {
-  public var order: TrustlessSDK.AccountTopUpStatus.TopUpOrder
-  public var authentication: TrustlessSDK.AccountTopUpResponse.TopUpAuthentication?
-  public var result: TrustlessSDK.AccountTopUpStatus.TopUpStatus
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension TrustlessSDK.AccountTopUpResponse {
-  public struct TopUpAuthentication : Swift.Decodable {
-    public var redirect: TrustlessSDK.AccountTopUpResponse.TopUpRedirect
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  public struct TopUpRedirect : Swift.Decodable {
-    public var domainName: Swift.String
-    public var html: Swift.String
-    public init(from decoder: any Swift.Decoder) throws
-  }
-}
-public struct AccountCustomer : Swift.Decodable {
-  public var name: Swift.String?
-  public var fullName: Swift.String?
-  public var type: Swift.String
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum CardSpendingLimitPeriod : Swift.String, Swift.Codable {
-  case daily
-  case weekly
-  case monthly
-  case annually
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct SetCardSpendingLimitParams {
-  public init(period: TrustlessSDK.CardSpendingLimitPeriod, cashLimit: Swift.Double? = nil, eCommerceLimit: Swift.Double? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public protocol CardsProvider {
-  func createCard(_ params: TrustlessSDK.CreateCardParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Card>) -> TrustlessSDK.CancelCallback
-  func getCard(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Card>) -> TrustlessSDK.CancelCallback
-  func getHiddenData(_ cardToken: Swift.String, showCVV: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardHiddenData>) -> TrustlessSDK.CancelCallback
-  func changeStatus(_ cardToken: Swift.String, status: TrustlessSDK.CardStatus, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func changeStatus(_ cardToken: Swift.String, status: TrustlessSDK.CardStatus, cardTrailer: Swift.String?, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func changeMobileNumber(_ cardToken: Swift.String, mobileNumber: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func getBalance(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CardBalance]>) -> TrustlessSDK.CancelCallback
-  func topUp(_ cardToken: Swift.String, params: TrustlessSDK.CardManageFundsParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardBalance>) -> TrustlessSDK.CancelCallback
-  func withdraw(_ cardToken: Swift.String, params: TrustlessSDK.CardManageFundsParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardBalance>) -> TrustlessSDK.CancelCallback
-  func getLimits(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CardSpendingLimits>) -> TrustlessSDK.CancelCallback
-  func setLimits(_ cardToken: Swift.String, params: TrustlessSDK.SetCardSpendingLimitParams, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.NewCardSpendingLimits]>) -> TrustlessSDK.CancelCallback
-  func getCardTransactions(_ cardToken: Swift.String, params: TrustlessSDK.GetCardTransactionsParams, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CardTransaction]>) -> TrustlessSDK.CancelCallback
-  func createCardsPaginator(onlyActiveCards: Swift.Bool) -> TrustlessSDK.Paginator<TrustlessSDK.Card>
-  func createCardsPaginator(onlyActiveCards: Swift.Bool, pageSize: Swift.Int?) -> TrustlessSDK.Paginator<TrustlessSDK.Card>
-  func getPinCode(_ cardToken: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.String>) -> TrustlessSDK.CancelCallback
-  func setPinCode(_ cardToken: Swift.String, pin: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-}
-public struct AccountDetails : Swift.Decodable {
-  public var branch: Swift.String?
-  public var number: Swift.String
-  public var type: Swift.String
-  public var name: Swift.String
-  public var bankName: Swift.String
-  public var customer: TrustlessSDK.AccountCustomer
-  public var currencyCode: Swift.String
-  public var noDebit: Swift.Bool
-  public var noCredit: Swift.Bool
-  public var dormant: Swift.Bool
-  public var iban: Swift.String
-  public var swift: Swift.String
-  public var currentBalance: Swift.Float
-  public var localCurrencyCurrentBalance: Swift.Float
-  public var availableBalance: Swift.Float
-  public var blockedAmount: Swift.Float
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct KYCCityValue : Swift.Codable {
-  public var countryCode: Swift.String
-  public var stateCode: Swift.String
-  public var stateName: Swift.String
-  public var cityAr: Swift.String
-  public var city: Swift.String
-  public var id: Swift.Int
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TrustlessConfig {
-  public init(clientKeys: TrustlessSDK.ClientKeys, certificate: TrustlessSDK.ClientCertificate, baseUrl: Foundation.URL, isScreenRecordingDisabled: Swift.Bool = false, biometryMessage: Swift.String = "Authenticate with biometry or passcode to continue.", globalHeaders: [Swift.String : Swift.String] = [:])
-}
-public protocol NusukProvider {
-  func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String) async throws
-  func getWallet(forUsername username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
-  func getWallet(forUsername username: Swift.String) async throws -> TrustlessSDK.Account?
-  func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatePaymentOrderResponse>) -> TrustlessSDK.CancelCallback
-  func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams) async throws -> TrustlessSDK.CreatePaymentOrderResponse
-  func getPaymentOrderDetails(_ orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.PaymentOrderDetails>) -> TrustlessSDK.CancelCallback
-  func getPaymentOrderDetails(_ orderId: Swift.String) async throws -> TrustlessSDK.PaymentOrderDetails
-  func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
-  func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
-  func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
-  func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
-}
-public struct CreateUserParams {
-  public init(email: Swift.String, username: Swift.String, password: Swift.String, firstName: Swift.String, lastName: Swift.String, phoneNumber: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-@_hasMissingDesignatedInitializers final public class KeychainService {
-  @objc deinit
-}
-extension TrustlessSDK.KeychainService {
-  public enum Biometry {
-    case none
-    case faceId
-    case passcode(code: Swift.String)
-  }
-  public static func enableFaceID(_ isEnabled: Swift.Bool)
-  public static var isEnabledFaceID: Swift.Bool {
-    get
-  }
-  public static func savePassCode(_ passCode: Swift.String)
-  public static func saveBiometryAuth(type: TrustlessSDK.KeychainService.Biometry)
-  public static func getAppPassCode() -> Swift.String?
-  public static func getBiometryAuthType() -> TrustlessSDK.KeychainService.Biometry
-  public static func clearPasscodeAndBiometry()
-}
-public enum CardStatus : Swift.String, Swift.Decodable, Swift.CaseIterable {
-  case activated
-  case frozen
-  case closed
-  case stolen
-  case fraud
-  case lost
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [TrustlessSDK.CardStatus]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [TrustlessSDK.CardStatus] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public protocol IdentityProvider {
-  func invalidateSession(forUsername username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func login(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func clearSession()
-  func login(username: Swift.String, password: Swift.String, withBiometry: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func login2FA(username: Swift.String, password: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func users2FAOTP(phone: Swift.String, locale: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func users2FA(email: Swift.String, username: Swift.String, password: Swift.String, phone: Swift.String, otp: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func completeLogin2FA(username: Swift.String, password: Swift.String, code: Swift.String, withBiometry enableBiometry: Swift.Bool, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func logout(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func registerUser(with params: TrustlessSDK.CreateUserParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.RegisteredUser>) -> TrustlessSDK.CancelCallback
-  func requestPasswordReset(email: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func confirmPasswordReset(email: Swift.String, code: Swift.String, newPassword: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func getProfile(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.UserProfile>) -> TrustlessSDK.CancelCallback
-  func updateUser(with params: TrustlessSDK.UpdateUserParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.UserProfile>) -> TrustlessSDK.CancelCallback
-  func updatePassword(currentPassword: Swift.String, newPassword: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func logDeviceId(_ completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-}
-public struct CardSpendingLimits : Swift.Codable {
-  public var daily: TrustlessSDK.CardSpendingLimitGroup
-  public var weekly: TrustlessSDK.CardSpendingLimitGroup
-  public var monthly: TrustlessSDK.CardSpendingLimitGroup
-  public var annually: TrustlessSDK.CardSpendingLimitGroup
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CardSpendingLimitGroup : Swift.Codable {
-  public var cash: TrustlessSDK.CardSpendingLimit
-  public var eCommerce: TrustlessSDK.CardSpendingLimit
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CardSpendingLimit : Swift.Codable {
-  public var limit: Swift.Double
-  public var transactionCountLimit: Swift.Int
-  public var transactionAmountLimit: Swift.Double
-  public var remainingAmount: Swift.Double?
-  public var remainingCount: Swift.Int?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CreateInternalTransferParams {
-  public init(customerAccount: Swift.String, beneficiaryAccount: Swift.String, amount: Swift.Double, currencyCode: Swift.String, transferNote: Swift.String? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct CardManageFundsParams {
-  public init(accountNumber: Swift.String, amount: Swift.Double, currency: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public enum VerifyOTPCode : Swift.String, Swift.Decodable {
-  case correct
-  case incorrect
-  case expired
-  case alreadyVerified
-  case attemptsExceeded
-  case unknown
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCSelectField : TrustlessSDK.KYCGenericField<Swift.String> {
   public var optionsEn: [TrustlessSDK.KYCSelectFieldValue] {
@@ -587,184 +632,70 @@ public struct KYCSelectFieldValue {
   public var value: Swift.String
   public init(label: Swift.String, value: Swift.String)
 }
-public struct RegisteredUser : Swift.Decodable {
-  public let id: Swift.String
-  public let username: Swift.String
-  public let email: Swift.String
-  public let firstName: Swift.String
-  public let lastName: Swift.String
-  public let phoneNumber: Swift.String
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CreatePaymentOrderResponse : Swift.Decodable {
-  public var orderId: Swift.String
-  public var orderType: Swift.String
-  public var createdAt: Swift.String?
-  public var status: TrustlessSDK.PaymentOrderStatus
-  public var errorDescription: Swift.String?
-  public var currency: Swift.String
-  public var totalAmount: Swift.Double
-  public var feesAmount: Swift.Double?
-  public var taxAmount: Swift.Double?
-  public var localCurrencyAmount: Swift.Double
-  public var exchangeRate: Swift.Double
-  public var transactionId: Swift.String?
-  public var sourceOfFunds: TrustlessSDK.PaymentOrderSourceOfFunds
-  public var supplier: TrustlessSDK.PaymentOrderSupplier
-  public var externalUniqueIdentifier: Swift.String?
-  public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]?
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CardTransaction : Swift.Codable {
-  public var id: Swift.String
-  public var type: Swift.String
-  public var status: Swift.String
-  public var date: Swift.String
-  public var description: Swift.String
-  public var transactionCurrency: Swift.String
-  public var transactionCurrencySymbol: Swift.String
-  public var transactionAmount: Swift.Double
-  public var cardCurrencyISO: Swift.String
-  public var cardCurrency: Swift.String
-  public var cardCurrencyAmount: Swift.Double
-  public var fees: Swift.Double
-  public var availableBalance: Swift.Double
-  public var postedAmount: Swift.Double
-  public var blockedAmount: Swift.Double
-  public var pendingAmount: Swift.Double
-  public var note: Swift.String
-  public var debitCreditIndicator: Swift.String
-  public var mcc: Swift.String?
-  public var merchantName: Swift.String?
-  public var merchantCity: Swift.String?
-  public var merchantCountry: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum TrustlessError : Swift.Error {
-  case notInitialized
-  case notLoggedIn
-  case kycNotFinished
-  case sessionInvalidated
-  case server(code: Swift.String, message: Swift.String)
-  case invalidServerResponse(error: (any Swift.Error)?)
-  case invalidEmptyServerResponse
-  case timeout
-  case canceled
-  case unexpected
-  case localAuthentication(TrustlessSDK.TrustlessError.LocalAuthenticationError)
-  case unavailableDeviceId
-  public enum LocalAuthenticationError : Swift.Error {
-    case passcodeNotSet
-    case biometryNotAvailable
-    case biometryNotEnrolled
-    case biometryLockout
-    case authenticationFailed
-    case canceled
-    case memoryAllocation
-    case unhandledKeychain(_: Darwin.OSStatus)
-  }
-}
-extension TrustlessSDK.TrustlessError : Foundation.LocalizedError {
-  public var errorDescription: Swift.String? {
-    get
-  }
-}
-extension TrustlessSDK.TrustlessError : Swift.Equatable {
-  public static func == (lhs: TrustlessSDK.TrustlessError, rhs: TrustlessSDK.TrustlessError) -> Swift.Bool
-}
-public protocol TransfersProvider {
-  func createTransfersPaginator(type: TrustlessSDK.TransferType, params: TrustlessSDK.GetTransfersParams?) -> TrustlessSDK.Paginator<TrustlessSDK.Transfer>
-  func createTransfersPaginator(type: TrustlessSDK.TransferType, pageSize: Swift.Int?) -> TrustlessSDK.Paginator<TrustlessSDK.Transfer>
-  func createTransfersPaginator(type: TrustlessSDK.TransferType, pageSize: Swift.Int?, params: TrustlessSDK.GetTransfersParams?) -> TrustlessSDK.Paginator<TrustlessSDK.Transfer>
-  func getTransfer(byId transferId: Swift.Int, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
-  func createInternal(params: TrustlessSDK.CreateInternalTransferParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
-  func createCliQ(params: TrustlessSDK.CreateCliQTransferParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
-  func confirm(byId transferId: Swift.Int, files: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
-}
-public let TrustlessSDK: TrustlessSDK.TrustlessSDKFramework
-@_hasMissingDesignatedInitializers final public class TrustlessSDKFramework {
-  final public var isCustomer: Swift.Bool {
-    get
-  }
-  final public var identityProvider: any TrustlessSDK.IdentityProvider {
-    get
-    set
-  }
-  final public var kycProvider: any TrustlessSDK.KYCProvider {
-    get
-    set
-  }
-  final public var accountsProvider: any TrustlessSDK.AccountsProvider {
-    get
-    set
-  }
-  final public var cardsProvider: any TrustlessSDK.CardsProvider {
-    get
-    set
-  }
-  final public var transfersProvider: any TrustlessSDK.TransfersProvider {
-    get
-    set
-  }
-  final public var cliQProvider: any TrustlessSDK.CliQProvider {
-    get
-    set
-  }
-  final public var verificationProvider: any TrustlessSDK.VerificationProvider {
-    get
-    set
-  }
-  final public var nusukProvider: any TrustlessSDK.NusukProvider {
-    get
-    set
-  }
-  final public var simulateProvider: any TrustlessSDK.SimulateProvider {
-    get
-    set
-  }
-  final public func initialize(with config: TrustlessSDK.TrustlessConfig)
-  final public func setGlobalHeaders(_ headers: [Swift.String : Swift.String])
-  final public func setDelegate(_ delegate: any TrustlessSDK.TrustlessSDKDelegate)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCTextField : TrustlessSDK.KYCGenericField<Swift.String> {
   @objc deinit
 }
-public protocol TrustlessSDKDelegate : AnyObject {
-  func didSessionExpired()
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCUrlField : TrustlessSDK.KYCSelectField {
+  public func setOptions(_ options: [TrustlessSDK.KYCSelectFieldValue])
+  @objc deinit
 }
-public struct TrustlessFile {
-  public var data: Foundation.Data {
+public protocol KYCStepDelegate : AnyObject {
+  func didUpdateFields(_ step: TrustlessSDK.KYCStepManager)
+  func didUpdateFieldError(_ step: TrustlessSDK.KYCStepManager, for fields: [TrustlessSDK.KYCBaseField])
+}
+@_hasMissingDesignatedInitializers final public class KYCStepManager {
+  weak final public var delegate: (any TrustlessSDK.KYCStepDelegate)?
+  final public let code: Swift.String
+  final public let title: Swift.String
+  final public var fields: [TrustlessSDK.KYCBaseField] {
     get
   }
-  public var mimeType: Swift.String {
+  final public var visibleFields: [TrustlessSDK.KYCBaseField] {
     get
   }
-  public init(data: Foundation.Data, mimeType: Swift.String = "application/octet-stream")
-  public init?(url: Foundation.URL, mimeType: Swift.String = "application/octet-stream")
-  public init?(image: UIKit.UIImage, mimeType: Swift.String = "application/octet-stream")
+  final public var documentFields: [TrustlessSDK.KYCBaseField] {
+    get
+  }
+  final public func getField(withCode code: Swift.String) -> TrustlessSDK.KYCBaseField?
+  final public func getField(withName name: Swift.String) -> TrustlessSDK.KYCBaseField?
+  final public func configureSourceValues(_ sourceValues: TrustlessSDK.KYCSourceValues)
+  final public func validate() -> [TrustlessSDK.KYCBaseField]?
+  @objc deinit
 }
-extension TrustlessSDK.TrustlessFile : Swift.Equatable {
-  public static func == (lhs: TrustlessSDK.TrustlessFile, rhs: TrustlessSDK.TrustlessFile) -> Swift.Bool
+@_hasMissingDesignatedInitializers final public class KYCStepsManager {
+  final public var steps: [TrustlessSDK.KYCStepManager] {
+    get
+  }
+  @objc deinit
 }
-public struct Account : Swift.Decodable {
-  public var branch: Swift.String?
-  public var number: Swift.String
-  public var type: Swift.String
-  public var name: Swift.String
-  public var bankName: Swift.String
-  public var customer: TrustlessSDK.AccountCustomer
-  public var currencyCode: Swift.String
-  public var noDebit: Swift.Bool
-  public var noCredit: Swift.Bool
-  public var dormant: Swift.Bool?
-  public var iban: Swift.String
-  public var swift: Swift.String
-  public var currentBalance: Swift.Double
-  public var localCurrencyCurrentBalance: Swift.Double
-  public var availableBalance: Swift.Double
+extension TrustlessSDK.KYCStepsManager {
+  final public func configureSourceValues(_ sourceValues: TrustlessSDK.KYCSourceValues)
+}
+extension TrustlessSDK.KYCStepsManager {
+  final public func getJson() -> Swift.String?
+  final public func getDocuments() -> [Swift.String : TrustlessSDK.TrustlessFile]
+}
+public enum KYCSourceValue {
+  case string(Swift.String)
+  case file(TrustlessSDK.TrustlessFile)
+}
+public class KYCSourceValues {
+  public init()
+  public func put(key: Swift.String, value: TrustlessSDK.KYCSourceValue)
+  public func get(key: Swift.String) -> TrustlessSDK.KYCSourceValue?
+  public func has(key: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+public struct KYCCityValue : Swift.Codable {
+  public var countryCode: Swift.String
+  public var stateCode: Swift.String
+  public var stateName: Swift.String
+  public var cityAr: Swift.String
+  public var city: Swift.String
+  public var id: Swift.Int
+  public init(countryCode: Swift.String, stateCode: Swift.String, stateName: Swift.String, cityAr: Swift.String, city: Swift.String, id: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public struct ClientCertificate {
-  public init(data: Foundation.Data, password: Swift.String = "")
 }
 public struct KYCStatus : Swift.Codable {
   public enum KYCType : Swift.String, Swift.Codable {
@@ -797,6 +728,7 @@ public struct KYCStatus : Swift.Codable {
   public var edaatInvoiceNumber: Swift.String?
   public var idType: Swift.String
   public var fundOutAvailable: Swift.Bool
+  public init(kycId: Swift.String, customerId: Swift.String? = nil, statusCode: Swift.String, status: Swift.String, statusAr: Swift.String, active: Swift.Bool, documents: [TrustlessSDK.KYCStatusDocument], pendingWalletTimer: Swift.String, mobileNumber: Swift.String, firstName: Swift.String, lastName: Swift.String, birthDate: Swift.String, gender: Swift.String, nationality: Swift.String, passportNumber: Swift.String, passportExpiryDate: Swift.String, passportIssueDate: Swift.String, kycType: TrustlessSDK.KYCStatus.KYCType, edaatInvoiceNumber: Swift.String?, idType: Swift.String, fundOutAvailable: Swift.Bool)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -809,141 +741,6 @@ public struct KYCStatusDocument : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public protocol KYCStepDelegate : AnyObject {
-  func didUpdateFields(_ step: TrustlessSDK.KYCStepManager)
-  func didUpdateFieldError(_ step: TrustlessSDK.KYCStepManager, for fields: [TrustlessSDK.KYCBaseField])
-}
-@_hasMissingDesignatedInitializers final public class KYCStepManager {
-  weak final public var delegate: (any TrustlessSDK.KYCStepDelegate)?
-  final public let code: Swift.String
-  final public let title: Swift.String
-  final public var fields: [TrustlessSDK.KYCBaseField] {
-    get
-  }
-  final public var visibleFields: [TrustlessSDK.KYCBaseField] {
-    get
-  }
-  final public var documentFields: [TrustlessSDK.KYCBaseField] {
-    get
-  }
-  final public func getField(withCode code: Swift.String) -> TrustlessSDK.KYCBaseField?
-  final public func getField(withName name: Swift.String) -> TrustlessSDK.KYCBaseField?
-  final public func configureSourceValues(_ sourceValues: TrustlessSDK.KYCSourceValues)
-  final public func validate() -> [TrustlessSDK.KYCBaseField]?
-  @objc deinit
-}
-public struct ClientKeys {
-  public init(clientId: Swift.String, clientSecret: Swift.String)
-}
-@_hasMissingDesignatedInitializers final public class KYCStepsManager {
-  final public var steps: [TrustlessSDK.KYCStepManager] {
-    get
-  }
-  @objc deinit
-}
-extension TrustlessSDK.KYCStepsManager {
-  final public func configureSourceValues(_ sourceValues: TrustlessSDK.KYCSourceValues)
-}
-extension TrustlessSDK.KYCStepsManager {
-  final public func getJson() -> Swift.String?
-  final public func getDocuments() -> [Swift.String : TrustlessSDK.TrustlessFile]
-}
-public enum KYCSourceValue {
-  case string(Swift.String)
-  case file(TrustlessSDK.TrustlessFile)
-}
-public class KYCSourceValues {
-  public init()
-  public func put(key: Swift.String, value: TrustlessSDK.KYCSourceValue)
-  public func get(key: Swift.String) -> TrustlessSDK.KYCSourceValue?
-  public func has(key: Swift.String) -> Swift.Bool
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCGenericField<T> : TrustlessSDK.KYCBaseField {
-  public var value: T? {
-    get
-  }
-  public func putValue(_ value: T?)
-  @objc deinit
-}
-public struct CliQAlias : Swift.Codable {
-  public var type: TrustlessSDK.CliQAliasType?
-  public var value: Swift.String?
-  public var startDate: Swift.String?
-  public var expirationDate: Swift.String?
-  public var status: Swift.String?
-  public var accounts: [TrustlessSDK.CliQAliasAccount]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum CliQAliasType : Swift.String, Swift.Codable {
-  case alias
-  case mobl
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct CliQAliasAccount : Swift.Codable {
-  public var currency: Swift.String?
-  public var openingDate: Swift.String?
-  public var closingDate: Swift.String?
-  public var iban: Swift.String?
-  public var isDefault: Swift.Bool?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCTextField : TrustlessSDK.KYCGenericField<Swift.String> {
-  @objc deinit
-}
-public protocol VerificationProvider {
-  func generateOTP(params: TrustlessSDK.GenerateOTPParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.String>) -> TrustlessSDK.CancelCallback
-  func sendOTP(params: TrustlessSDK.SendOTPParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func verifyOTP(params: TrustlessSDK.VerifyOTPParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.VerifyOTPCode>) -> TrustlessSDK.CancelCallback
-}
-public enum OTPLocale : Swift.String, Swift.Encodable {
-  case en
-  case ar
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum OTPChannel : Swift.String, Swift.Encodable {
-  case sms
-  case email
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum OTPType : Swift.String, Swift.Encodable {
-  case numeric
-  case alphanumeric
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct SendOTPParams {
-  public init(to: Swift.String, channel: TrustlessSDK.OTPChannel, locale: TrustlessSDK.OTPLocale, length: Swift.Int = 6, type: TrustlessSDK.OTPType = .numeric)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct CreateCardParams {
-  public init(currencyCode: Swift.String, cardHolderName: Swift.String, mobileNumber: Swift.String, deliveryDestination: Swift.String? = nil, arrivalDateTime: Swift.String? = nil, flightNumber: Swift.String? = nil, accountNumber: Swift.String? = nil, amount: Swift.Float? = 0)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct PaymentOrderMetaData : Swift.Codable {
-  public var name: Swift.String
-  public var value: Swift.String
-  public init(name: Swift.String, value: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public struct KYCStep : Swift.Decodable {
   public var id: Swift.Int
   public var title: Swift.String
@@ -952,6 +749,7 @@ public struct KYCStep : Swift.Decodable {
   public var fields: [[Swift.String : TrustlessSDK.KYCField]]
   public var prevStep: Swift.String
   public var nextStep: Swift.String
+  public init(id: Swift.Int, title: Swift.String, code: Swift.String, missing: Swift.Bool, fields: [[Swift.String : TrustlessSDK.KYCField]], prevStep: Swift.String, nextStep: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum KYCField {
@@ -983,6 +781,7 @@ public struct KYCFieldObject {
   public var url: Swift.String
   public var urlCodes: [Swift.String : Swift.String]?
   public var webviewUrl: Swift.String
+  public init(id: Swift.Int, sortOrder: Swift.Int, label: Swift.String, labelAr: Swift.String, type: TrustlessSDK.KYCFieldType, value: TrustlessSDK.KYCFieldValue? = nil, readOnly: Swift.Bool, source: TrustlessSDK.KYCFieldSourceType, sourceField: Swift.String, sdkMapping: [[Swift.String : Swift.String]], dependentField: [Swift.String], required: Swift.Bool, validations: [TrustlessSDK.KYCFieldValidation], choiceValues: [[Swift.String : Swift.String]], choiceValuesAr: [[Swift.String : Swift.String]], requiredWhen: [TrustlessSDK.KYCFieldDependency], disabledWhen: [TrustlessSDK.KYCFieldDependency], url: Swift.String, urlCodes: [Swift.String : Swift.String]? = nil, webviewUrl: Swift.String)
 }
 @_documentation(visibility: internal) extension TrustlessSDK.KYCFieldObject : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
@@ -1039,36 +838,82 @@ public struct KYCFieldValidation : Swift.Decodable {
   public var minLength: Swift.String?
   public var message: Swift.String
   public var messageAr: Swift.String
+  public init(maxLength: Swift.String? = nil, pattern: Swift.String? = nil, boolean: Swift.String? = nil, date: Swift.String? = nil, age: Swift.String? = nil, gender: Swift.String? = nil, workType: Swift.String? = nil, minLength: Swift.String? = nil, message: Swift.String, messageAr: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct KYCFieldDependency : Swift.Decodable {
   public var operation: Swift.String?
   public var value: [TrustlessSDK.KYCFieldDependencyValue]
+  public init(operation: Swift.String? = nil, value: [TrustlessSDK.KYCFieldDependencyValue])
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct KYCFieldDependencyValue : Swift.Decodable {
   public var field: Swift.String
   public var operation: Swift.String
   public var value: [TrustlessSDK.KYCFieldValue]?
+  public init(field: Swift.String, operation: Swift.String, value: [TrustlessSDK.KYCFieldValue]? = nil)
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct GetCardTransactionsParams : Swift.Codable {
-  public var dateFrom: Swift.String
-  public var dateTo: Swift.String
-  public init(dateFrom: Foundation.Date, dateTo: Foundation.Date = Date())
+public struct LocalRequestResponse : Swift.Decodable {
+  public var requestId: Swift.String
+  public var transactionId: Swift.String
+  public var otp: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol KYCProvider {
+  func getStatus() async throws -> TrustlessSDK.KYCStatus
+  func getStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
+  func getSteps() async throws -> [TrustlessSDK.KYCStep]
+  func getSteps(_ completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCStep]>) -> TrustlessSDK.CancelCallback
+  func getStepsManager() async throws -> TrustlessSDK.KYCStepsManager
+  func getStepsManager(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStepsManager>) -> TrustlessSDK.CancelCallback
+  func getCityList(for countryCode: Swift.String) async throws -> [TrustlessSDK.KYCCityValue]
+  func getCityList(for countryCode: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCCityValue]>) -> TrustlessSDK.CancelCallback
+  func createRequest(body: Swift.String, files: [Swift.String : TrustlessSDK.TrustlessFile], proofDocuments: [Swift.String : TrustlessSDK.TrustlessFile]) async throws
+  func createRequest(body: Swift.String, files: [Swift.String : TrustlessSDK.TrustlessFile], proofDocuments: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func uploadDocuments(files: [Swift.String : TrustlessSDK.TrustlessFile]) async throws
+  func uploadDocuments(files: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func getKYCStatus() async throws -> TrustlessSDK.KYCStatus
+  func getKYCStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
+}
+public struct CreatePaymentOrderParams {
+  public var idempotencyKey: Swift.String
+  public var externalUniqueIdentifier: Swift.String?
+  public var sourceOfFunds: TrustlessSDK.CreatePaymentOrderParams.OrderSourceOfFunds
+  public var totalAmount: Swift.Double
+  public var feesAmount: Swift.Double?
+  public var taxAmount: Swift.Double?
+  public var currency: Swift.String
+  public var supplierId: Swift.String
+  public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]
+  public init(idempotencyKey: Swift.String = UUID().uuidString, externalUniqueIdentifier: Swift.String? = nil, accountNumber: Swift.String, totalAmount: Swift.Double, feesAmount: Swift.Double? = nil, taxAmount: Swift.Double? = nil, currency: Swift.String, supplierId: Swift.String, orderMetaData: [TrustlessSDK.PaymentOrderMetaData] = [])
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCDocumentField : TrustlessSDK.KYCGenericField<TrustlessSDK.TrustlessFile> {
-  @objc deinit
+extension TrustlessSDK.CreatePaymentOrderParams {
+  public struct OrderSourceOfFunds : Swift.Encodable {
+    public let type: Swift.String
+    public var value: Swift.String
+    public init(value: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
 }
-public struct AccountTransaction : Swift.Decodable {
-  public var date: Swift.String
-  public var valueDate: Swift.String
-  public var description: Swift.String
-  public var debitCreditIndicator: Swift.String
-  public var transactionAmount: Swift.Double
-  public var transactionCurrency: Swift.String
+public struct CreatePaymentOrderResponse : Swift.Decodable {
+  public var orderId: Swift.String
+  public var orderType: Swift.String
+  public var createdAt: Swift.String?
+  public var status: TrustlessSDK.PaymentOrderStatus
+  public var errorDescription: Swift.String?
+  public var currency: Swift.String
+  public var totalAmount: Swift.Double
+  public var feesAmount: Swift.Double?
+  public var taxAmount: Swift.Double?
+  public var localCurrencyAmount: Swift.Double
+  public var exchangeRate: Swift.Double
+  public var transactionId: Swift.String?
+  public var sourceOfFunds: TrustlessSDK.PaymentOrderSourceOfFunds
+  public var supplier: TrustlessSDK.PaymentOrderSupplier
+  public var externalUniqueIdentifier: Swift.String?
+  public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct NusukWithdrawRequestParam {
@@ -1093,206 +938,406 @@ extension TrustlessSDK.NusukWithdrawRequestParam {
     public func encode(to encoder: any Swift.Encoder) throws
   }
 }
-public typealias ResultValue<Value> = Swift.Result<Value, TrustlessSDK.TrustlessError>
-public typealias ResultCallback<Value> = (TrustlessSDK.ResultValue<Value>) -> Swift.Void
+public struct NusukWithdrawRequestResponse : Swift.Decodable {
+  public let transferId: Swift.Int
+  public let paymentAmount: Swift.Double
+  public let paymentCurrency: Swift.String
+  public let transferAmount: Swift.Double
+  public let transferCurrency: Swift.String
+  public let exchangeRate: Swift.Double
+  public let timestamp: Swift.String
+  public let type: Swift.String
+  public let transferType: Swift.String
+  public let beneficiary: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary
+  public let purpose: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose
+  public let status: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus
+  public init(transferId: Swift.Int, paymentAmount: Swift.Double, paymentCurrency: Swift.String, transferAmount: Swift.Double, transferCurrency: Swift.String, exchangeRate: Swift.Double, timestamp: Swift.String, type: Swift.String, transferType: Swift.String, beneficiary: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawBeneficiary, purpose: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawPurpose, status: TrustlessSDK.NusukWithdrawRequestResponse.NusukWithdrawStatus)
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TrustlessSDK.NusukWithdrawRequestResponse {
+  public struct NusukWithdrawBeneficiary : Swift.Decodable {
+    public let type: Swift.String
+    public let account: Swift.String
+    public let bankCode: Swift.String
+    public let name: Swift.String
+    public let phone: Swift.String
+    public let address: Swift.String
+    public init(type: Swift.String, account: Swift.String, bankCode: Swift.String, name: Swift.String, phone: Swift.String, address: Swift.String)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct NusukWithdrawPurpose : Swift.Decodable {
+    public let code: Swift.String
+    public let descriptionArabic: Swift.String
+    public let descriptionEnglish: Swift.String
+    public init(code: Swift.String, descriptionArabic: Swift.String, descriptionEnglish: Swift.String)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct NusukWithdrawStatus : Swift.Decodable {
+    public let id: Swift.Int
+    public let name: Swift.String
+    public let code: Swift.String
+    public let label: Swift.String
+    public let labelAr: Swift.String
+    public init(id: Swift.Int, name: Swift.String, code: Swift.String, label: Swift.String, labelAr: Swift.String)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+public struct PaymentOrderDetails : Swift.Codable {
+  public var orderId: Swift.String
+  public var orderType: Swift.String
+  public var createdAt: Swift.String?
+  public var status: TrustlessSDK.PaymentOrderStatus
+  public var errorCode: Swift.String?
+  public var errorDescription: Swift.String?
+  public var errorDescriptionAr: Swift.String?
+  public var currency: Swift.String
+  public var totalAmount: Swift.Double
+  public var feesAmount: Swift.Double?
+  public var taxAmount: Swift.Double?
+  public var localCurrencyAmount: Swift.Double
+  public var exchangeRate: Swift.Double
+  public var transactionId: Swift.String?
+  public var sourceOfFunds: TrustlessSDK.PaymentOrderSourceOfFunds
+  public var supplier: TrustlessSDK.PaymentOrderSupplier
+  public var externalUniqueIdentifier: Swift.String?
+  public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaymentOrderMetaData : Swift.Codable {
+  public var name: Swift.String
+  public var value: Swift.String
+  public init(name: Swift.String, value: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaymentOrderSourceOfFunds : Swift.Codable {
+  public var customerId: Swift.String
+  public var type: Swift.String
+  public var value: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaymentOrderStatus : Swift.Codable {
+  public var id: Swift.String
+  public var code: Swift.String
+  public var name: Swift.String
+  public var label: Swift.String
+  public var labelAr: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct PaymentOrderSupplier : Swift.Codable {
   public var id: Swift.String
   public var account: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct AccountTopUpParams {
-  public var amount: Swift.Double
-  public var currency: Swift.String
-  public var card: TrustlessSDK.AccountTopUpParams.CardDetails
-  public var browser: TrustlessSDK.TopUpBrowserDetails
-  public var idempotencyKey: Swift.String
-  public init(amount: Swift.Double, currency: Swift.String, card: TrustlessSDK.AccountTopUpParams.CardDetails, browser: TrustlessSDK.TopUpBrowserDetails, idempotencyKey: Swift.String)
+public protocol NusukProvider {
+  func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func sendKYCRequest(visaNumber: Swift.String, birthDate: Foundation.Date, iban: Swift.String, bank: Swift.String) async throws
+  func sendLocalKYCRequest(idNumber: Swift.String, locale: TrustlessSDK.TrustlessLocale) async throws -> TrustlessSDK.LocalRequestResponse
+  func sendLocalKYCRequest(idNumber: Swift.String, locale: TrustlessSDK.TrustlessLocale, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.LocalRequestResponse>) -> TrustlessSDK.CancelCallback
+  func getWallet(forUsername username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
+  func getWallet(forUsername username: Swift.String) async throws -> TrustlessSDK.Account?
+  func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatePaymentOrderResponse>) -> TrustlessSDK.CancelCallback
+  func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams) async throws -> TrustlessSDK.CreatePaymentOrderResponse
+  func getPaymentOrderDetails(_ orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.PaymentOrderDetails>) -> TrustlessSDK.CancelCallback
+  func getPaymentOrderDetails(_ orderId: Swift.String) async throws -> TrustlessSDK.PaymentOrderDetails
+  func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
+  func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
+  func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
+  func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
 }
-extension TrustlessSDK.AccountTopUpParams {
-  public struct CardDetails : Swift.Encodable {
-    public struct Expiry : Swift.Encodable {
-      public var month: Swift.String
-      public var year: Swift.String
-      public init(month: Swift.String, year: Swift.String)
-      public func encode(to encoder: any Swift.Encoder) throws
-    }
-    public var number: Swift.String
-    public var expiry: TrustlessSDK.AccountTopUpParams.CardDetails.Expiry
-    public var securityCode: Swift.Int
-    public init(number: Swift.String, expiry: TrustlessSDK.AccountTopUpParams.CardDetails.Expiry, securityCode: Swift.Int)
-    public func encode(to encoder: any Swift.Encoder) throws
-  }
+public protocol SimulateProvider {
 }
-public struct TopUpBrowserDetails : Swift.Encodable {
-  public enum SecureChallengeWindowSize : Swift.String, Swift.Encodable {
-    case size250x400
-    case size390x400
-    case size500x600
-    case size600x400
-    case fullScreen
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public var secureChallengeWindowSize: TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize
-  public let acceptHeaders: Swift.String
-  public var colorDepth: Swift.Int
-  public var javaEnabled: Swift.Bool
-  public var javaScriptEnabled: Swift.Bool
-  public var language: TrustlessSDK.TrustlessLanguage
-  public let screenHeight: Swift.Int
-  public let screenWidth: Swift.Int
-  public let timeZone: Swift.Int
-  public init(secureChallengeWindowSize: TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize = .fullScreen, colorDepth: Swift.Int = 30, javaEnabled: Swift.Bool = false, javaScriptEnabled: Swift.Bool = true, language: TrustlessSDK.TrustlessLanguage)
+public struct CreateCliQTransferParams {
+  public init(customerAccount: Swift.String, beneficiaryAliasType: TrustlessSDK.CliQAliasType, beneficiaryAlias: Swift.String, amount: Swift.Double, purposeCode: Swift.String, currencyCode: Swift.String, transferNote: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
 }
-public typealias PaginatorResultsHandler<Element> = (TrustlessSDK.Paginator<Element>, [Element]) -> Swift.Void where Element : Swift.Decodable
-public typealias PaginatorFailureHandler<Element> = (TrustlessSDK.Paginator<Element>, TrustlessSDK.TrustlessError) -> Swift.Void where Element : Swift.Decodable
-@_hasMissingDesignatedInitializers public class Paginator<Element> where Element : Swift.Decodable {
-  final public let pageSize: Swift.Int
-  public var pageNumber: Swift.Int {
-    get
-  }
-  public var totalPages: Swift.Int {
-    get
-  }
-  public var requestStatus: TrustlessSDK.RequestStatus {
-    get
-  }
-  public var results: [Element] {
-    get
-  }
-  public var cancelRequestCallback: TrustlessSDK.CancelCallback? {
-    get
-  }
-  public var resultsHandler: TrustlessSDK.PaginatorResultsHandler<Element>? {
-    get
-  }
-  public var failureHandler: TrustlessSDK.PaginatorFailureHandler<Element>? {
-    get
-  }
-  public func setResultsHandler(_ resultsHandler: @escaping TrustlessSDK.PaginatorResultsHandler<Element>)
-  public func setFailureHandler(_ failureHandler: @escaping TrustlessSDK.PaginatorFailureHandler<Element>)
-  public func fetchFirstPage(completion: TrustlessSDK.ResultCallback<[Element]>? = nil) -> TrustlessSDK.CancelCallback?
-  public func fetchNextPage(completion: TrustlessSDK.ResultCallback<[Element]>? = nil) -> TrustlessSDK.CancelCallback?
-  @objc deinit
-}
-extension TrustlessSDK.Paginator {
-  public var isLoadedAllData: Swift.Bool {
-    get
-  }
-  public var reachedLastPage: Swift.Bool {
-    get
-  }
-}
-public enum RequestStatus {
-  case none
-  case inProgress
-  case done
-  case failed
-  public static func == (a: TrustlessSDK.RequestStatus, b: TrustlessSDK.RequestStatus) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KYCDateField : TrustlessSDK.KYCGenericField<Foundation.Date> {
-  @objc deinit
-}
-public struct Card : Swift.Decodable {
-  public enum CardType : Swift.String, Swift.Decodable {
-    case virtual
-    case physical
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public var token: Swift.String
-  public var balances: [TrustlessSDK.CardBalance]
-  public var pan: Swift.String
-  public var expiryDate: Swift.String
-  public var cardHolderName: Swift.String?
-  public var status: Swift.String
-  public var type: Swift.String
-  public var secure3DEnrolled: Swift.Bool?
-  public var cvv: Swift.String?
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CardBalance : Swift.Codable {
-  public var currencyCode: Swift.String
-  public var currentBalance: Swift.Double
-  public var blockedBalance: Swift.Double
-  public var availableBalance: Swift.Double
-  public var number: Swift.String?
-  public var iban: Swift.String?
-  public var swift: Swift.String?
-  public var bankName: Swift.String?
+public struct CreateInternalTransferParams {
+  public init(customerAccount: Swift.String, beneficiaryAccount: Swift.String, amount: Swift.Double, currencyCode: Swift.String, transferNote: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct GetTransfersParams : Swift.Codable {
   public init(month: Swift.Int? = nil, year: Swift.Int? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct CreatePaymentOrderParams {
-  public var idempotencyKey: Swift.String
-  public var externalUniqueIdentifier: Swift.String?
-  public var sourceOfFunds: TrustlessSDK.CreatePaymentOrderParams.OrderSourceOfFunds
-  public var totalAmount: Swift.Double
-  public var feesAmount: Swift.Double?
-  public var taxAmount: Swift.Double?
-  public var currency: Swift.String
-  public var supplierId: Swift.String
-  public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]
-  public init(idempotencyKey: Swift.String = UUID().uuidString, externalUniqueIdentifier: Swift.String? = nil, accountNumber: Swift.String, totalAmount: Swift.Double, feesAmount: Swift.Double? = nil, taxAmount: Swift.Double? = nil, currency: Swift.String, supplierId: Swift.String, orderMetaData: [TrustlessSDK.PaymentOrderMetaData] = [])
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-extension TrustlessSDK.CreatePaymentOrderParams {
-  public struct OrderSourceOfFunds : Swift.Encodable {
-    public let type: Swift.String
-    public var value: Swift.String
-    public init(value: Swift.String)
-    public func encode(to encoder: any Swift.Encoder) throws
-  }
-}
-public protocol CliQProvider {
-  func getAliases(completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CliQAlias]>) -> TrustlessSDK.CancelCallback
-  func createAlias(for accountNumber: Swift.String, params: TrustlessSDK.CreateCliQAliasParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatedCliqAlias>) -> TrustlessSDK.CancelCallback
-  func getPurposeCodes(aliasType: TrustlessSDK.CliQAliasType, alias: Swift.String?, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.CliQPurposeCode]>) -> TrustlessSDK.CancelCallback
-}
-public struct UserProfile : Swift.Codable {
-  public let username: Swift.String
-  public let email: Swift.String
-  public let firstName: Swift.String
-  public let lastName: Swift.String
-  public let phoneNumber: Swift.String
+public struct CliQPurposeCode : Swift.Codable {
+  public var purposeCode: Swift.String
+  public var purposeCodeLabelAr: Swift.String
+  public var purposeCodeLabelEn: Swift.String
+  public init(purposeCode: Swift.String, purposeCodeLabelAr: Swift.String, purposeCodeLabelEn: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public typealias CancelCallback = () -> Swift.Void
-public struct AccountApplePayTopUpParams {
-  public init(amount: Swift.Double, currency: Swift.String, paymentToken: Swift.String, walletProvider: Swift.String = "APPLE_PAY", idempotencyKey: Swift.String = UUID().uuidString)
+public struct Transfer : Swift.Decodable {
+  public var transferId: Swift.Int
+  public var type: TrustlessSDK.TransferType
+  public var transferType: Swift.String
+  public var transferNote: Swift.String
+  public var timestamp: Swift.String?
+  public var status: TrustlessSDK.TransferStatus
+  public var localCurrencyAmount: Swift.Double
+  public var exchangeRate: Swift.Int
+  public var transferCurrency: Swift.String
+  public var transferAmount: Swift.Double
+  public var chargeType: TrustlessSDK.TransferChargeType
+  public var beneficiary: TrustlessSDK.TransferBeneficiary
+  public var fees: TrustlessSDK.TransferFee
+  public var requiredDocuments: TrustlessSDK.TransferRequiredDocuments
+  public init(transferId: Swift.Int, type: TrustlessSDK.TransferType, transferType: Swift.String, transferNote: Swift.String, timestamp: Swift.String? = nil, status: TrustlessSDK.TransferStatus, localCurrencyAmount: Swift.Double, exchangeRate: Swift.Int, transferCurrency: Swift.String, transferAmount: Swift.Double, chargeType: TrustlessSDK.TransferChargeType, beneficiary: TrustlessSDK.TransferBeneficiary, fees: TrustlessSDK.TransferFee, requiredDocuments: TrustlessSDK.TransferRequiredDocuments)
+  public init(from decoder: any Swift.Decoder) throws
 }
-public protocol KYCProvider {
-  var isKycFinished: Swift.Bool { get }
-  func getStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
-  func getKYCStatus(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
-  func getSteps(_ completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCStep]>) -> TrustlessSDK.CancelCallback
-  func getStepsManager(_ completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStepsManager>) -> TrustlessSDK.CancelCallback
-  func getCityList(for countryCode: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<[TrustlessSDK.KYCCityValue]>) -> TrustlessSDK.CancelCallback
-  func createRequest(body: Swift.String, files: [Swift.String : TrustlessSDK.TrustlessFile], proofDocuments: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  func sendLocalRequest(idNumber: Swift.String, locale: TrustlessSDK.TrustlessLocale, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.LocalRequestResponse>) -> TrustlessSDK.CancelCallback
-  func uploadDocuments(files: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+public enum TransferType : Swift.String, Swift.Decodable {
+  case standing
+  case saved
+  case transfer
+  case goal
+  case all
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
-public struct CreateCliQAliasParams {
-  public init(type: TrustlessSDK.CliQAliasType, value: Swift.String)
+public struct TransferStatus : Swift.Codable {
+  public var id: Swift.Int
+  public var code: Swift.String
+  public var name: Swift.String
+  public var label: Swift.String
+  public var labelAr: Swift.String
+  public init(id: Swift.Int, code: Swift.String, name: Swift.String, label: Swift.String, labelAr: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransferChargeType : Swift.Codable {
+  public var chargeTypeId: Swift.Int
+  public var chargeTypeCode: Swift.String
+  public var chargeTypeName: Swift.String
+  public init(chargeTypeId: Swift.Int, chargeTypeCode: Swift.String, chargeTypeName: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransferBeneficiary : Swift.Codable {
+  public var name: Swift.String
+  public var alias: Swift.String?
+  public var account: Swift.String
+  public var address: Swift.String
+  public var bankCode: Swift.String
+  public var bankCountry: Swift.String
+  public var type: Swift.String?
+  public init(name: Swift.String, alias: Swift.String? = nil, account: Swift.String, address: Swift.String, bankCode: Swift.String, bankCountry: Swift.String, type: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransferFee : Swift.Codable {
+  public var amount: Swift.Double
+  public var currency: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransferRequiredDocuments : Swift.Codable {
+  public var requiredDocumentCount: Swift.Int
+  public var requiredDocumentsList: [Swift.String]
+  public var requiredDocumentsListAr: [Swift.String]
+  public var isDocumentsRequired: [Swift.Bool?]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol TransfersProvider {
+  func createTransfersPaginator(type: TrustlessSDK.TransferType, params: TrustlessSDK.GetTransfersParams?) -> TrustlessSDK.Paginator<TrustlessSDK.Transfer>
+  func createTransfersPaginator(type: TrustlessSDK.TransferType, params: TrustlessSDK.GetTransfersParams?, pageSize: Swift.Int) -> TrustlessSDK.Paginator<TrustlessSDK.Transfer>
+  func getTransfer(byId transferId: Swift.Int, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
+  func createInternal(params: TrustlessSDK.CreateInternalTransferParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
+  func createCliQ(params: TrustlessSDK.CreateCliQTransferParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
+  func confirm(byId transferId: Swift.Int, files: [Swift.String : TrustlessSDK.TrustlessFile], completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Transfer>) -> TrustlessSDK.CancelCallback
+}
+public struct GenerateOTPParams {
+  public init(locale: TrustlessSDK.OTPLocale, length: Swift.Int = 6, type: TrustlessSDK.OTPType = .numeric)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum OTPLocale : Swift.String, Swift.Encodable {
+  case en
+  case ar
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OTPChannel : Swift.String, Swift.Encodable {
+  case sms
+  case email
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OTPType : Swift.String, Swift.Encodable {
+  case numeric
+  case alphanumeric
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SendOTPParams {
+  public init(to: Swift.String, channel: TrustlessSDK.OTPChannel, locale: TrustlessSDK.OTPLocale, length: Swift.Int = 6, type: TrustlessSDK.OTPType = .numeric)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct VerifyOTPParams {
+  public init(to: Swift.String, channel: TrustlessSDK.OTPChannel, code: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum VerifyOTPCode : Swift.String, Swift.Decodable {
+  case correct
+  case incorrect
+  case expired
+  case alreadyVerified
+  case attemptsExceeded
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol VerificationProvider {
+  func generateOTP(params: TrustlessSDK.GenerateOTPParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.String>) -> TrustlessSDK.CancelCallback
+  func sendOTP(params: TrustlessSDK.SendOTPParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  func verifyOTP(params: TrustlessSDK.VerifyOTPParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.VerifyOTPCode>) -> TrustlessSDK.CancelCallback
+}
+public enum PaginatorError : Swift.Error {
+  case alreadyLoading
+  case allPagesFetched
+  public static func == (a: TrustlessSDK.PaginatorError, b: TrustlessSDK.PaginatorError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Paginator<Element> : Combine.ObservableObject where Element : Swift.Decodable {
+  final public let pageSize: Swift.Int
+  public var pageNumber: Swift.Int {
+    get
+  }
+  public var totalPages: Swift.Int? {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($requestStatus) public var requestStatus: TrustlessSDK.RequestStatus {
+    get
+  }
+  public var $requestStatus: Combine.Published<TrustlessSDK.RequestStatus>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isLoading) public var isLoading: Swift.Bool {
+    get
+  }
+  public var $isLoading: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isLoadingMore) public var isLoadingMore: Swift.Bool {
+    get
+  }
+  public var $isLoadingMore: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isFirstLoaded) public var isFirstLoaded: Swift.Bool {
+    get
+  }
+  public var $isFirstLoaded: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isAllLoaded) public var isAllLoaded: Swift.Bool {
+    get
+  }
+  public var $isAllLoaded: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isRefreshing) public var isRefreshing: Swift.Bool {
+    get
+  }
+  public var $isRefreshing: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($error) public var error: TrustlessSDK.TrustlessError? {
+    get
+  }
+  public var $error: Combine.Published<TrustlessSDK.TrustlessError?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($results) public var results: [Element] {
+    get
+  }
+  public var $results: Combine.Published<[Element]>.Publisher {
+    get
+  }
+  @objc deinit
+  public func fetch(refresh: Swift.Bool = false) async throws -> [Element]
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+}
+extension TrustlessSDK.Paginator {
+  public var reachedLastPage: Swift.Bool {
+    get
+  }
+}
+public enum RequestStatus : Swift.Equatable {
+  case none
+  case loading
+  case loadingMore
+  case refreshing
+  case done
+  case failed(error: TrustlessSDK.TrustlessError)
+  public static func == (a: TrustlessSDK.RequestStatus, b: TrustlessSDK.RequestStatus) -> Swift.Bool
+}
+public typealias CancelCallback = () -> Swift.Void
+public struct ClientCertificate {
+  public init(data: Foundation.Data, password: Swift.String = "")
+}
+public struct ClientKeys {
+  public init(clientId: Swift.String, clientSecret: Swift.String)
+}
+public enum TrustlessError : Swift.Error {
+  case notLoggedIn
+  case kycNotFinished
+  case sessionInvalidated
+  case server(code: Swift.String, message: Swift.String)
+  case invalidServerResponse(error: (any Swift.Error)?)
+  case invalidEmptyServerResponse
+  case timeout
+  case canceled
+  case unexpected
+  case localAuthenticationRequired
+  case localAuthorizationFailed
+  case unavailableDeviceId
+  case sessionExpired
+}
+extension TrustlessSDK.TrustlessError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension TrustlessSDK.TrustlessError : Swift.Equatable {
+  public static func == (lhs: TrustlessSDK.TrustlessError, rhs: TrustlessSDK.TrustlessError) -> Swift.Bool
+}
+public struct TrustlessFile {
+  public var data: Foundation.Data {
+    get
+  }
+  public var mimeType: Swift.String {
+    get
+  }
+  public init(data: Foundation.Data, mimeType: Swift.String = "application/octet-stream")
+  public init?(url: Foundation.URL, mimeType: Swift.String = "application/octet-stream")
+  public init?(image: UIKit.UIImage, mimeType: Swift.String = "application/octet-stream")
+}
+extension TrustlessSDK.TrustlessFile : Swift.Equatable {
+  public static func == (lhs: TrustlessSDK.TrustlessFile, rhs: TrustlessSDK.TrustlessFile) -> Swift.Bool
 }
 public enum TrustlessLanguage : Swift.String, Swift.Codable {
   case en
@@ -1303,41 +1348,151 @@ public enum TrustlessLanguage : Swift.String, Swift.Codable {
     get
   }
 }
+public enum TrustlessLocale : Swift.String, Swift.Codable {
+  case en
+  case ar
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias ResultValue<Value> = Swift.Result<Value, TrustlessSDK.TrustlessError>
+public typealias ResultCallback<Value> = (TrustlessSDK.ResultValue<Value>) -> Swift.Void
+public enum LocalAuthChallengeType {
+  case passcode(Swift.String)
+  case biometry
+}
+public enum LocalAuthType {
+  case none
+  case biometry(isEnabled: Swift.Bool)
+  case passcode(code: Swift.String)
+}
+public enum BiometryLocalAuthError : Swift.Error, Foundation.LocalizedError {
+  case biometryTypeNotSupported
+  case biometryNotAvailable
+  case biometryNotEnrolled
+  case biometryLockout
+  case failed
+  case canceled
+  case other(LocalAuthentication.LAError)
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+public struct LocalAuthParams {
+  public init(localAuthRequestTimeout: Foundation.TimeInterval = 30, biometryRequestReason: Swift.String = "Authenticate with biometry to continue.")
+}
+public struct TrustlessConfig {
+  public init(clientKeys: TrustlessSDK.ClientKeys, certificate: TrustlessSDK.ClientCertificate, baseUrl: Foundation.URL, localAuthParams: TrustlessSDK.LocalAuthParams = .init(), globalHeaders: [Swift.String : Swift.String] = [:])
+}
+public let TrustlessSDK: TrustlessSDK.TrustlessSDKFramework
+@_hasMissingDesignatedInitializers final public class TrustlessSDKFramework {
+  final public var isCustomer: Swift.Bool {
+    get
+  }
+  final public var isKycFinished: Swift.Bool {
+    get
+  }
+  final public var authenticationProvider: any TrustlessSDK.AuthenticationProvider {
+    get
+    set
+  }
+  final public var identityProvider: any TrustlessSDK.IdentityProvider {
+    get
+    set
+  }
+  final public var kycProvider: any TrustlessSDK.KYCProvider {
+    get
+    set
+  }
+  final public var accountsProvider: any TrustlessSDK.AccountsProvider {
+    get
+    set
+  }
+  final public var cardsProvider: any TrustlessSDK.CardsProvider {
+    get
+    set
+  }
+  final public var transfersProvider: any TrustlessSDK.TransfersProvider {
+    get
+    set
+  }
+  final public var cliQProvider: any TrustlessSDK.CliQProvider {
+    get
+    set
+  }
+  final public var verificationProvider: any TrustlessSDK.VerificationProvider {
+    get
+    set
+  }
+  final public var nusukProvider: any TrustlessSDK.NusukProvider {
+    get
+    set
+  }
+  final public var simulateProvider: any TrustlessSDK.SimulateProvider {
+    get
+    set
+  }
+  final public func initialize(with config: TrustlessSDK.TrustlessConfig)
+  final public func deinitialize()
+  final public func setDelegate(_ delegate: any TrustlessSDK.TrustlessSDKDelegate)
+  final public func setGlobalHeaders(_ headers: [Swift.String : Swift.String])
+  @objc deinit
+}
+public protocol TrustlessSDKDelegate : AnyObject {
+  func didSessionExpired()
+  func didReceiveLocalAuthorizationChallenge(type: TrustlessSDK.LocalAuthChallengeType) async -> Swift.Bool
+  func didReceiveLocalAuthorizationChallenge(type: TrustlessSDK.LocalAuthChallengeType, completion: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension TrustlessSDK.TrustlessSDKDelegate {
+  public func didSessionExpired()
+  public func didReceiveLocalAuthorizationChallenge(type: TrustlessSDK.LocalAuthChallengeType) async -> Swift.Bool
+  public func didReceiveLocalAuthorizationChallenge(type: TrustlessSDK.LocalAuthChallengeType, completion: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.Equatable {}
+extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.Hashable {}
+extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.RawRepresentable {}
 extension TrustlessSDK.AccountTopUpStatus.TopUpStatus : Swift.Equatable {}
 extension TrustlessSDK.AccountTopUpStatus.TopUpStatus : Swift.Hashable {}
 extension TrustlessSDK.AccountTopUpStatus.TopUpStatus : Swift.RawRepresentable {}
-extension TrustlessSDK.TransferType : Swift.Equatable {}
-extension TrustlessSDK.TransferType : Swift.Hashable {}
-extension TrustlessSDK.TransferType : Swift.RawRepresentable {}
-extension TrustlessSDK.CardSpendingLimitType : Swift.Equatable {}
-extension TrustlessSDK.CardSpendingLimitType : Swift.Hashable {}
-extension TrustlessSDK.CardSpendingLimitType : Swift.RawRepresentable {}
-extension TrustlessSDK.TrustlessLocale : Swift.Equatable {}
-extension TrustlessSDK.TrustlessLocale : Swift.Hashable {}
-extension TrustlessSDK.TrustlessLocale : Swift.RawRepresentable {}
-extension TrustlessSDK.GenerateOTPParams : Swift.Encodable {}
-extension TrustlessSDK.VerifyOTPParams : Swift.Encodable {}
-extension TrustlessSDK.CreateCliQTransferParams : Swift.Encodable {}
-extension TrustlessSDK.UpdateUserParams : Swift.Encodable {}
+extension TrustlessSDK.CardManageFundsParams : Swift.Encodable {}
+extension TrustlessSDK.CreateCardParams : Swift.Encodable {}
 extension TrustlessSDK.CardSpendingLimitPeriod : Swift.Equatable {}
 extension TrustlessSDK.CardSpendingLimitPeriod : Swift.Hashable {}
 extension TrustlessSDK.CardSpendingLimitPeriod : Swift.RawRepresentable {}
 extension TrustlessSDK.SetCardSpendingLimitParams : Swift.Encodable {}
-extension TrustlessSDK.CreateUserParams : Swift.Encodable {}
+extension TrustlessSDK.Card.CardType : Swift.Equatable {}
+extension TrustlessSDK.Card.CardType : Swift.Hashable {}
+extension TrustlessSDK.Card.CardType : Swift.RawRepresentable {}
 extension TrustlessSDK.CardStatus : Swift.Equatable {}
 extension TrustlessSDK.CardStatus : Swift.Hashable {}
 extension TrustlessSDK.CardStatus : Swift.RawRepresentable {}
-extension TrustlessSDK.CreateInternalTransferParams : Swift.Encodable {}
-extension TrustlessSDK.CardManageFundsParams : Swift.Encodable {}
-extension TrustlessSDK.VerifyOTPCode : Swift.Equatable {}
-extension TrustlessSDK.VerifyOTPCode : Swift.Hashable {}
-extension TrustlessSDK.VerifyOTPCode : Swift.RawRepresentable {}
-extension TrustlessSDK.KYCStatus.KYCType : Swift.Equatable {}
-extension TrustlessSDK.KYCStatus.KYCType : Swift.Hashable {}
-extension TrustlessSDK.KYCStatus.KYCType : Swift.RawRepresentable {}
+extension TrustlessSDK.CardSpendingLimitType : Swift.Equatable {}
+extension TrustlessSDK.CardSpendingLimitType : Swift.Hashable {}
+extension TrustlessSDK.CardSpendingLimitType : Swift.RawRepresentable {}
+extension TrustlessSDK.CreateCliQAliasParams : Swift.Encodable {}
 extension TrustlessSDK.CliQAliasType : Swift.Equatable {}
 extension TrustlessSDK.CliQAliasType : Swift.Hashable {}
 extension TrustlessSDK.CliQAliasType : Swift.RawRepresentable {}
+extension TrustlessSDK.CreateUserParams : Swift.Encodable {}
+extension TrustlessSDK.UpdateUserParams : Swift.Encodable {}
+extension TrustlessSDK.KYCStatus.KYCType : Swift.Equatable {}
+extension TrustlessSDK.KYCStatus.KYCType : Swift.Hashable {}
+extension TrustlessSDK.KYCStatus.KYCType : Swift.RawRepresentable {}
+extension TrustlessSDK.KYCFieldType : Swift.Equatable {}
+extension TrustlessSDK.KYCFieldType : Swift.Hashable {}
+extension TrustlessSDK.KYCFieldSourceType : Swift.Equatable {}
+extension TrustlessSDK.KYCFieldSourceType : Swift.Hashable {}
+extension TrustlessSDK.KYCFieldSourceType : Swift.RawRepresentable {}
+extension TrustlessSDK.CreatePaymentOrderParams : Swift.Encodable {}
+extension TrustlessSDK.NusukWithdrawRequestParam : Swift.Encodable {}
+extension TrustlessSDK.CreateCliQTransferParams : Swift.Encodable {}
+extension TrustlessSDK.CreateInternalTransferParams : Swift.Encodable {}
+extension TrustlessSDK.TransferType : Swift.Equatable {}
+extension TrustlessSDK.TransferType : Swift.Hashable {}
+extension TrustlessSDK.TransferType : Swift.RawRepresentable {}
+extension TrustlessSDK.GenerateOTPParams : Swift.Encodable {}
 extension TrustlessSDK.OTPLocale : Swift.Equatable {}
 extension TrustlessSDK.OTPLocale : Swift.Hashable {}
 extension TrustlessSDK.OTPLocale : Swift.RawRepresentable {}
@@ -1348,23 +1503,15 @@ extension TrustlessSDK.OTPType : Swift.Equatable {}
 extension TrustlessSDK.OTPType : Swift.Hashable {}
 extension TrustlessSDK.OTPType : Swift.RawRepresentable {}
 extension TrustlessSDK.SendOTPParams : Swift.Encodable {}
-extension TrustlessSDK.CreateCardParams : Swift.Encodable {}
-extension TrustlessSDK.KYCFieldType : Swift.Equatable {}
-extension TrustlessSDK.KYCFieldType : Swift.Hashable {}
-extension TrustlessSDK.KYCFieldSourceType : Swift.Equatable {}
-extension TrustlessSDK.KYCFieldSourceType : Swift.Hashable {}
-extension TrustlessSDK.KYCFieldSourceType : Swift.RawRepresentable {}
-extension TrustlessSDK.NusukWithdrawRequestParam : Swift.Encodable {}
-extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.Equatable {}
-extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.Hashable {}
-extension TrustlessSDK.TopUpBrowserDetails.SecureChallengeWindowSize : Swift.RawRepresentable {}
-extension TrustlessSDK.RequestStatus : Swift.Equatable {}
-extension TrustlessSDK.RequestStatus : Swift.Hashable {}
-extension TrustlessSDK.Card.CardType : Swift.Equatable {}
-extension TrustlessSDK.Card.CardType : Swift.Hashable {}
-extension TrustlessSDK.Card.CardType : Swift.RawRepresentable {}
-extension TrustlessSDK.CreatePaymentOrderParams : Swift.Encodable {}
-extension TrustlessSDK.CreateCliQAliasParams : Swift.Encodable {}
+extension TrustlessSDK.VerifyOTPParams : Swift.Encodable {}
+extension TrustlessSDK.VerifyOTPCode : Swift.Equatable {}
+extension TrustlessSDK.VerifyOTPCode : Swift.Hashable {}
+extension TrustlessSDK.VerifyOTPCode : Swift.RawRepresentable {}
+extension TrustlessSDK.PaginatorError : Swift.Equatable {}
+extension TrustlessSDK.PaginatorError : Swift.Hashable {}
 extension TrustlessSDK.TrustlessLanguage : Swift.Equatable {}
 extension TrustlessSDK.TrustlessLanguage : Swift.Hashable {}
 extension TrustlessSDK.TrustlessLanguage : Swift.RawRepresentable {}
+extension TrustlessSDK.TrustlessLocale : Swift.Equatable {}
+extension TrustlessSDK.TrustlessLocale : Swift.Hashable {}
+extension TrustlessSDK.TrustlessLocale : Swift.RawRepresentable {}

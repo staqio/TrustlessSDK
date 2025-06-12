@@ -6,35 +6,43 @@
 	<dict>
 		<key>Headers/TrustlessSDK-Swift.h</key>
 		<data>
-		Q+e+qTT5j2gy4So2aLqG7uBo/Ro=
+		VDR8Xw0vcwI8wbJQIr2t56vbwy8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qzXyrqF2Na8g3cEBZeb7M2azqYk=
+		r3ubkizDol24/yxeXFlYYSAAIGA=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		XCo/RNVhxcYgmCj7AmeA5GjdWhU=
+		Tyh0NezldX/MNKpoQ5vGtShWfRk=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		WCI3kZnU7X+m6WFw1LXdbpPwM2c=
+		ZFoErYPhR79fhBsP7OMOqE1rWlM=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		yk7mxo/ya3g4aO+LMPuz3Oh+0Gk=
+		Tzpt0ZnmG/NamBbBeL/1+AfIHnI=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		WCI3kZnU7X+m6WFw1LXdbpPwM2c=
+		ZFoErYPhR79fhBsP7OMOqE1rWlM=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		tjlOclVvW9Aak5Pot7ij76+hIAA=
+		M8kY2mbCFajoc3UBLvzOlMMBmVg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		vwDJTMddPE99uHyhqksRhvelj2o=
+		</data>
+		<key>nusuk-dev.pfx</key>
+		<data>
+		X0MaLXGwlvqLW1trJNur2jdjGoU=
+		</data>
+		<key>white-label-dev.pfx</key>
+		<data>
+		Jk6Xtbnw+R0+1uqtW+NZHGZD9b8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,42 +51,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yy7Cp5VAvxnybw4Y46nsXHDzEcn/TpmKs/1krShh5K8=
+			o6hshHp16GT/WjsVYu/gEYRmC9ayozXo0WwbyPxrZds=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ihlxgYmVdMOlRTP2D+tW3qqUoxOCpbh+IOy1P0LrMBQ=
+			uDE4EOzRCZrLDbQtAWjQ1rUs8i35PlmaS6mTpZ760Kc=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f1qqj912lHk0UmdFcRhyXq8VywoxpiN3M5yQT60iCSY=
+			xXEREEoJfmIh2BzzA4AbXRwZZFNd25NQxvORzIU7F6g=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TdtWq7xdOEWNSoK/Reeu5d1QfDpPwrAzPLwJP+2/phY=
+			NX+O16yqviCKkLG0CZ0DjKlTSaS4uplx7qQrqEsRdMA=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f1qqj912lHk0UmdFcRhyXq8VywoxpiN3M5yQT60iCSY=
+			xXEREEoJfmIh2BzzA4AbXRwZZFNd25NQxvORzIU7F6g=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			erGEFG9JuPFYV6KjQS7Slo5JeJ1XP6/R3yb0UV2s/H0=
+			yjwon/Qg42v8S6VU8IsdkyMQpzrR9g+31zespXJPM9I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -86,6 +94,20 @@
 			<key>hash2</key>
 			<data>
 			GhX+LrQAvNauE7SxGtMmzqBT++pd0NY+rtiDYH/e5TE=
+			</data>
+		</dict>
+		<key>nusuk-dev.pfx</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			r5W/hXnSKDHBmqhyAYUcc7UC03GwJOHuqJq9NwZSvEE=
+			</data>
+		</dict>
+		<key>white-label-dev.pfx</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7k6FMNXpezpq4pMzg6an7tTisk2arq/Tyl4ysIyd5Sw=
 			</data>
 		</dict>
 	</dict>
