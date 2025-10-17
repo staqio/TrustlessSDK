@@ -240,7 +240,7 @@ public protocol AuthenticationProvider {
   func saveBiometryAuth(isEnabled: Swift.Bool) async throws
   func savePasscodeAuth(code: Swift.String)
   func canEvaluateBiometryAuth() -> TrustlessSDK.BiometryLocalAuthError?
-  func evaluateBiometryAuth(reason: Swift.String) async -> TrustlessSDK.BiometryLocalAuthError?
+  func evaluateBiometryAuth(reason: Swift.String) async throws
   func removeLocalAuth()
 }
 extension TrustlessSDK.AuthenticationProvider {
@@ -888,6 +888,7 @@ public struct KYCStatus : Swift.Codable {
   public enum KYCType : Swift.String, Swift.Codable {
     case international
     case local
+    case unknown
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -915,7 +916,8 @@ public struct KYCStatus : Swift.Codable {
   public var edaatInvoiceNumber: Swift.String?
   public var idType: Swift.String?
   public var fundOutAvailable: Swift.Bool?
-  public init(kycId: Swift.String, customerId: Swift.String?, statusCode: Swift.String, status: Swift.String, statusAr: Swift.String, active: Swift.Bool, documents: [TrustlessSDK.KYCStatusDocument], pendingWalletTimer: Swift.String?, mobileNumber: Swift.String?, firstName: Swift.String?, lastName: Swift.String?, birthDate: Swift.String?, gender: Swift.String?, nationality: Swift.String?, passportNumber: Swift.String?, passportExpiryDate: Swift.String?, passportIssueDate: Swift.String?, kycType: TrustlessSDK.KYCStatus.KYCType?, edaatInvoiceNumber: Swift.String?, idType: Swift.String?, fundOutAvailable: Swift.Bool?)
+  public var tier: Swift.String
+  public init(kycId: Swift.String, customerId: Swift.String?, statusCode: Swift.String, status: Swift.String, statusAr: Swift.String, active: Swift.Bool, documents: [TrustlessSDK.KYCStatusDocument], pendingWalletTimer: Swift.String?, mobileNumber: Swift.String?, firstName: Swift.String?, lastName: Swift.String?, birthDate: Swift.String?, gender: Swift.String?, nationality: Swift.String?, passportNumber: Swift.String?, passportExpiryDate: Swift.String?, passportIssueDate: Swift.String?, kycType: TrustlessSDK.KYCStatus.KYCType?, edaatInvoiceNumber: Swift.String?, idType: Swift.String?, fundOutAvailable: Swift.Bool?, tier: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1238,7 +1240,7 @@ public struct PaymentOrderSupplier : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct NusukKYCRequestParams {
+public struct NusukInternationalRequestParams {
   public let visaNumber: Swift.String
   public let birthDate: Foundation.Date
   public let iban: Swift.String
@@ -1248,21 +1250,62 @@ public struct NusukKYCRequestParams {
 public struct NusukLocalKYCRequestParams {
   public let idNumber: Swift.String
   public let locale: TrustlessSDK.TrustlessLocale
+  public init(idNumber: Swift.String, locale: TrustlessSDK.TrustlessLocale)
   public func encode(to encoder: any Swift.Encoder) throws
 }
+public struct NusukWalletRequestParams {
+  public let tier: Swift.String
+  public init(tier: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct ExternalWallet : Swift.Codable {
+  public struct Customer : Swift.Codable {
+    public let name: Swift.String
+    public let fullName: Swift.String
+    public let type: Swift.String
+    public init(name: Swift.String, fullName: Swift.String, type: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let number: Swift.String
+  public let currencyCode: Swift.String
+  public let customer: TrustlessSDK.ExternalWallet.Customer
+  public let noDebit: Swift.Bool
+  public let noCredit: Swift.Bool
+  public let dormant: Swift.Bool
+  public let currentBalance: Swift.Double
+  public let blockedAmount: Swift.Double
+  public let availableBalance: Swift.Double
+  public init(number: Swift.String, currencyCode: Swift.String, customer: TrustlessSDK.ExternalWallet.Customer, noDebit: Swift.Bool, noCredit: Swift.Bool, dormant: Swift.Bool, currentBalance: Swift.Double, blockedAmount: Swift.Double, availableBalance: Swift.Double)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExternalWalletTransaction : Swift.Codable {
+  public let id: Swift.String
+  public let date: Swift.String
+  public let valueDate: Swift.String
+  public let description: Swift.String
+  public let transactionAmount: Swift.Double
+  public let transactionCurrency: Swift.String
+  public init(id: Swift.String, date: Swift.String, valueDate: Swift.String, description: Swift.String, transactionAmount: Swift.Double, transactionCurrency: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public protocol NusukProvider {
-  func sendKYCRequest(params: TrustlessSDK.NusukKYCRequestParams, options: TrustlessSDK.RequestOptions) async throws
+  func sendWalletKYCRequest(params: TrustlessSDK.NusukWalletRequestParams, options: TrustlessSDK.RequestOptions) async throws
+  func sendInternationalKYCRequest(params: TrustlessSDK.NusukInternationalRequestParams, options: TrustlessSDK.RequestOptions) async throws
   func sendLocalKYCRequest(params: TrustlessSDK.NusukLocalKYCRequestParams, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.LocalRequestResponse
-  func getWallet(username: Swift.String, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.Account?
+  func getWallet(options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.ExternalWallet?
+  func getWalletTransactions(for walletId: Swift.String, options: TrustlessSDK.RequestOptions) async throws -> [TrustlessSDK.ExternalWalletTransaction]
+  func getAccountWallet(username: Swift.String, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.Account?
   func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.CreatePaymentOrderResponse
   func getPaymentOrderDetails(_ orderId: Swift.String, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.PaymentOrderDetails
   func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
   func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String, options: TrustlessSDK.RequestOptions) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
-  func getWallet(username: Swift.String) async throws -> TrustlessSDK.Account?
 }
 extension TrustlessSDK.NusukProvider {
-  public func sendKYCRequest(params: TrustlessSDK.NusukKYCRequestParams, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  public func getWallet(username: Swift.String, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
+  public func sendKYCRequest(params: TrustlessSDK.NusukInternationalRequestParams, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  public func getAccountWallet(username: Swift.String, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
   public func sendLocalKYCRequest(params: TrustlessSDK.NusukLocalKYCRequestParams, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.LocalRequestResponse>) -> TrustlessSDK.CancelCallback
   public func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatePaymentOrderResponse>) -> TrustlessSDK.CancelCallback
   public func getPaymentOrderDetails(_ orderId: Swift.String, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.PaymentOrderDetails>) -> TrustlessSDK.CancelCallback
@@ -1270,15 +1313,15 @@ extension TrustlessSDK.NusukProvider {
   public func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String, options: TrustlessSDK.RequestOptions, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.NusukWithdrawRequestResponse>) -> TrustlessSDK.CancelCallback
 }
 extension TrustlessSDK.NusukProvider {
-  public func sendKYCRequest(params: TrustlessSDK.NusukKYCRequestParams) async throws
+  public func sendKYCRequest(params: TrustlessSDK.NusukInternationalRequestParams) async throws
   public func sendLocalKYCRequest(params: TrustlessSDK.NusukLocalKYCRequestParams) async throws -> TrustlessSDK.LocalRequestResponse
-  public func getWallet(username: Swift.String) async throws -> TrustlessSDK.Account?
+  public func getAccountWallet(username: Swift.String) async throws -> TrustlessSDK.Account?
   public func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams) async throws -> TrustlessSDK.CreatePaymentOrderResponse
   public func getPaymentOrderDetails(_ orderId: Swift.String) async throws -> TrustlessSDK.PaymentOrderDetails
   public func sendWithdrawalRequest(params: TrustlessSDK.NusukWithdrawRequestParam) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
   public func confirmWithdrawalRequest(transferId: Swift.Int, otp: Swift.String) async throws -> TrustlessSDK.NusukWithdrawRequestResponse
-  public func sendKYCRequest(params: TrustlessSDK.NusukKYCRequestParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
-  public func getWallet(username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
+  public func sendKYCRequest(params: TrustlessSDK.NusukInternationalRequestParams, completion: @escaping TrustlessSDK.ResultCallback<Swift.Void>) -> TrustlessSDK.CancelCallback
+  public func getAccountWallet(username: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.Account?>) -> TrustlessSDK.CancelCallback
   public func sendLocalKYCRequest(params: TrustlessSDK.NusukLocalKYCRequestParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.LocalRequestResponse>) -> TrustlessSDK.CancelCallback
   public func createPaymentOrder(params: TrustlessSDK.CreatePaymentOrderParams, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.CreatePaymentOrderResponse>) -> TrustlessSDK.CancelCallback
   public func getPaymentOrderDetails(_ orderId: Swift.String, completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.PaymentOrderDetails>) -> TrustlessSDK.CancelCallback
@@ -1766,6 +1809,7 @@ public struct ClientKeys {
   public init(clientId: Swift.String, clientSecret: Swift.String)
 }
 public enum TrustlessError : Swift.Error {
+  case notInitialized
   case notLoggedIn
   case kycNotFinished
   case sessionInvalidated
@@ -1984,6 +2028,7 @@ extension TrustlessSDK.KYCFieldSourceType : Swift.RawRepresentable {}
 extension TrustlessSDK.CreatePaymentOrderParams : Swift.Encodable {}
 extension TrustlessSDK.NusukWithdrawRequestParam : Swift.Encodable {}
 extension TrustlessSDK.NusukLocalKYCRequestParams : Swift.Encodable {}
+extension TrustlessSDK.NusukWalletRequestParams : Swift.Encodable {}
 extension TrustlessSDK.CreateCliQTransferParams : Swift.Encodable {}
 extension TrustlessSDK.CreateInternalTransferParams : Swift.Encodable {}
 extension TrustlessSDK.TransferDetails.CodingKeys : Swift.Equatable {}
