@@ -14,43 +14,43 @@
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		GWP6dPc4AXFatv7MZa7OJx60wZQ=
+		wWsGUmvOt9apWAdfA5D4Jk5Sa7Q=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ygU7mJIm+6P8eIJ4eOXG5wyhdOg=
+		Tz0c8/DBcKwp9M5hYXkzPrdpBTg=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		N3OaqaGbjHVkP0CE6KXYE1N1iq8=
+		TWEF7m8mRpGObrVNG72BtEFLSIk=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ygU7mJIm+6P8eIJ4eOXG5wyhdOg=
+		Tz0c8/DBcKwp9M5hYXkzPrdpBTg=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AVGfcx2YsDr4iBhbgolyrpDhmlU=
+		lDucEFHU0qrR/23bmETB8Tx7sek=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		GWP6dPc4AXFatv7MZa7OJx60wZQ=
+		wWsGUmvOt9apWAdfA5D4Jk5Sa7Q=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gBHLh9sTddS/dAOIQM/BXzHBkZY=
+		F+tD3wBpCayRfCD7iBgz3nYA/7E=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		vdGGoZfI+zQMEfAawem4/DU0O/4=
+		mz44Xq4N4fNwYnxIwR078JOEt9Q=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gBHLh9sTddS/dAOIQM/BXzHBkZY=
+		F+tD3wBpCayRfCD7iBgz3nYA/7E=
 		</data>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		G5O20RrsEPdMFphIo2Ps+EsRoDk=
+		/yZduw9GKgAZevigOfUtoCnTj70=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,70 +78,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ftPr0n4/AnQQ4R44GV7NoyFFoYB478DMibP9jE0z8t4=
+			2zdbEOKZ8krppBHJ6gAwb2BvhPNc44F1jv6+uw8fxZc=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FIgFDKDr2jSB0LzimMvcUQf0XvO+cj0mVU/tVyJT1bk=
+			JaXwAziNZ/m9CPzQQWNvCejAQ5C8JS+OhHCzy3ktDUI=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JCCjP2FwaK3y2nUXQgnBMt2grQMLYI2FGPI6gab7R+g=
+			EZG2T7mn8l0BHAJIhMW+cF6AXfXDr0aB1ew4vpX4rwg=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FIgFDKDr2jSB0LzimMvcUQf0XvO+cj0mVU/tVyJT1bk=
+			JaXwAziNZ/m9CPzQQWNvCejAQ5C8JS+OhHCzy3ktDUI=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ry2CwaYxi8RlpPIkHcLN/hWVuHEPW0cR3kVdbOpJUII=
+			UQz5ByJEVbP5hE8LueKL1KX/ebfyTYH8sU5KBwqFf9s=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ftPr0n4/AnQQ4R44GV7NoyFFoYB478DMibP9jE0z8t4=
+			2zdbEOKZ8krppBHJ6gAwb2BvhPNc44F1jv6+uw8fxZc=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BhrBN54BZuUkWrzoWgv7fYXbmnwL1MA8xv6nqylQP7Y=
+			/w840y+91lap2siJwDkqQnNIGUnu88bVX6CFbSFOLjg=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BlbN4cMm+mOkPxF/eLkMt93nZ/by7szbuBF0hHg8t2k=
+			BnUU6EeK308i1L0O2QY5Pg9uOgSezpml8xyajWyO0NQ=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BhrBN54BZuUkWrzoWgv7fYXbmnwL1MA8xv6nqylQP7Y=
+			/w840y+91lap2siJwDkqQnNIGUnu88bVX6CFbSFOLjg=
 			</data>
 		</dict>
 		<key>Modules/TrustlessSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l8WVWDp4Vi5NyBpnkNKtcpItgUN1yjwcxrfMoLv6MJE=
+			tNDj19nSLgB3L3BNaurwB0HHvTNp1jpUPvGxZEurwXc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

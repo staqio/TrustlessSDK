@@ -41915,16 +41915,25 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12TrustlessSDK9KYCStatusV4tierSSvp",
-            "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSvp",
+            "usr": "s:12TrustlessSDK9KYCStatusV4tierSSSgvp",
+            "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSSgvp",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
+              "HasInitialValue",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -41938,14 +41947,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK9KYCStatusV4tierSSvg",
-                "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSvg",
+                "usr": "s:12TrustlessSDK9KYCStatusV4tierSSSgvg",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSSgvg",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -41962,14 +41979,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK9KYCStatusV4tierSSvs",
-                "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSvs",
+                "usr": "s:12TrustlessSDK9KYCStatusV4tierSSSgvs",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSSgvs",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -41986,8 +42011,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK9KYCStatusV4tierSSvM",
-                "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSvM",
+                "usr": "s:12TrustlessSDK9KYCStatusV4tierSSSgvM",
+                "mangledName": "$s12TrustlessSDK9KYCStatusV4tierSSSgvM",
                 "moduleName": "TrustlessSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -42261,14 +42286,22 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK9KYCStatusV5kycId08customerE010statusCode0G00G2Ar6active9documents18pendingWalletTimer12mobileNumber9firstName04lastR09birthDate6gender11nationality08passportP00x6ExpiryU00x5IssueU00D4Type012edaatInvoiceP06idType16fundOutAvailable4tierACSS_SSSgS3SSbSayAA0C8DocumentVGA10zC7KYCTypeOSgA2ZSbSgSStcfc",
-            "mangledName": "$s12TrustlessSDK9KYCStatusV5kycId08customerE010statusCode0G00G2Ar6active9documents18pendingWalletTimer12mobileNumber9firstName04lastR09birthDate6gender11nationality08passportP00x6ExpiryU00x5IssueU00D4Type012edaatInvoiceP06idType16fundOutAvailable4tierACSS_SSSgS3SSbSayAA0C8DocumentVGA10zC7KYCTypeOSgA2ZSbSgSStcfc",
+            "usr": "s:12TrustlessSDK9KYCStatusV5kycId08customerE010statusCode0G00G2Ar6active9documents18pendingWalletTimer12mobileNumber9firstName04lastR09birthDate6gender11nationality08passportP00x6ExpiryU00x5IssueU00D4Type012edaatInvoiceP06idType16fundOutAvailable4tierACSS_SSSgS3SSbSayAA0C8DocumentVGA10zC7KYCTypeOSgA2ZSbSgAZtcfc",
+            "mangledName": "$s12TrustlessSDK9KYCStatusV5kycId08customerE010statusCode0G00G2Ar6active9documents18pendingWalletTimer12mobileNumber9firstName04lastR09birthDate6gender11nationality08passportP00x6ExpiryU00x5IssueU00D4Type012edaatInvoiceP06idType16fundOutAvailable4tierACSS_SSSgS3SSbSayAA0C8DocumentVGA10zC7KYCTypeOSgA2ZSbSgAZtcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl"
@@ -51584,92 +51617,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "idempotencyKey",
-            "printedName": "idempotencyKey",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvp",
-            "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvp",
-            "moduleName": "TrustlessSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvg",
-                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvg",
-                "moduleName": "TrustlessSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvs",
-                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvs",
-                "moduleName": "TrustlessSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvM",
-                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKeySSvM",
-                "moduleName": "TrustlessSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "externalUniqueIdentifier",
             "printedName": "externalUniqueIdentifier",
             "children": [
@@ -52456,22 +52403,345 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "entityId",
+            "printedName": "entityId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvp",
+            "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvg",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvs",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvM",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV8entityIdSSSgvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userId",
+            "printedName": "userId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvp",
+            "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvg",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvs",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvM",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV6userIdSSSgvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serviceId",
+            "printedName": "serviceId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvp",
+            "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvg",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvs",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvs",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvM",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV9serviceIdSSSgvM",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(idempotencyKey:externalUniqueIdentifier:accountNumber:totalAmount:feesAmount:taxAmount:currency:supplierId:orderMetaData:)",
+            "printedName": "init(externalUniqueIdentifier:sourceOfFunds:totalAmount:feesAmount:taxAmount:currency:supplierId:orderMetaData:entityId:userId:serviceId:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "CreatePaymentOrderParams",
                 "printedName": "TrustlessSDK.CreatePaymentOrderParams",
                 "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -52490,9 +52760,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "OrderSourceOfFunds",
+                "printedName": "TrustlessSDK.CreatePaymentOrderParams.OrderSourceOfFunds",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV"
               },
               {
                 "kind": "TypeNominal",
@@ -52556,11 +52826,56 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKey24externalUniqueIdentifier13accountNumber11totalAmount04feesO003taxO08currency10supplierId13orderMetaDataACSS_SSSgSSS2dSgANS2SSayAA0devW0VGtcfc",
-            "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV14idempotencyKey24externalUniqueIdentifier13accountNumber11totalAmount04feesO003taxO08currency10supplierId13orderMetaDataACSS_SSSgSSS2dSgANS2SSayAA0devW0VGtcfc",
+            "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV24externalUniqueIdentifier13sourceOfFunds11totalAmount04feesN003taxN08currency10supplierId13orderMetaData06entityS004userS007serviceS0ACSSSg_AC0e6SourcekL0VS2dSgARS2SSayAA0deuV0VGA3Otcfc",
+            "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV24externalUniqueIdentifier13sourceOfFunds11totalAmount04feesN003taxN08currency10supplierId13orderMetaData06entityS004userS007serviceS0ACSSSg_AC0e6SourcekL0VS2dSgARS2SSayAA0deuV0VGA3Otcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl",
@@ -52615,12 +52930,10 @@
                 "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4typeSSvp",
                 "moduleName": "TrustlessSDK",
                 "declAttributes": [
-                  "HasInitialValue",
                   "HasStorage",
                   "AccessControl",
                   "RawDocComment"
                 ],
-                "isLet": true,
                 "hasStorage": true,
                 "accessors": [
                   {
@@ -52641,6 +52954,48 @@
                     "moduleName": "TrustlessSDK",
                     "implicit": true,
                     "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4typeSSvs",
+                    "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4typeSSvs",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4typeSSvM",
+                    "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4typeSSvM",
+                    "moduleName": "TrustlessSDK",
+                    "implicit": true,
+                    "accessorKind": "_modify"
                   }
                 ]
               },
@@ -52733,7 +53088,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(value:)",
+                "printedName": "init(type:value:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -52746,11 +53101,17 @@
                     "name": "String",
                     "printedName": "Swift.String",
                     "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV5valueAESS_tcfc",
-                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV5valueAESS_tcfc",
+                "usr": "s:12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4type5valueAESS_SStcfc",
+                "mangledName": "$s12TrustlessSDK24CreatePaymentOrderParamsV0E13SourceOfFundsV4type5valueAESS_SStcfc",
                 "moduleName": "TrustlessSDK",
                 "declAttributes": [
                   "AccessControl",
@@ -90851,189 +91212,189 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3796,
+      "offset": 3798,
       "length": 7,
       "value": "\"KycId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3830,
+      "offset": 3832,
       "length": 12,
       "value": "\"CustomerId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3869,
+      "offset": 3871,
       "length": 12,
       "value": "\"StatusCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3904,
+      "offset": 3906,
       "length": 8,
       "value": "\"Status\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3937,
+      "offset": 3939,
       "length": 10,
       "value": "\"StatusAr\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 3970,
+      "offset": 3972,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4004,
+      "offset": 4006,
       "length": 11,
       "value": "\"Documents\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4050,
+      "offset": 4052,
       "length": 20,
       "value": "\"PendingWalletTimer\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4099,
+      "offset": 4101,
       "length": 14,
       "value": "\"MobileNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4139,
+      "offset": 4141,
       "length": 11,
       "value": "\"FirstName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4175,
+      "offset": 4177,
       "length": 10,
       "value": "\"LastName\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4211,
+      "offset": 4213,
       "length": 11,
       "value": "\"BirthDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4245,
+      "offset": 4247,
       "length": 8,
       "value": "\"Gender\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4281,
+      "offset": 4283,
       "length": 13,
       "value": "\"Nationality\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4325,
+      "offset": 4327,
       "length": 16,
       "value": "\"PassportNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4376,
+      "offset": 4378,
       "length": 20,
       "value": "\"PassportExpiryDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4430,
+      "offset": 4432,
       "length": 19,
       "value": "\"PassportIssueDate\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4473,
+      "offset": 4475,
       "length": 9,
       "value": "\"KycType\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4517,
+      "offset": 4519,
       "length": 20,
       "value": "\"EdaatInvoiceNumber\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4560,
+      "offset": 4562,
       "length": 8,
       "value": "\"IdType\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4601,
+      "offset": 4603,
       "length": 18,
       "value": "\"FundOutAvailable\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 4640,
+      "offset": 4642,
       "length": 6,
       "value": "\"Tier\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 5391,
+      "offset": 5393,
       "length": 6,
       "value": "\"Name\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 5426,
+      "offset": 5428,
       "length": 14,
       "value": "\"DocumentCode\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 5465,
+      "offset": 5467,
       "length": 10,
       "value": "\"Approved\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 5498,
+      "offset": 5500,
       "length": 8,
       "value": "\"Reason\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/KYCProvider\/Responses\/KYCStatus.swift",
       "kind": "StringLiteral",
-      "offset": 5531,
+      "offset": 5533,
       "length": 10,
       "value": "\"ReasonAr\""
     },
@@ -91180,84 +91541,98 @@
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "Array",
-      "offset": 2396,
+      "offset": 2216,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 2899,
+      "offset": 2809,
       "length": 26,
       "value": "\"ExternalUniqueIdentifier\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 2955,
+      "offset": 2865,
       "length": 15,
       "value": "\"SourceOfFunds\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 2998,
+      "offset": 2908,
       "length": 13,
       "value": "\"TotalAmount\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3038,
+      "offset": 2948,
       "length": 12,
       "value": "\"FeesAmount\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3076,
+      "offset": 2986,
       "length": 11,
       "value": "\"TaxAmount\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3112,
+      "offset": 3022,
       "length": 10,
       "value": "\"Currency\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3149,
+      "offset": 3059,
       "length": 12,
       "value": "\"SupplierId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3191,
+      "offset": 3101,
       "length": 15,
       "value": "\"OrderMetaData\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3451,
-      "length": 9,
-      "value": "\"ACCOUNT\""
+      "offset": 3141,
+      "length": 10,
+      "value": "\"EntityId\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3829,
+      "offset": 3174,
+      "length": 8,
+      "value": "\"UserId\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
+      "kind": "StringLiteral",
+      "offset": 3208,
+      "length": 11,
+      "value": "\"ServiceId\""
+    },
+    {
+      "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
+      "kind": "StringLiteral",
+      "offset": 3910,
       "length": 6,
       "value": "\"Type\""
     },
     {
       "filePath": "\/Users\/dmitriylunev\/Projects\/Staq\/trustless-sdk-ios\/Source\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/CreatePaymentOrderParams.swift",
       "kind": "StringLiteral",
-      "offset": 3861,
+      "offset": 3942,
       "length": 7,
       "value": "\"Value\""
     },
