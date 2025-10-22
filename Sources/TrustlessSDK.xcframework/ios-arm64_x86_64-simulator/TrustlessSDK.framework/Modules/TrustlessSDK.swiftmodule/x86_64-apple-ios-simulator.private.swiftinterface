@@ -916,8 +916,8 @@ public struct KYCStatus : Swift.Codable {
   public var edaatInvoiceNumber: Swift.String?
   public var idType: Swift.String?
   public var fundOutAvailable: Swift.Bool?
-  public var tier: Swift.String
-  public init(kycId: Swift.String, customerId: Swift.String?, statusCode: Swift.String, status: Swift.String, statusAr: Swift.String, active: Swift.Bool, documents: [TrustlessSDK.KYCStatusDocument], pendingWalletTimer: Swift.String?, mobileNumber: Swift.String?, firstName: Swift.String?, lastName: Swift.String?, birthDate: Swift.String?, gender: Swift.String?, nationality: Swift.String?, passportNumber: Swift.String?, passportExpiryDate: Swift.String?, passportIssueDate: Swift.String?, kycType: TrustlessSDK.KYCStatus.KYCType?, edaatInvoiceNumber: Swift.String?, idType: Swift.String?, fundOutAvailable: Swift.Bool?, tier: Swift.String)
+  public var tier: Swift.String?
+  public init(kycId: Swift.String, customerId: Swift.String?, statusCode: Swift.String, status: Swift.String, statusAr: Swift.String, active: Swift.Bool, documents: [TrustlessSDK.KYCStatusDocument], pendingWalletTimer: Swift.String?, mobileNumber: Swift.String?, firstName: Swift.String?, lastName: Swift.String?, birthDate: Swift.String?, gender: Swift.String?, nationality: Swift.String?, passportNumber: Swift.String?, passportExpiryDate: Swift.String?, passportIssueDate: Swift.String?, kycType: TrustlessSDK.KYCStatus.KYCType?, edaatInvoiceNumber: Swift.String?, idType: Swift.String?, fundOutAvailable: Swift.Bool?, tier: Swift.String?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1084,7 +1084,6 @@ extension TrustlessSDK.KYCProvider {
   public func getKYCStatus(completion: @escaping TrustlessSDK.ResultCallback<TrustlessSDK.KYCStatus>) -> TrustlessSDK.CancelCallback
 }
 public struct CreatePaymentOrderParams {
-  public var idempotencyKey: Swift.String
   public var externalUniqueIdentifier: Swift.String?
   public var sourceOfFunds: TrustlessSDK.CreatePaymentOrderParams.OrderSourceOfFunds
   public var totalAmount: Swift.Double
@@ -1093,14 +1092,17 @@ public struct CreatePaymentOrderParams {
   public var currency: Swift.String
   public var supplierId: Swift.String
   public var orderMetaData: [TrustlessSDK.PaymentOrderMetaData]
-  public init(idempotencyKey: Swift.String = UUID().uuidString, externalUniqueIdentifier: Swift.String? = nil, accountNumber: Swift.String, totalAmount: Swift.Double, feesAmount: Swift.Double? = nil, taxAmount: Swift.Double? = nil, currency: Swift.String, supplierId: Swift.String, orderMetaData: [TrustlessSDK.PaymentOrderMetaData] = [])
+  public var entityId: Swift.String?
+  public var userId: Swift.String?
+  public var serviceId: Swift.String?
+  public init(externalUniqueIdentifier: Swift.String? = nil, sourceOfFunds: TrustlessSDK.CreatePaymentOrderParams.OrderSourceOfFunds, totalAmount: Swift.Double, feesAmount: Swift.Double? = nil, taxAmount: Swift.Double? = nil, currency: Swift.String, supplierId: Swift.String, orderMetaData: [TrustlessSDK.PaymentOrderMetaData] = [], entityId: Swift.String? = nil, userId: Swift.String? = nil, serviceId: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension TrustlessSDK.CreatePaymentOrderParams {
   public struct OrderSourceOfFunds : Swift.Encodable {
-    public let type: Swift.String
+    public var type: Swift.String
     public var value: Swift.String
-    public init(value: Swift.String)
+    public init(type: Swift.String, value: Swift.String)
     public func encode(to encoder: any Swift.Encoder) throws
   }
 }
