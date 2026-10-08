@@ -32582,7 +32582,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(clientKeys:certificate:networkConfig:localAuthConfig:debugConfig:globalHeaders:)",
+            "printedName": "init(clientKeys:certificate:networkConfig:localAuthConfig:secureStorageConfig:debugConfig:globalHeaders:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -32626,6 +32626,21 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TrustlessSDK.TrustlessSecureStorageConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrustlessSecureStorageConfig",
+                    "printedName": "TrustlessSDK.TrustlessSecureStorageConfig",
+                    "usr": "s:12TrustlessSDK0A19SecureStorageConfigV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "TrustlessDebugConfig",
                 "printedName": "TrustlessSDK.TrustlessDebugConfig",
                 "hasDefaultArg": true,
@@ -32654,8 +32669,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK0A6ConfigV10clientKeys11certificate07networkC009localAuthC005debugC013globalHeadersAcA06ClientE0V_AA0M11CertificateVSgAA0a7NetworkC0VAA0a5LocaliC0VAA0a5DebugC0VSDyS2SGtcfc",
-            "mangledName": "$s12TrustlessSDK0A6ConfigV10clientKeys11certificate07networkC009localAuthC005debugC013globalHeadersAcA06ClientE0V_AA0M11CertificateVSgAA0a7NetworkC0VAA0a5LocaliC0VAA0a5DebugC0VSDyS2SGtcfc",
+            "usr": "s:12TrustlessSDK0A6ConfigV10clientKeys11certificate07networkC009localAuthC0013secureStorageC005debugC013globalHeadersAcA06ClientE0V_AA0O11CertificateVSgAA0a7NetworkC0VAA0a5LocaliC0VAA0a6SecurekC0VSgAA0a5DebugC0VSDyS2SGtcfc",
+            "mangledName": "$s12TrustlessSDK0A6ConfigV10clientKeys11certificate07networkC009localAuthC0013secureStorageC005debugC013globalHeadersAcA06ClientE0V_AA0O11CertificateVSgAA0a7NetworkC0VAA0a5LocaliC0VAA0a6SecurekC0VSgAA0a5DebugC0VSDyS2SGtcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl",
@@ -32667,6 +32682,111 @@
         "declKind": "Struct",
         "usr": "s:12TrustlessSDK0A6ConfigV",
         "mangledName": "$s12TrustlessSDK0A6ConfigV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TrustlessSecureStorageConfig",
+        "printedName": "TrustlessSecureStorageConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "namespace",
+            "printedName": "namespace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK0A19SecureStorageConfigV9namespaceSSvp",
+            "mangledName": "$s12TrustlessSDK0A19SecureStorageConfigV9namespaceSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK0A19SecureStorageConfigV9namespaceSSvg",
+                "mangledName": "$s12TrustlessSDK0A19SecureStorageConfigV9namespaceSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrustlessSecureStorageConfig",
+                "printedName": "TrustlessSDK.TrustlessSecureStorageConfig",
+                "usr": "s:12TrustlessSDK0A19SecureStorageConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK0A19SecureStorageConfigV9namespaceACSS_tKcfc",
+            "mangledName": "$s12TrustlessSDK0A19SecureStorageConfigV9namespaceACSS_tKcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK0A19SecureStorageConfigV",
+        "mangledName": "$s12TrustlessSDK0A19SecureStorageConfigV",
         "moduleName": "TrustlessSDK",
         "declAttributes": [
           "AccessControl",
@@ -40678,6 +40798,54 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "secureStorage",
+            "printedName": "secureStorage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorage",
+                "printedName": "any TrustlessSDK.SecureStorage",
+                "usr": "s:12TrustlessSDK13SecureStorageP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK0A12SDKFrameworkC13secureStorageAA06SecureE0_pvp",
+            "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC13secureStorageAA06SecureE0_pvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "Final",
+              "Lazy",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorage",
+                    "printedName": "any TrustlessSDK.SecureStorage",
+                    "usr": "s:12TrustlessSDK13SecureStorageP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK0A12SDKFrameworkC13secureStorageAA06SecureE0_pvg",
+                "mangledName": "$s12TrustlessSDK0A12SDKFrameworkC13secureStorageAA06SecureE0_pvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "initialize",
             "printedName": "initialize(with:)",
@@ -41025,14 +41193,23 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12TrustlessSDK10ClientKeysV8clientId0E6SecretACSS_SStcfc",
-            "mangledName": "$s12TrustlessSDK10ClientKeysV8clientId0E6SecretACSS_SStcfc",
+            "usr": "s:12TrustlessSDK10ClientKeysV8clientId0E6SecretACSS_SSSgtcfc",
+            "mangledName": "$s12TrustlessSDK10ClientKeysV8clientId0E6SecretACSS_SSSgtcfc",
             "moduleName": "TrustlessSDK",
             "declAttributes": [
               "AccessControl",
@@ -42525,6 +42702,16 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -45594,6 +45781,49 @@
             "declKind": "Func",
             "usr": "s:12TrustlessSDK22AuthenticationProviderP23confirmEnable2FARequest6params7optionsyAA14Users2FAParamsV_AA14RequestOptionsVtYaKF",
             "mangledName": "$s12TrustlessSDK22AuthenticationProviderP23confirmEnable2FARequest6params7optionsyAA14Users2FAParamsV_AA14RequestOptionsVtYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.AuthenticationProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.AuthenticationProvider>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmEnable2FARequest",
+            "printedName": "confirmEnable2FARequest(phone:otp:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestOptions",
+                "printedName": "TrustlessSDK.RequestOptions",
+                "usr": "s:12TrustlessSDK14RequestOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK22AuthenticationProviderP23confirmEnable2FARequest5phone3otp7optionsySS_SSAA14RequestOptionsVtYaKF",
+            "mangledName": "$s12TrustlessSDK22AuthenticationProviderP23confirmEnable2FARequest5phone3otp7optionsySS_SSAA14RequestOptionsVtYaKF",
             "moduleName": "TrustlessSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.AuthenticationProvider>",
             "sugared_genericSig": "<Self where Self : TrustlessSDK.AuthenticationProvider>",
@@ -56118,8 +56348,8 @@
       },
       {
         "kind": "Import",
-        "name": "LocalAuthentication",
-        "printedName": "LocalAuthentication",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "TrustlessSDK",
         "declAttributes": [
@@ -56128,10 +56358,2198 @@
       },
       {
         "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Security",
         "printedName": "Security",
         "declKind": "Import",
         "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorageAccessLevel",
+        "printedName": "SecureStorageAccessLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "standard",
+            "printedName": "standard",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageAccessLevel.Type) -> TrustlessSDK.SecureStorageAccessLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageAccessLevel",
+                    "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                    "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageAccessLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageAccessLevel",
+                        "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                        "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO8standardyA2CmF",
+            "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO8standardyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "biometryCurrentSet",
+            "printedName": "biometryCurrentSet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageAccessLevel.Type) -> TrustlessSDK.SecureStorageAccessLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageAccessLevel",
+                    "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                    "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageAccessLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageAccessLevel",
+                        "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                        "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO18biometryCurrentSetyA2CmF",
+            "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO18biometryCurrentSetyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO9hashValueSivp",
+            "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO9hashValueSivp",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO9hashValueSivg",
+                "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO9hashValueSivg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO4hash4intoys6HasherVz_tF",
+            "moduleName": "TrustlessSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO2eeoiySbAC_ACtFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO",
+        "mangledName": "$s12TrustlessSDK24SecureStorageAccessLevelO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorageError",
+        "printedName": "SecureStorageError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "notConfigured",
+            "printedName": "notConfigured",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO13notConfiguredyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO13notConfiguredyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidNamespace",
+            "printedName": "invalidNamespace",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO16invalidNamespaceyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO16invalidNamespaceyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidKey",
+            "printedName": "invalidKey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO10invalidKeyyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO10invalidKeyyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "duplicateMigrationKey",
+            "printedName": "duplicateMigrationKey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO21duplicateMigrationKeyyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO21duplicateMigrationKeyyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reservedLegacySource",
+            "printedName": "reservedLegacySource",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO20reservedLegacySourceyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO20reservedLegacySourceyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidStoredValue",
+            "printedName": "invalidStoredValue",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO18invalidStoredValueyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO18invalidStoredValueyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authenticationCanceled",
+            "printedName": "authenticationCanceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO22authenticationCanceledyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO22authenticationCanceledyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authenticationFailed",
+            "printedName": "authenticationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO20authenticationFailedyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO20authenticationFailedyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "interactionNotAllowed",
+            "printedName": "interactionNotAllowed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO21interactionNotAllowedyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO21interactionNotAllowedyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "accessControlCreationFailed",
+            "printedName": "accessControlCreationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageError",
+                    "printedName": "TrustlessSDK.SecureStorageError",
+                    "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO27accessControlCreationFailedyA2CmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO27accessControlCreationFailedyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "operationFailed",
+            "printedName": "operationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageError.Type) -> (Swift.Int32) -> TrustlessSDK.SecureStorageError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32) -> TrustlessSDK.SecureStorageError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(status: Swift.Int32)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int32",
+                            "printedName": "Swift.Int32",
+                            "usr": "s:s5Int32V"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO15operationFailedyACs5Int32V_tcACmF",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO15operationFailedyACs5Int32V_tcACmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "underlyingStatus",
+            "printedName": "underlyingStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int32?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO16underlyingStatuss5Int32VSgvp",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO16underlyingStatuss5Int32VSgvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int32?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK18SecureStorageErrorO16underlyingStatuss5Int32VSgvg",
+                "mangledName": "$s12TrustlessSDK18SecureStorageErrorO16underlyingStatuss5Int32VSgvg",
+                "moduleName": "TrustlessSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageError",
+                "printedName": "TrustlessSDK.SecureStorageError",
+                "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageError",
+                "printedName": "TrustlessSDK.SecureStorageError",
+                "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK18SecureStorageErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s12TrustlessSDK18SecureStorageErrorO16errorDescriptionSSSgvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK18SecureStorageErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s12TrustlessSDK18SecureStorageErrorO16errorDescriptionSSSgvg",
+                "moduleName": "TrustlessSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK18SecureStorageErrorO",
+        "mangledName": "$s12TrustlessSDK18SecureStorageErrorO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorageMigrationItem",
+        "printedName": "SecureStorageMigrationItem",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV3keySSvp",
+            "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV3keySSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV3keySSvg",
+                "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV3keySSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "accessLevel",
+            "printedName": "accessLevel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV11accessLevelAA0cd6AccessH0Ovp",
+            "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV11accessLevelAA0cd6AccessH0Ovp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageAccessLevel",
+                    "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                    "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV11accessLevelAA0cd6AccessH0Ovg",
+                "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV11accessLevelAA0cd6AccessH0Ovg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "context",
+            "printedName": "context",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV7contextSo9LAContextCSgvp",
+            "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV7contextSo9LAContextCSgvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "LocalAuthentication.LAContext?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LAContext",
+                        "printedName": "LocalAuthentication.LAContext",
+                        "usr": "c:objc(cs)LAContext"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV7contextSo9LAContextCSgvg",
+                "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV7contextSo9LAContextCSgvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(key:accessLevel:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationItem",
+                "printedName": "TrustlessSDK.SecureStorageMigrationItem",
+                "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "hasDefaultArg": true,
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV3key11accessLevel7contextACSS_AA0cd6AccessI0OSo9LAContextCSgtcfc",
+            "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV3key11accessLevel7contextACSS_AA0cd6AccessI0OSo9LAContextCSgtcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV",
+        "mangledName": "$s12TrustlessSDK26SecureStorageMigrationItemV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorageMigrationOutcome",
+        "printedName": "SecureStorageMigrationOutcome",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "migrated",
+            "printedName": "migrated",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageMigrationOutcome.Type) -> TrustlessSDK.SecureStorageMigrationOutcome",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageMigrationOutcome",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                    "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageMigrationOutcome",
+                        "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                        "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO8migratedyA2CmF",
+            "mangledName": "$s12TrustlessSDK29SecureStorageMigrationOutcomeO8migratedyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "destinationPreserved",
+            "printedName": "destinationPreserved",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageMigrationOutcome.Type) -> TrustlessSDK.SecureStorageMigrationOutcome",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageMigrationOutcome",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                    "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageMigrationOutcome",
+                        "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                        "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO20destinationPreservedyA2CmF",
+            "mangledName": "$s12TrustlessSDK29SecureStorageMigrationOutcomeO20destinationPreservedyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sourceMissing",
+            "printedName": "sourceMissing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageMigrationOutcome.Type) -> TrustlessSDK.SecureStorageMigrationOutcome",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageMigrationOutcome",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                    "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageMigrationOutcome",
+                        "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                        "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO13sourceMissingyA2CmF",
+            "mangledName": "$s12TrustlessSDK29SecureStorageMigrationOutcomeO13sourceMissingyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.SecureStorageMigrationOutcome.Type) -> (TrustlessSDK.SecureStorageError) -> TrustlessSDK.SecureStorageMigrationOutcome",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TrustlessSDK.SecureStorageError) -> TrustlessSDK.SecureStorageMigrationOutcome",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageMigrationOutcome",
+                        "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                        "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageError",
+                        "printedName": "TrustlessSDK.SecureStorageError",
+                        "usr": "s:12TrustlessSDK18SecureStorageErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SecureStorageMigrationOutcome",
+                        "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                        "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO6failedyAcA0cD5ErrorOcACmF",
+            "mangledName": "$s12TrustlessSDK29SecureStorageMigrationOutcomeO6failedyAcA0cD5ErrorOcACmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationOutcome",
+                "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationOutcome",
+                "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12TrustlessSDK29SecureStorageMigrationOutcomeO2eeoiySbAC_ACtFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO",
+        "mangledName": "$s12TrustlessSDK29SecureStorageMigrationOutcomeO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorageMigrationResult",
+        "printedName": "SecureStorageMigrationResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV3keySSvp",
+            "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV3keySSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV3keySSvg",
+                "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV3keySSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "outcome",
+            "printedName": "outcome",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationOutcome",
+                "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV7outcomeAA0cdE7OutcomeOvp",
+            "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV7outcomeAA0cdE7OutcomeOvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageMigrationOutcome",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                    "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV7outcomeAA0cdE7OutcomeOvg",
+                "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV7outcomeAA0cdE7OutcomeOvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(key:outcome:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationResult",
+                "printedName": "TrustlessSDK.SecureStorageMigrationResult",
+                "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationOutcome",
+                "printedName": "TrustlessSDK.SecureStorageMigrationOutcome",
+                "usr": "s:12TrustlessSDK29SecureStorageMigrationOutcomeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV3key7outcomeACSS_AA0cdE7OutcomeOtcfc",
+            "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV3key7outcomeACSS_AA0cdE7OutcomeOtcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationResult",
+                "printedName": "TrustlessSDK.SecureStorageMigrationResult",
+                "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageMigrationResult",
+                "printedName": "TrustlessSDK.SecureStorageMigrationResult",
+                "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV2eeoiySbAC_ACtFZ",
+            "moduleName": "TrustlessSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV",
+        "mangledName": "$s12TrustlessSDK28SecureStorageMigrationResultV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureStorage",
+        "printedName": "SecureStorage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:forKey:accessLevel:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStorageP4save_6forKey11accessLevel7contexty10Foundation4DataV_SSAA0cd6AccessI0OSo9LAContextCSgtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStorageP4save_6forKey11accessLevel7contexty10Foundation4DataV_SSAA0cd6AccessI0OSo9LAContextCSgtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadData",
+            "printedName": "loadData(forKey:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStorageP8loadData6forKey7context10Foundation0F0VSgSS_So9LAContextCSgtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStorageP8loadData6forKey7context10Foundation0F0VSgSS_So9LAContextCSgtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStorageP6deleteyySSKF",
+            "mangledName": "$s12TrustlessSDK13SecureStorageP6deleteyySSKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAll",
+            "printedName": "removeAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStorageP9removeAllyyKF",
+            "mangledName": "$s12TrustlessSDK13SecureStorageP9removeAllyyKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "migrateLegacyItems",
+            "printedName": "migrateLegacyItems(fromBundleIdentifier:items:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[TrustlessSDK.SecureStorageMigrationResult]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageMigrationResult",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationResult",
+                    "usr": "s:12TrustlessSDK28SecureStorageMigrationResultV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[TrustlessSDK.SecureStorageMigrationItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecureStorageMigrationItem",
+                    "printedName": "TrustlessSDK.SecureStorageMigrationItem",
+                    "usr": "s:12TrustlessSDK26SecureStorageMigrationItemV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStorageP18migrateLegacyItems20fromBundleIdentifier5itemsSayAA0cD15MigrationResultVGSS_SayAA0cdL4ItemVGtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStorageP18migrateLegacyItems20fromBundleIdentifier5itemsSayAA0cD15MigrationResultVGSS_SayAA0cdL4ItemVGtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE4save_6forKeyy10Foundation4DataV_SStKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE4save_6forKeyy10Foundation4DataV_SStKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:forKey:accessLevel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE4save_6forKey11accessLevely10Foundation4DataV_SSAA0cd6AccessI0OtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE4save_6forKey11accessLevely10Foundation4DataV_SSAA0cd6AccessI0OtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:forKey:accessLevel:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "hasDefaultArg": true,
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE4save_6forKey11accessLevel7contextySS_SSAA0cd6AccessI0OSo9LAContextCSgtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE4save_6forKey11accessLevel7contextySS_SSAA0cd6AccessI0OSo9LAContextCSgtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(_:forKey:accessLevel:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SecureStorageAccessLevel",
+                "printedName": "TrustlessSDK.SecureStorageAccessLevel",
+                "hasDefaultArg": true,
+                "usr": "s:12TrustlessSDK24SecureStorageAccessLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE4save_6forKey11accessLevel7contextySb_SSAA0cd6AccessI0OSo9LAContextCSgtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE4save_6forKey11accessLevel7contextySb_SSAA0cd6AccessI0OSo9LAContextCSgtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadData",
+            "printedName": "loadData(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE8loadData6forKey10Foundation0F0VSgSS_tKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE8loadData6forKey10Foundation0F0VSgSS_tKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadString",
+            "printedName": "loadString(forKey:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE10loadString6forKey7contextSSSgSS_So9LAContextCSgtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE10loadString6forKey7contextSSSgSS_So9LAContextCSgtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadBool",
+            "printedName": "loadBool(forKey:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13SecureStoragePAAE8loadBool6forKey7contextSbSgSS_So9LAContextCSgtKF",
+            "mangledName": "$s12TrustlessSDK13SecureStoragePAAE8loadBool6forKey7contextSbSgSS_So9LAContextCSgtKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.SecureStorage>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.SecureStorage>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12TrustlessSDK13SecureStorageP",
+        "mangledName": "$s12TrustlessSDK13SecureStorageP",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -111893,6 +114311,81 @@
           },
           {
             "kind": "Function",
+            "name": "exchangeNusukSession",
+            "printedName": "exchangeNusukSession(params:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeResult",
+                "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeParams",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestOptions",
+                "printedName": "TrustlessSDK.RequestOptions",
+                "usr": "s:12TrustlessSDK14RequestOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderP08exchangeC7Session6params7optionsAA0cF14ExchangeResultOAA0cfI6ParamsV_AA14RequestOptionsVtYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP08exchangeC7Session6params7optionsAA0cF14ExchangeResultOAA0cfI6ParamsV_AA14RequestOptionsVtYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmNusukSessionExchange",
+            "printedName": "confirmNusukSessionExchange(params:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeConfirmParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeConfirmParams",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestOptions",
+                "printedName": "TrustlessSDK.RequestOptions",
+                "usr": "s:12TrustlessSDK14RequestOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderP07confirmC15SessionExchange6params7optionsyAA0cfG13ConfirmParamsV_AA14RequestOptionsVtYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderP07confirmC15SessionExchange6params7optionsyAA0cfG13ConfirmParamsV_AA14RequestOptionsVtYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "sendKYCRequest",
             "printedName": "sendKYCRequest(params:options:completion:)",
             "children": [
@@ -112444,6 +114937,157 @@
           },
           {
             "kind": "Function",
+            "name": "exchangeNusukSession",
+            "printedName": "exchangeNusukSession(params:options:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeParams",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestOptions",
+                "printedName": "TrustlessSDK.RequestOptions",
+                "usr": "s:12TrustlessSDK14RequestOptionsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TrustlessSDK.NusukSessionExchangeResult, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TrustlessSDK.NusukSessionExchangeResult, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukSessionExchangeResult",
+                        "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                        "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderPAAE08exchangeC7Session6params7options10completionyycAA0cF14ExchangeParamsV_AA14RequestOptionsVys6ResultOyAA0cfjN0OAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderPAAE08exchangeC7Session6params7options10completionyycAA0cF14ExchangeParamsV_AA14RequestOptionsVys6ResultOyAA0cfjN0OAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmNusukSessionExchange",
+            "printedName": "confirmNusukSessionExchange(params:options:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeConfirmParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeConfirmParams",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestOptions",
+                "printedName": "TrustlessSDK.RequestOptions",
+                "usr": "s:12TrustlessSDK14RequestOptionsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderPAAE07confirmC15SessionExchange6params7options10completionyycAA0cfG13ConfirmParamsV_AA14RequestOptionsVys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderPAAE07confirmC15SessionExchange6params7options10completionyycAA0cfG13ConfirmParamsV_AA14RequestOptionsVys6ResultOyytAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "sendKYCRequest",
             "printedName": "sendKYCRequest(params:)",
             "children": [
@@ -112638,6 +115282,61 @@
             "declKind": "Func",
             "usr": "s:12TrustlessSDK13NusukProviderPAAE24confirmWithdrawalRequest10transferId3otpAA0c8WithdrawG8ResponseVSi_SStYaKF",
             "mangledName": "$s12TrustlessSDK13NusukProviderPAAE24confirmWithdrawalRequest10transferId3otpAA0c8WithdrawG8ResponseVSi_SStYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exchangeNusukSession",
+            "printedName": "exchangeNusukSession(params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeResult",
+                "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeParams",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderPAAE08exchangeC7Session6paramsAA0cF14ExchangeResultOAA0cfH6ParamsV_tYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderPAAE08exchangeC7Session6paramsAA0cF14ExchangeResultOAA0cfH6ParamsV_tYaKF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmNusukSessionExchange",
+            "printedName": "confirmNusukSessionExchange(params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeConfirmParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeConfirmParams",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderPAAE07confirmC15SessionExchange6paramsyAA0cfG13ConfirmParamsV_tYaKF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderPAAE07confirmC15SessionExchange6paramsyAA0cfG13ConfirmParamsV_tYaKF",
             "moduleName": "TrustlessSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
             "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
@@ -113136,6 +115835,145 @@
             "declKind": "Func",
             "usr": "s:12TrustlessSDK13NusukProviderPAAE24confirmWithdrawalRequest10transferId3otp10completionyycSi_SSys6ResultOyAA0c8WithdrawG8ResponseVAA0A5ErrorOGctF",
             "mangledName": "$s12TrustlessSDK13NusukProviderPAAE24confirmWithdrawalRequest10transferId3otp10completionyycSi_SSys6ResultOyAA0c8WithdrawG8ResponseVAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exchangeNusukSession",
+            "printedName": "exchangeNusukSession(params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeParams",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<TrustlessSDK.NusukSessionExchangeResult, TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<TrustlessSDK.NusukSessionExchangeResult, TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukSessionExchangeResult",
+                        "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                        "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderPAAE08exchangeC7Session6params10completionyycAA0cF14ExchangeParamsV_ys6ResultOyAA0cfiK0OAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderPAAE08exchangeC7Session6params10completionyycAA0cF14ExchangeParamsV_ys6ResultOyAA0cfiK0OAA0A5ErrorOGctF",
+            "moduleName": "TrustlessSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
+            "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmNusukSessionExchange",
+            "printedName": "confirmNusukSessionExchange(params:completion:)",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeConfirmParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeConfirmParams",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), TrustlessSDK.TrustlessError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), TrustlessSDK.TrustlessError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrustlessError",
+                        "printedName": "TrustlessSDK.TrustlessError",
+                        "usr": "s:12TrustlessSDK0A5ErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12TrustlessSDK13NusukProviderPAAE07confirmC15SessionExchange6params10completionyycAA0cfG13ConfirmParamsV_ys6ResultOyytAA0A5ErrorOGctF",
+            "mangledName": "$s12TrustlessSDK13NusukProviderPAAE07confirmC15SessionExchange6params10completionyycAA0cfG13ConfirmParamsV_ys6ResultOyytAA0A5ErrorOGctF",
             "moduleName": "TrustlessSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : TrustlessSDK.NusukProvider>",
             "sugared_genericSig": "<Self where Self : TrustlessSDK.NusukProvider>",
@@ -126171,6 +129009,541 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NusukSessionExchangeParams",
+        "printedName": "NusukSessionExchangeParams",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "idToken",
+            "printedName": "idToken",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV7idTokenSSvp",
+            "mangledName": "$s12TrustlessSDK26NusukSessionExchangeParamsV7idTokenSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV7idTokenSSvg",
+                "mangledName": "$s12TrustlessSDK26NusukSessionExchangeParamsV7idTokenSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "username",
+            "printedName": "username",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV8usernameSSvp",
+            "mangledName": "$s12TrustlessSDK26NusukSessionExchangeParamsV8usernameSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV8usernameSSvg",
+                "mangledName": "$s12TrustlessSDK26NusukSessionExchangeParamsV8usernameSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(idToken:username:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeParams",
+                "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV7idToken8usernameACSS_SStcfc",
+            "mangledName": "$s12TrustlessSDK26NusukSessionExchangeParamsV7idToken8usernameACSS_SStcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK26NusukSessionExchangeParamsV",
+        "mangledName": "$s12TrustlessSDK26NusukSessionExchangeParamsV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NusukSessionExchangeConfirmParams",
+        "printedName": "NusukSessionExchangeConfirmParams",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "challengeId",
+            "printedName": "challengeId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV11challengeIdSSvp",
+            "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV11challengeIdSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV11challengeIdSSvg",
+                "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV11challengeIdSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "otp",
+            "printedName": "otp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV3otpSSvp",
+            "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV3otpSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV3otpSSvg",
+                "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV3otpSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "username",
+            "printedName": "username",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV8usernameSSvp",
+            "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV8usernameSSvp",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV8usernameSSvg",
+                "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV8usernameSSvg",
+                "moduleName": "TrustlessSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(challengeId:otp:username:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NusukSessionExchangeConfirmParams",
+                "printedName": "TrustlessSDK.NusukSessionExchangeConfirmParams",
+                "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV11challengeId3otp8usernameACSS_S2Stcfc",
+            "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV11challengeId3otp8usernameACSS_S2Stcfc",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TrustlessSDK33NusukSessionExchangeConfirmParamsV",
+        "mangledName": "$s12TrustlessSDK33NusukSessionExchangeConfirmParamsV",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NusukSessionExchangeResult",
+        "printedName": "NusukSessionExchangeResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sessionEstablished",
+            "printedName": "sessionEstablished",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.NusukSessionExchangeResult.Type) -> TrustlessSDK.NusukSessionExchangeResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NusukSessionExchangeResult",
+                    "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                    "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.NusukSessionExchangeResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukSessionExchangeResult",
+                        "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                        "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO18sessionEstablishedyA2CmF",
+            "mangledName": "$s12TrustlessSDK26NusukSessionExchangeResultO18sessionEstablishedyA2CmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "otpRequired",
+            "printedName": "otpRequired",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TrustlessSDK.NusukSessionExchangeResult.Type) -> (Swift.String) -> TrustlessSDK.NusukSessionExchangeResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> TrustlessSDK.NusukSessionExchangeResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukSessionExchangeResult",
+                        "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                        "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(challengeId: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TrustlessSDK.NusukSessionExchangeResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NusukSessionExchangeResult",
+                        "printedName": "TrustlessSDK.NusukSessionExchangeResult",
+                        "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO11otpRequiredyACSS_tcACmF",
+            "mangledName": "$s12TrustlessSDK26NusukSessionExchangeResultO11otpRequiredyACSS_tcACmF",
+            "moduleName": "TrustlessSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12TrustlessSDK26NusukSessionExchangeResultO",
+        "mangledName": "$s12TrustlessSDK26NusukSessionExchangeResultO",
+        "moduleName": "TrustlessSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "Optional",
         "printedName": "Optional",
@@ -126335,6 +129708,28 @@
           },
           {
             "kind": "Conformance",
+            "name": "AccessibilityRotorContent",
+            "printedName": "AccessibilityRotorContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI25AccessibilityRotorContentP",
+            "mangledName": "$s7SwiftUI25AccessibilityRotorContentP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Commands",
             "printedName": "Commands",
             "children": [
@@ -126395,6 +129790,28 @@
             ],
             "usr": "s:7SwiftUI7GestureP",
             "mangledName": "$s7SwiftUI7GestureP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SceneAccessoryContent",
+            "printedName": "SceneAccessoryContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI21SceneAccessoryContentP",
+            "mangledName": "$s7SwiftUI21SceneAccessoryContentP"
           },
           {
             "kind": "Conformance",
@@ -129151,35 +132568,35 @@
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "Dictionary",
-      "offset": 1381,
+      "offset": 1729,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2629,
+      "offset": 3837,
       "length": 27,
       "value": "\"identity kyc verification\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2691,
+      "offset": 3899,
       "length": 63,
       "value": "\"identity kyc accounts cards transfers cliq cardpay simulation\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 3071,
+      "offset": 4279,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/TrustlessConfig.swift",
       "kind": "StringLiteral",
-      "offset": 3115,
+      "offset": 4323,
       "length": 41,
       "value": "\"Authenticate with biometry to continue.\""
     },
@@ -130018,43 +133435,85 @@
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 319,
+      "length": 13,
+      "value": "\"accessToken\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 342,
+      "length": 14,
+      "value": "\"refreshToken\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 366,
+      "length": 10,
+      "value": "\"passCode\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 386,
+      "length": 10,
+      "value": "\"biometry\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 531,
+      "length": 10,
+      "value": "\"passCode\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
+      "kind": "StringLiteral",
+      "offset": 598,
+      "length": 10,
+      "value": "\"biometry\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "Array",
-      "offset": 359,
+      "offset": 1273,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "Array",
-      "offset": 1703,
+      "offset": 1516,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "Array",
-      "offset": 2081,
+      "offset": 1894,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "Array",
-      "offset": 2617,
+      "offset": 2356,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "Array",
-      "offset": 3826,
+      "offset": 2955,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/KeychainService.swift",
       "kind": "Array",
-      "offset": 4168,
+      "offset": 3290,
       "length": 2,
       "value": "[]"
     },
@@ -130068,7 +133527,7 @@
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/ApiService\/Decorators\/CachingApiService.swift",
       "kind": "Dictionary",
-      "offset": 2465,
+      "offset": 2597,
       "length": 3,
       "value": "[]"
     },
@@ -131706,28 +135165,28 @@
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AuthenticationProvider\/Params\/Confirm2FARequestParams.swift",
       "kind": "StringLiteral",
-      "offset": 279,
+      "offset": 478,
       "length": 10,
       "value": "\"Password\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AuthenticationProvider\/Params\/Confirm2FARequestParams.swift",
       "kind": "StringLiteral",
-      "offset": 311,
+      "offset": 510,
       "length": 13,
       "value": "\"PhoneNumber\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AuthenticationProvider\/Params\/Confirm2FARequestParams.swift",
       "kind": "StringLiteral",
-      "offset": 344,
+      "offset": 543,
       "length": 5,
       "value": "\"Otp\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/AuthenticationProvider\/Params\/Confirm2FARequestParams.swift",
       "kind": "StringLiteral",
-      "offset": 371,
+      "offset": 570,
       "length": 7,
       "value": "\"Scope\""
     },
@@ -133036,14 +136495,14 @@
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/TokenRefreshService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3052,
+      "offset": 4894,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/TokenRefreshService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3727,
+      "offset": 5569,
       "length": 1,
       "value": "3"
     },
@@ -134122,34 +137581,34 @@
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/LocalAuthService.swift",
       "kind": "StringLiteral",
       "offset": 1661,
-      "length": 10,
-      "value": "\"biometry\""
+      "length": 20,
+      "value": "\"localAuth.biometry\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/LocalAuthService.swift",
       "kind": "StringLiteral",
-      "offset": 1702,
-      "length": 10,
-      "value": "\"passCode\""
+      "offset": 1712,
+      "length": 20,
+      "value": "\"localAuth.passCode\""
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/LocalAuthService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4485,
+      "offset": 4505,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/LocalAuthService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4970,
+      "offset": 4950,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/LocalAuthService.swift",
       "kind": "StringLiteral",
-      "offset": 7383,
+      "offset": 7319,
       "length": 2,
       "value": "\"\""
     },
@@ -134163,9 +137622,100 @@
     {
       "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Shared\/Services\/CryptoService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3986,
+      "offset": 3615,
       "length": 2,
       "value": "16"
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionExchangeParams.swift",
+      "kind": "StringLiteral",
+      "offset": 1174,
+      "length": 9,
+      "value": "\"IdToken\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionExchangeParams.swift",
+      "kind": "StringLiteral",
+      "offset": 1208,
+      "length": 10,
+      "value": "\"ClientId\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionExchangeParams.swift",
+      "kind": "StringLiteral",
+      "offset": 1241,
+      "length": 8,
+      "value": "\"Scopes\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionExchangeConfirmParams.swift",
+      "kind": "StringLiteral",
+      "offset": 878,
+      "length": 13,
+      "value": "\"ChallengeId\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionExchangeConfirmParams.swift",
+      "kind": "StringLiteral",
+      "offset": 911,
+      "length": 5,
+      "value": "\"Otp\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionExchangeConfirmParams.swift",
+      "kind": "StringLiteral",
+      "offset": 938,
+      "length": 7,
+      "value": "\"Scope\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Params\/NusukSessionRefreshBody.swift",
+      "kind": "StringLiteral",
+      "offset": 466,
+      "length": 14,
+      "value": "\"RefreshToken\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukSessionExchangeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 592,
+      "length": 13,
+      "value": "\"AccessToken\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukSessionExchangeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 14,
+      "value": "\"RefreshToken\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukSessionExchangeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 674,
+      "length": 11,
+      "value": "\"TokenType\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukSessionExchangeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 711,
+      "length": 11,
+      "value": "\"ExpiresIn\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukSessionExchangeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 755,
+      "length": 18,
+      "value": "\"RefreshExpiresIn\""
+    },
+    {
+      "filePath": "\/Users\/dmytrolunov\/Master\/Projects\/Staq\/trustless-sdk-ios\/TrustlessSDK\/TrustlessSDK\/Providers\/NusukProvider\/Models\/NusukSessionExchangeResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 801,
+      "length": 13,
+      "value": "\"ChallengeId\""
     }
   ]
 }
